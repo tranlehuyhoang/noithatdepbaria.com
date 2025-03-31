@@ -596,92 +596,9 @@
                 </section>
                 <section class="page">
                     <div class="container">
-                        <h1 class="page-title bold">Giới thiệu</h1>
+                        <h1 class="page-title bold">{{ $about->title }}</h1>
                         <div class="content-page rte mb-5">
-                            <p>Mẫu theme <strong>HELLO</strong> của HELLO là giải pháp lý tưởng cho các cửa hàng
-                                kinh doanh
-                                sản phẩm&nbsp;decor,&nbsp;phong thủy, nội, ngoại thất và trang trí nhà cửa. Với thiết kế
-                                tinh tế và
-                                giao diện thân thiện, mẫu website này giúp quý khách sử dụng dễ dàng giới thiệu các mặt
-                                hàng sản
-                                phẩm của mình.</p>
-                            <h3>Tạo Dấu Ấn Với Thiết Kế Đẹp Mắt</h3>
-                            <p><strong>HELLO</strong> mang đến một diện mạo mới cho các sản phẩm decor. Mỗi chi tiết
-                                trên theme
-                                đều được chăm chút tỉ mỉ, từ màu sắc, bố cục đến hình ảnh sản phẩm, nhằm tạo ra một giao
-                                diện hợp
-                                lý, sinh động.</p>
-                            <h3>Cải Thiện Trải Nghiệm Mua Sắm</h3>
-                            <p>Chúng tôi hiểu rằng một trải nghiệm mua sắm mượt mà có thể khiến khách hàng quay trở lại
-                                mua sắm
-                                nhiều lần. Do đó, <strong>HELLO</strong> được tối ưu hóa để đảm bảo quá trình tìm
-                                kiếm, so sánh
-                                và mua hàng của khách hàng diễn ra nhanh chóng và thuận tiện, với một hệ thống phân loại
-                                sản phẩm
-                                thông minh và quy trình thanh toán đơn giản.</p>
-                            <h3>Hỗ Trợ Quảng Cáo và SEO</h3>
-                            <p>Mẫu website <strong>HELLO</strong> được&nbsp;tối ưu SEO&nbsp;ngay từ bản thiết kế cơ
-                                bản, giúp
-                                nâng cao khả năng xuất hiện trên các công cụ tìm kiếm và thu hút khách hàng tiềm năng.
-                                Cùng với đó,
-                                việc tích hợp các công cụ quảng cáo giúp bạn mở rộng sự hiện diện trực tuyến, đạt được
-                                hiệu quả
-                                quảng cáo tốt nhất.</p>
-                            <h3>Ưu Điểm Khi Sử Dụng <strong>HELLO</strong>:</h3>
-                            <ul>
-                                <li><strong>Thiết Kế Decor&nbsp;Hợp Lý</strong>: Mẫu website phản ánh sự hiểu biết sâu
-                                    sắc về phong
-                                    thủy, thu hút khách hàng quan tâm đến nghệ thuật này.</li>
-                                <li><strong>Dễ Dàng Quản Lý Sản Phẩm</strong>: Tính năng quản lý sản phẩm linh hoạt, cho
-                                    phép cập
-                                    nhật và điều chỉnh thông tin sản phẩm dễ dàng.</li>
-                                <li><strong>Tối Ưu Hóa Mọi Thiết Bị</strong>: Tương thích với mọi loại thiết bị, đảm bảo
-                                    khách hàng
-                                    có thể truy cập mọi lúc, mọi nơi.</li>
-                            </ul>
-                            <p>&nbsp;</p>
-                            <section>
-                                <h2 data-auto-toc-id="vi_sao_can_thiet_ke_website_ban_do_the_thao_chuyen_nghiep"
-                                    id="vi_sao_can_thiet_ke_website_ban_do_the_thao_chuyen_nghiep">Vì sao cần thiết kế
-                                    website
-                                    chuyên nghiệp?&nbsp;</h2>
-                                <p>Trước khi tìm hiểu sâu về việc thiết kế website, doanh nghiệp cần hiểu tầm quan trọng
-                                    của nó. Sở
-                                    hữu một kênh mua sắm sẽ mang lại cho công ty nhiều lợi ích.</p>
-                                <h3 data-auto-toc-id="ho_tro_do_luong_hieu_qua_viec_kinh_doanh"
-                                    id="ho_tro_do_luong_hieu_qua_viec_kinh_doanh">Hỗ trợ đo lường hiệu&nbsp;quả việc
-                                    kinh doanh
-                                </h3>
-                                <p>Website tích hợp nhiều tính năng hỗ trợ bán hàng, mang lại khả năng thống kê lượt
-                                    truy cập, đơn
-                                    hàng, các sản phẩm được tìm kiếm nhiều,....</p>
-                                <p><em>Vì sao cần thiết kế website bán đồ thể thao chuyên nghiệp?</em></p>
-                                <p>Tiết kiệm chi phí đầu tư so với hình thức kinh doanh truyền thống: Kinh doanh truyền
-                                    thống yêu
-                                    cầu nhiều vốn cho các khoản: thuê mặt bằng, điện, nước, sửa chữa mặt bằng,... Với
-                                    kinh doanh
-                                    online, chỉ cần bỏ ra chi phí thiết kế, bảo trì web là đủ.&nbsp;</p>
-                                <h3 data-auto-toc-id="tiep_can_khach_hang_o_bat_cu_khu_vuc_dia_ly_nao"
-                                    id="tiep_can_khach_hang_o_bat_cu_khu_vuc_dia_ly_nao">Tiếp cận khách hàng ở bất cứ
-                                    khu vực địa
-                                    lý nào</h3>
-                                <p>Website cho phép tiếp cận với khách hàng ở nhiều nơi chỉ với một chiếc điện thoại
-                                    thông minh hoặc
-                                    máy tính, laptop có kết nối Internet.&nbsp;</p>
-                                <h3 data-auto-toc-id="hoat_dong_khong_gioi_han_thoi_gian"
-                                    id="hoat_dong_khong_gioi_han_thoi_gian">
-                                    Hoạt động không giới hạn thời gian</h3>
-                                <p>Website là công cụ để giới thiệu sản phẩm, bán hàng, giải đáp các câu hỏi, tư vấn cho
-                                    khách
-                                    hàng,... mọi lúc mọi nơi, không bị giới hạn thời gian như cửa hàng thông thường.</p>
-                                <h3 data-auto-toc-id="bat_kip_xu_huong_tieu_dung" id="bat_kip_xu_huong_tieu_dung">Bắt
-                                    kịp xu hướng
-                                    tiêu dùng</h3>
-                                <p>Người tiêu dùng hiện có xu hướng mua hàng qua mạng thay vì đến cửa hàng, đặc biệt là
-                                    những người
-                                    bận rộn. Thiết kế web thể hiện sự chuyên nghiệp và khả năng bắt kịp xu thế thời đại.
-                                </p>
-                            </section>
+                            {!! $about->content !!}
                         </div>
                     </div>
                 </section>
