@@ -582,12 +582,13 @@
                                             <img class="position-absolute"
                                                 src="{{ Storage::url($video->banner) }}"
                                                 alt="{{ $video->title }}">
+                                        </a>
                                         <div class="info position-absolute">
                                             <h3 class="font-weight-bold">
-                                                <a  href="{{ $video->url }}"
-                                                    title="{{ $video->title }}">{{ $video->title }}</a>
+                                                <a href="{{ $video->url }}" title="{{ $video->title }}">
+                                                    {{ $video->title }}
+                                                </a>
                                             </h3>
-
                                         </div>
                                     </div>
                                 </div>

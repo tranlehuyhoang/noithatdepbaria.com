@@ -13,113 +13,13 @@
                 </g>
             </svg>DANH MỤC</div>
         <nav class="nav-category">
-            <ul class="navbar-pills">
-                <li class="nav-item  position-relative">
-                    <a title="Hiện đại" href="/hien-dai" class="nav-link pr-5">Hiện
-                        đại</a>
-                    <i class="open_mnu down_icon"></i>
-                    <ul class="menu_down" style="display:none;">
-                        <li class="nav-item">
-                            <a title="Giường" class="nav-link"
-                                href="/giuong">Giường</a>
-                        </li>
-                        <li class="nav-item">
-                            <a title="Tủ" class="nav-link" href="/tu">Tủ</a>
-                        </li>
-                        <li class="nav-item">
-                            <a title="Đèn" class="nav-link" href="/den">Đèn</a>
-                        </li>
-                        <li class="nav-item">
-                            <a title="Cây trang trí" class="nav-link"
-                                href="/cay-trang-tri">Cây
-                                trang trí</a>
-                        </li>
-                        <li class="nav-item">
-                            <a title="Tranh treo tường" class="nav-link"
-                                href="/tranh-treo-tuong">Tranh treo tường</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item  position-relative">
-                    <a title="Cổ điển" href="/co-dien" class="nav-link pr-5">Cổ
-                        điển</a>
-                    <i class="open_mnu down_icon"></i>
-                    <ul class="menu_down" style="display:none;">
-                        <li class="nav-item">
-                            <a title="Giường" class="nav-link"
-                                href="/giuong">Giường</a>
-                        </li>
-                        <li class="nav-item">
-                            <a title="Tủ" class="nav-link" href="/tu">Tủ</a>
-                        </li>
-                        <li class="nav-item">
-                            <a title="Đèn" class="nav-link" href="/den">Đèn</a>
-                        </li>
-                        <li class="nav-item">
-                            <a title="Cây trang trí" class="nav-link"
-                                href="/cay-trang-tri">Cây
-                                trang trí</a>
-                        </li>
-                        <li class="nav-item">
-                            <a title="Tranh treo tường" class="nav-link"
-                                href="/">Tranh
-                                treo tường</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item  position-relative">
-                    <a title="Đơn giản" href="/don-gian" class="nav-link pr-5">Đơn
-                        giản</a>
-                    <i class="open_mnu down_icon"></i>
-                    <ul class="menu_down" style="display:none;">
-                        <li class="nav-item">
-                            <a title="Giường" class="nav-link"
-                                href="/giuong">Giường</a>
-                        </li>
-                        <li class="nav-item">
-                            <a title="Tủ" class="nav-link" href="/tu">Tủ</a>
-                        </li>
-                        <li class="nav-item">
-                            <a title="Đèn" class="nav-link" href="/den">Đèn</a>
-                        </li>
-                        <li class="nav-item">
-                            <a title="Cây trang trí" class="nav-link"
-                                href="/cay-trang-tri">Cây
-                                trang trí</a>
-                        </li>
-                        <li class="nav-item">
-                            <a title="Tranh treo tường" class="nav-link"
-                                href="/tranh-treo-tuong">Tranh treo tường</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item  position-relative">
-                    <a title="Sang trọng" href="/sang-trong"
-                        class="nav-link pr-5">Sang trọng</a>
-                    <i class="open_mnu down_icon"></i>
-                    <ul class="menu_down" style="display:none;">
-                        <li class="nav-item">
-                            <a title="Giường" class="nav-link"
-                                href="/giuong">Giường</a>
-                        </li>
-                        <li class="nav-item">
-                            <a title="Tủ" class="nav-link" href="/tu">Tủ</a>
-                        </li>
-                        <li class="nav-item">
-                            <a title="Đèn" class="nav-link" href="/den">Đèn</a>
-                        </li>
-                        <li class="nav-item">
-                            <a title="Cây trang trí" class="nav-link"
-                                href="/cay-trang-tri">Cây
-                                trang trí</a>
-                        </li>
-                        <li class="nav-item">
-                            <a title="Tranh treo tường" class="nav-link"
-                                href="/tranh-treo-tuong">Tranh treo tường</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
+                @foreach ($categories ?? [] as $category)
+                <div class="nav-item  position-relative">
+                    <a title="Hiện đại" href="/" class="nav-link pr-5">
+                        {{ $category->title }}
+                    </a>
+                </div>
+                @endforeach
         </nav>
     </div>
     <script>
@@ -151,59 +51,26 @@
         <div class="aside-title bold mb-3 pb-3 border-bottom"><a href="tin-tuc"
                 title="Tin tức mới">Tin tức mới</a></div>
         <div class="blog_content">
-            <div class="item d-flex flex-wrap">
-                <a class="post-thumb scale_hover"
-                    href="/blog/huong-dan-tu-decor-phong-ngu-dep-va-chuan-phong-thuy-2023"
-                    title="Hướng dẫn tự decor phòng ngủ đẹp và chuẩn phong thủy 2023">
-                    <img class="w-100 h-100 rounded-5 "
-                        src="/assets/100/501/740/articles/1-15da8b7a-69a1-43cc-a22b-26b1f9d7371a.jpg?v=1701363821503"
-                        alt="Hướng dẫn tự decor phòng ngủ đẹp và chuẩn phong thủy 2023">
-                </a>
-                <div class="post-content">
-                    <span>30/11/2023</span>
-                    <h3 class="mb-0">
-                        <a title="Hướng dẫn tự decor phòng ngủ đẹp và chuẩn phong thủy 2023"
-                            href="/blog/huong-dan-tu-decor-phong-ngu-dep-va-chuan-phong-thuy-2023">Hướng
-                            dẫn tự decor phòng ngủ đẹp và chuẩn phong thủy 2023</a>
-                    </h3>
+            @foreach ($blogs ?? [] as $blog)
+                <div class="item d-flex flex-wrap">
+                    <a class="post-thumb scale_hover"
+                        href="{{ 'blog/'. $blog->title }}"
+                        title="{{ $blog->title }}">
+                        <img class="w-100 h-100 rounded-5 "
+                            src="{{ Storage::url($blog->banner) }}"
+                            alt="{{ $blog->title }}">
+                    </a>
+                    <div class="post-content">
+                        <span>{{ \Carbon\Carbon::parse( $blog->created_at)->translatedFormat(' d/n/Y') }}</span>
+                        <h3 class="mb-0">
+                            <a title="{{ $blog->title }}"
+                                href="{{ "blog/". $blog->title }}">{{ $blog->short_desc }}
+                            </a>
+                        </h3>
+                    </div>
                 </div>
-            </div>
-            <div class="item d-flex flex-wrap">
-                <a class="post-thumb scale_hover"
-                    href="/ghe-sofa-bo-roi-phu-hop-voi-khong-gian-phong-khach-nao"
-                    title="Ghế sofa bộ rời phù hợp với không gian phòng khách nào?">
-                    <img class="w-100 h-100 rounded-5 "
-                        src="/assets/100/501/740/articles/1-e7aec805-773d-496b-a0c5-68693018e642.jpg?v=1701361754090"
-                        alt="Ghế sofa bộ rời phù hợp với không gian phòng khách nào?">
-                </a>
-                <div class="post-content">
-                    <span>30/11/2023</span>
-                    <h3 class="mb-0">
-                        <a title="Ghế sofa bộ rời phù hợp với không gian phòng khách nào?"
-                            href="/ghe-sofa-bo-roi-phu-hop-voi-khong-gian-phong-khach-nao">Ghế
-                            sofa
-                            bộ rời phù hợp với không gian phòng khách nào?</a>
-                    </h3>
-                </div>
-            </div>
-            <div class="item d-flex flex-wrap">
-                <a class="post-thumb scale_hover"
-                    href="/bi-quyet-chon-sofa-cho-phong-khach-nho"
-                    title="Bí quyết chọn sofa cho phòng khách nhỏ">
-                    <img class="w-100 h-100 rounded-5 "
-                        src="/assets/100/501/740/articles/3-23f953d8-34eb-4cf1-a22a-db13998581ea.jpg?v=1701361427303"
-                        alt="Bí quyết chọn sofa cho phòng khách nhỏ">
-                </a>
-                <div class="post-content">
-                    <span>30/11/2023</span>
-                    <h3 class="mb-0">
-                        <a title="Bí quyết chọn sofa cho phòng khách nhỏ"
-                            href="/bi-quyet-chon-sofa-cho-phong-khach-nho">Bí quyết
-                            chọn sofa cho
-                            phòng khách nhỏ</a>
-                    </h3>
-                </div>
-            </div>
+            @endforeach
+
         </div>
     </div>
 </div>
