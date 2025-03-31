@@ -1319,7 +1319,7 @@
                                         </div>
                                         <div class="swiper-slide">
                                             <span class="vote d-inline-block mb-2"></span>
-                                            <p class="mb-md-5 mb-2">Nhân viên của OH!Decor rất nhiệt tình và chuyên
+                                            <p class="mb-md-5 mb-2">Nhân viên của HELLO rất nhiệt tình và chuyên
                                                 nghiệp, mình có
                                                 thiện cảm ngay từ khi được tư vấn sản phẩm.</p>
                                             <div class="info position-relative py-4">
@@ -1335,7 +1335,7 @@
                                             <span class="vote d-inline-block mb-2"></span>
                                             <p class="mb-md-5 mb-2">Chất lượng dịch vụ khi mình đến lựa chọn sản phẩm
                                                 là điều mình
-                                                cảm thấy ấn tượng khi đến với OH!Decor </p>
+                                                cảm thấy ấn tượng khi đến với HELLO </p>
                                             <div class="info position-relative py-4">
                                                 <img width="89" height="89" class="lazyload position-absolute"
                                                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"

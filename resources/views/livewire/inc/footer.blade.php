@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-12 col-md-6 col-lg-3 col-footer col-info mb-4 mb-md-5">
                 <h4 class="title-menu position-relative bold">THÔNG TIN LIÊN HỆ</h4>
-                <p><b>Công ty cổ phần OH!Decor</b></p>
+                <p><b>Công ty cổ phần HELLO</b></p>
                 <p class="info-icon mb-1 position-relative pl-4"><svg xmlns="http://www.w3.org/2000/svg"
                         class="position-absolute"
                         viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
