@@ -524,283 +524,73 @@
                                 <div class="list-blogs">
 
                                     <div class="row">
-
+                                    @foreach ($blogs as $blog)
                                         <div class="col-md-6">
                                             <div class="item-blog mb-md-4 mb-2">
                                                 <a class="thumb ratioblog d-block position-relative rounded-10"
-                                                    href="/blog/huong-dan-tu-decor-phong-ngu-dep-va-chuan-phong-thuy-2023"
-                                                    title="Hướng dẫn tự decor phòng ngủ đẹp và chuẩn phong thủy 2023">
+                                                    href="{{ '/blog/' . $blog->slug }}"
+                                                    title="{{ $blog->title }}">
                                                     <img class=" position-absolute"
-                                                        src="/assets/100/501/740/articles/1-15da8b7a-69a1-43cc-a22b-26b1f9d7371a.jpg?v=1701363821503"
-                                                        alt="Hướng dẫn tự decor phòng ngủ đẹp và chuẩn phong thủy 2023">
+                                                        src="{{ Storage::url($blog->banner) }}"
+                                                        alt="{{ $blog->title }}">
                                                 </a>
                                                 <div class="content py-3">
-                                                    <div class="time-post mb-2 d-md-block d-none">Thứ năm, 30/11/2023,
-                                                        11:36</div>
+                                                    <div class="time-post mb-2 d-md-block d-none">
+                                                        {{ ucfirst(\Carbon\Carbon::parse( $blog->created_at)->locale('vi')->translatedFormat('l, d/n/Y, H:i:s')) }}
+                                                    </div>
                                                     <h3 class="bold mb-md-2 mb-1">
-                                                        <a href="/blog/huong-dan-tu-decor-phong-ngu-dep-va-chuan-phong-thuy-2023"
+                                                        <a href="{{ '/blog/' . $blog->slug }}"
                                                             class="text2line"
-                                                            title="Hướng dẫn tự decor phòng ngủ đẹp và chuẩn phong thủy 2023">Hướng
-                                                            dẫn tự decor phòng ngủ đẹp và chuẩn phong thủy 2023</a>
+                                                            title="{{ $blog->title }}">
+                                                            {{ $blog->title }}
+                                                        </a>
                                                     </h3>
-                                                    <p class="justify summary text4line">Bạn đang tìm kiếm ý tưởng
-                                                        decor phòng ngủ?
-                                                        Bạn muốn tham khảo nhiều phong cách trang trí phòng ngủ đẹp và
-                                                        chi tiết
-                                                        nhất? Tham khảo hướng dẫn decor phòng ngủ dưới đây để tìm ra ý
-                                                        tưởng trang
-                                                        trí phù hợp nhất với bạn nhé.
-                                                        1. Lưu ý trước khi decor phòng ngủ
-                                                        Decor phòng ngủ&nbsp;không chỉ cần khoa học, thẩm mỹ mà cần
-                                                        thuận phong
-                                                        thủy. Đối với người Việt, yếu tố phong thủy được đánh giá quan
-                                                        trọng....</p>
+                                                    <p class="justify summary text4line">
+                                                        {{ $blog->short_desc }}
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-6">
-                                            <div class="item-blog mb-md-4 mb-2">
-                                                <a class="thumb ratioblog d-block position-relative rounded-10"
-                                                    href="/blog/huong-dan-tu-decor-phong-ngu-dep-va-chuan-phong-thuy-2023"
-                                                    title="Hướng dẫn tự decor phòng ngủ đẹp và chuẩn phong thủy 2023">
-                                                    <img class=" position-absolute"
-                                                        src="/assets/100/501/740/articles/1-15da8b7a-69a1-43cc-a22b-26b1f9d7371a.jpg?v=1701363821503"
-                                                        alt="Hướng dẫn tự decor phòng ngủ đẹp và chuẩn phong thủy 2023">
-                                                </a>
-                                                <div class="content py-3">
-                                                    <div class="time-post mb-2 d-md-block d-none">Thứ năm, 30/11/2023,
-                                                        11:36</div>
-                                                    <h3 class="bold mb-md-2 mb-1">
-                                                        <a href="/blog/huong-dan-tu-decor-phong-ngu-dep-va-chuan-phong-thuy-2023"
-                                                            class="text2line"
-                                                            title="Hướng dẫn tự decor phòng ngủ đẹp và chuẩn phong thủy 2023">Hướng
-                                                            dẫn tự decor phòng ngủ đẹp và chuẩn phong thủy 2023</a>
-                                                    </h3>
-                                                    <p class="justify summary text4line">Bạn đang tìm kiếm ý tưởng
-                                                        decor phòng ngủ?
-                                                        Bạn muốn tham khảo nhiều phong cách trang trí phòng ngủ đẹp và
-                                                        chi tiết
-                                                        nhất? Tham khảo hướng dẫn decor phòng ngủ dưới đây để tìm ra ý
-                                                        tưởng trang
-                                                        trí phù hợp nhất với bạn nhé.
-                                                        1. Lưu ý trước khi decor phòng ngủ
-                                                        Decor phòng ngủ&nbsp;không chỉ cần khoa học, thẩm mỹ mà cần
-                                                        thuận phong
-                                                        thủy. Đối với người Việt, yếu tố phong thủy được đánh giá quan
-                                                        trọng....</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="item-blog mb-md-4 mb-2">
-                                                <a class="thumb ratioblog d-block position-relative rounded-10"
-                                                    href="/blog/huong-dan-tu-decor-phong-ngu-dep-va-chuan-phong-thuy-2023"
-                                                    title="Hướng dẫn tự decor phòng ngủ đẹp và chuẩn phong thủy 2023">
-                                                    <img class=" position-absolute"
-                                                        src="/assets/100/501/740/articles/1-15da8b7a-69a1-43cc-a22b-26b1f9d7371a.jpg?v=1701363821503"
-                                                        alt="Hướng dẫn tự decor phòng ngủ đẹp và chuẩn phong thủy 2023">
-                                                </a>
-                                                <div class="content py-3">
-                                                    <div class="time-post mb-2 d-md-block d-none">Thứ năm, 30/11/2023,
-                                                        11:36</div>
-                                                    <h3 class="bold mb-md-2 mb-1">
-                                                        <a href="/blog/huong-dan-tu-decor-phong-ngu-dep-va-chuan-phong-thuy-2023"
-                                                            class="text2line"
-                                                            title="Hướng dẫn tự decor phòng ngủ đẹp và chuẩn phong thủy 2023">Hướng
-                                                            dẫn tự decor phòng ngủ đẹp và chuẩn phong thủy 2023</a>
-                                                    </h3>
-                                                    <p class="justify summary text4line">Bạn đang tìm kiếm ý tưởng
-                                                        decor phòng ngủ?
-                                                        Bạn muốn tham khảo nhiều phong cách trang trí phòng ngủ đẹp và
-                                                        chi tiết
-                                                        nhất? Tham khảo hướng dẫn decor phòng ngủ dưới đây để tìm ra ý
-                                                        tưởng trang
-                                                        trí phù hợp nhất với bạn nhé.
-                                                        1. Lưu ý trước khi decor phòng ngủ
-                                                        Decor phòng ngủ&nbsp;không chỉ cần khoa học, thẩm mỹ mà cần
-                                                        thuận phong
-                                                        thủy. Đối với người Việt, yếu tố phong thủy được đánh giá quan
-                                                        trọng....</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="item-blog mb-md-4 mb-2">
-                                                <a class="thumb ratioblog d-block position-relative rounded-10"
-                                                    href="/blog/huong-dan-tu-decor-phong-ngu-dep-va-chuan-phong-thuy-2023"
-                                                    title="Hướng dẫn tự decor phòng ngủ đẹp và chuẩn phong thủy 2023">
-                                                    <img class=" position-absolute"
-                                                        src="/assets/100/501/740/articles/1-15da8b7a-69a1-43cc-a22b-26b1f9d7371a.jpg?v=1701363821503"
-                                                        alt="Hướng dẫn tự decor phòng ngủ đẹp và chuẩn phong thủy 2023">
-                                                </a>
-                                                <div class="content py-3">
-                                                    <div class="time-post mb-2 d-md-block d-none">Thứ năm, 30/11/2023,
-                                                        11:36</div>
-                                                    <h3 class="bold mb-md-2 mb-1">
-                                                        <a href="/blog/huong-dan-tu-decor-phong-ngu-dep-va-chuan-phong-thuy-2023"
-                                                            class="text2line"
-                                                            title="Hướng dẫn tự decor phòng ngủ đẹp và chuẩn phong thủy 2023">Hướng
-                                                            dẫn tự decor phòng ngủ đẹp và chuẩn phong thủy 2023</a>
-                                                    </h3>
-                                                    <p class="justify summary text4line">Bạn đang tìm kiếm ý tưởng
-                                                        decor phòng ngủ?
-                                                        Bạn muốn tham khảo nhiều phong cách trang trí phòng ngủ đẹp và
-                                                        chi tiết
-                                                        nhất? Tham khảo hướng dẫn decor phòng ngủ dưới đây để tìm ra ý
-                                                        tưởng trang
-                                                        trí phù hợp nhất với bạn nhé.
-                                                        1. Lưu ý trước khi decor phòng ngủ
-                                                        Decor phòng ngủ&nbsp;không chỉ cần khoa học, thẩm mỹ mà cần
-                                                        thuận phong
-                                                        thủy. Đối với người Việt, yếu tố phong thủy được đánh giá quan
-                                                        trọng....</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="item-blog mb-md-4 mb-2">
-                                                <a class="thumb ratioblog d-block position-relative rounded-10"
-                                                    href="/blog/huong-dan-tu-decor-phong-ngu-dep-va-chuan-phong-thuy-2023"
-                                                    title="Hướng dẫn tự decor phòng ngủ đẹp và chuẩn phong thủy 2023">
-                                                    <img class=" position-absolute"
-                                                        src="/assets/100/501/740/articles/1-15da8b7a-69a1-43cc-a22b-26b1f9d7371a.jpg?v=1701363821503"
-                                                        alt="Hướng dẫn tự decor phòng ngủ đẹp và chuẩn phong thủy 2023">
-                                                </a>
-                                                <div class="content py-3">
-                                                    <div class="time-post mb-2 d-md-block d-none">Thứ năm, 30/11/2023,
-                                                        11:36</div>
-                                                    <h3 class="bold mb-md-2 mb-1">
-                                                        <a href="/blog/huong-dan-tu-decor-phong-ngu-dep-va-chuan-phong-thuy-2023"
-                                                            class="text2line"
-                                                            title="Hướng dẫn tự decor phòng ngủ đẹp và chuẩn phong thủy 2023">Hướng
-                                                            dẫn tự decor phòng ngủ đẹp và chuẩn phong thủy 2023</a>
-                                                    </h3>
-                                                    <p class="justify summary text4line">Bạn đang tìm kiếm ý tưởng
-                                                        decor phòng ngủ?
-                                                        Bạn muốn tham khảo nhiều phong cách trang trí phòng ngủ đẹp và
-                                                        chi tiết
-                                                        nhất? Tham khảo hướng dẫn decor phòng ngủ dưới đây để tìm ra ý
-                                                        tưởng trang
-                                                        trí phù hợp nhất với bạn nhé.
-                                                        1. Lưu ý trước khi decor phòng ngủ
-                                                        Decor phòng ngủ&nbsp;không chỉ cần khoa học, thẩm mỹ mà cần
-                                                        thuận phong
-                                                        thủy. Đối với người Việt, yếu tố phong thủy được đánh giá quan
-                                                        trọng....</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="item-blog mb-md-4 mb-2">
-                                                <a class="thumb ratioblog d-block position-relative rounded-10"
-                                                    href="/blog/huong-dan-tu-decor-phong-ngu-dep-va-chuan-phong-thuy-2023"
-                                                    title="Hướng dẫn tự decor phòng ngủ đẹp và chuẩn phong thủy 2023">
-                                                    <img class=" position-absolute"
-                                                        src="/assets/100/501/740/articles/1-15da8b7a-69a1-43cc-a22b-26b1f9d7371a.jpg?v=1701363821503"
-                                                        alt="Hướng dẫn tự decor phòng ngủ đẹp và chuẩn phong thủy 2023">
-                                                </a>
-                                                <div class="content py-3">
-                                                    <div class="time-post mb-2 d-md-block d-none">Thứ năm, 30/11/2023,
-                                                        11:36</div>
-                                                    <h3 class="bold mb-md-2 mb-1">
-                                                        <a href="/blog/huong-dan-tu-decor-phong-ngu-dep-va-chuan-phong-thuy-2023"
-                                                            class="text2line"
-                                                            title="Hướng dẫn tự decor phòng ngủ đẹp và chuẩn phong thủy 2023">Hướng
-                                                            dẫn tự decor phòng ngủ đẹp và chuẩn phong thủy 2023</a>
-                                                    </h3>
-                                                    <p class="justify summary text4line">Bạn đang tìm kiếm ý tưởng
-                                                        decor phòng ngủ?
-                                                        Bạn muốn tham khảo nhiều phong cách trang trí phòng ngủ đẹp và
-                                                        chi tiết
-                                                        nhất? Tham khảo hướng dẫn decor phòng ngủ dưới đây để tìm ra ý
-                                                        tưởng trang
-                                                        trí phù hợp nhất với bạn nhé.
-                                                        1. Lưu ý trước khi decor phòng ngủ
-                                                        Decor phòng ngủ&nbsp;không chỉ cần khoa học, thẩm mỹ mà cần
-                                                        thuận phong
-                                                        thủy. Đối với người Việt, yếu tố phong thủy được đánh giá quan
-                                                        trọng....</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="item-blog mb-md-4 mb-2">
-                                                <a class="thumb ratioblog d-block position-relative rounded-10"
-                                                    href="/blog/huong-dan-tu-decor-phong-ngu-dep-va-chuan-phong-thuy-2023"
-                                                    title="Hướng dẫn tự decor phòng ngủ đẹp và chuẩn phong thủy 2023">
-                                                    <img class=" position-absolute"
-                                                        src="/assets/100/501/740/articles/1-15da8b7a-69a1-43cc-a22b-26b1f9d7371a.jpg?v=1701363821503"
-                                                        alt="Hướng dẫn tự decor phòng ngủ đẹp và chuẩn phong thủy 2023">
-                                                </a>
-                                                <div class="content py-3">
-                                                    <div class="time-post mb-2 d-md-block d-none">Thứ năm, 30/11/2023,
-                                                        11:36</div>
-                                                    <h3 class="bold mb-md-2 mb-1">
-                                                        <a href="/blog/huong-dan-tu-decor-phong-ngu-dep-va-chuan-phong-thuy-2023"
-                                                            class="text2line"
-                                                            title="Hướng dẫn tự decor phòng ngủ đẹp và chuẩn phong thủy 2023">Hướng
-                                                            dẫn tự decor phòng ngủ đẹp và chuẩn phong thủy 2023</a>
-                                                    </h3>
-                                                    <p class="justify summary text4line">Bạn đang tìm kiếm ý tưởng
-                                                        decor phòng ngủ?
-                                                        Bạn muốn tham khảo nhiều phong cách trang trí phòng ngủ đẹp và
-                                                        chi tiết
-                                                        nhất? Tham khảo hướng dẫn decor phòng ngủ dưới đây để tìm ra ý
-                                                        tưởng trang
-                                                        trí phù hợp nhất với bạn nhé.
-                                                        1. Lưu ý trước khi decor phòng ngủ
-                                                        Decor phòng ngủ&nbsp;không chỉ cần khoa học, thẩm mỹ mà cần
-                                                        thuận phong
-                                                        thủy. Đối với người Việt, yếu tố phong thủy được đánh giá quan
-                                                        trọng....</p>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    @endforeach
 
                                     </div>
                                     <div class="pagenav m-0">
 
                                         <nav>
                                             <ul class="pagination clearfix">
-
-                                                <li class="page-item disabled"><a class="page-link"
-                                                        href="#"><svg aria-hidden="true" focusable="false"
-                                                            data-prefix="far" data-icon="angle-left" role="img"
-                                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"
-                                                            class="svg-inline--fa fa-angle-left fa-w-6">
-                                                            <path fill="currentColor"
-                                                                d="M4.2 247.5L151 99.5c4.7-4.7 12.3-4.7 17 0l19.8 19.8c4.7 4.7 4.7 12.3 0 17L69.3 256l118.5 119.7c4.7 4.7 4.7 12.3 0 17L168 412.5c-4.7 4.7-12.3 4.7-17 0L4.2 264.5c-4.7-4.7-4.7-12.3 0-17z"
-                                                                class=""></path>
-                                                        </svg></a></li>
-
-
-
-
-
-                                                <li class="active page-item disabled"><a class="page-link"
-                                                        href="#">1</a>
-                                                </li>
-
-
-
-
-                                                <li class="page-item"><a class="page-link"
-                                                        href="/tin-tuc?page=2">2</a></li>
-
-
-
-
-                                                <li class="page-item hidden-xs"><a class="page-link"
-                                                        href="/tin-tuc?page=2"><svg aria-hidden="true"
-                                                            focusable="false" data-prefix="far"
-                                                            data-icon="angle-right" role="img"
-                                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"
-                                                            class="svg-inline--fa fa-angle-right fa-w-6">
-                                                            <path fill="currentColor"
-                                                                d="M187.8 264.5L41 412.5c-4.7 4.7-12.3 4.7-17 0L4.2 392.7c-4.7-4.7-4.7-12.3 0-17L122.7 256 4.2 136.3c-4.7-4.7-4.7-12.3 0-17L24 99.5c4.7-4.7 12.3-4.7 17 0l146.8 148c4.7 4.7 4.7 12.3 0 17z"
-                                                                class=""></path>
-                                                        </svg></a></li>
-
+                                                @php
+                                                    $queryParams = request()->query();
+                                                    unset($queryParams['page']);
+                                                    $queryString = http_build_query($queryParams);
+                                                @endphp
+                                                @if ($blogs->currentPage() > 1)
+                                                    <li class="page-item"><a class="page-link"
+                                                            href="/blogs?{{ $queryString }}&page={{ $blogs->currentPage() - 1 }}"><svg aria-hidden="true" focusable="false"
+                                                                data-prefix="far" data-icon="angle-left" role="img"
+                                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"
+                                                                class="svg-inline--fa fa-angle-left fa-w-6">
+                                                                <path fill="currentColor"
+                                                                    d="M4.2 247.5L151 99.5c4.7-4.7 12.3-4.7 17 0l19.8 19.8c4.7 4.7 4.7 12.3 0 17L69.3 256l118.5 119.7c4.7 4.7 4.7 12.3 0 17L168 412.5c-4.7 4.7-12.3 4.7-17 0L4.2 264.5c-4.7-4.7-4.7-12.3 0-17z"
+                                                                    class=""></path>
+                                                            </svg></a></li>
+                                                @endif
+                                                @for ($i = 1; $i <= $blogs->lastPage(); $i++)
+                                                    <li class="page-item {{ $i == $blogs->currentPage() ? 'active' : '' }}">
+                                                        <a class="page-link" href="/blogs?{{ $queryString }}&page={{ $i }}">{{ $i }}</a>
+                                                    </li>
+                                                @endfor
+                                                @if ($blogs->currentPage() < $blogs->lastPage())
+                                                    <li class="page-item"><a class="page-link"
+                                                            href="/blogs?{{ $queryString }}&page={{ $blogs->currentPage() + 1 }}"><svg aria-hidden="true"
+                                                                focusable="false" data-prefix="far"
+                                                                data-icon="angle-right" role="img"
+                                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"
+                                                                class="svg-inline--fa fa-angle-right fa-w-6">
+                                                                <path fill="currentColor"
+                                                                    d="M187.8 264.5L41 412.5c-4.7 4.7-12.3 4.7-17 0L4.2 392.7c-4.7-4.7-4.7-12.3 0-17L122.7 256 4.2 136.3c-4.7-4.7-4.7-12.3 0-17L24 99.5c4.7-4.7 12.3-4.7 17 0l146.8 148c4.7 4.7 4.7 12.3 0 17z"
+                                                                    class=""></path>
+                                                            </svg></a></li>
+                                                @endif
                                             </ul>
                                         </nav>
 

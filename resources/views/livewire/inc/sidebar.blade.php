@@ -28,11 +28,9 @@
         });
     </script>
     <div class="aside-item aside-item-search rounded-10 mb-5">
-        <form action="/search" method="get" class="position-relative"
-            role="search">
-            <input type="text" name="query" class="form-control py-0 pl-3 pr-5"
+        <form action="/blogs" method="get" class="position-relative" role="search">
+            <input type="text" name="keyword" class="form-control py-0 pl-3 pr-5"
                 placeholder="Từ khóa" autocomplete="off" />
-            <input type="hidden" name="type" value="article">
             <button class="btn btn-default position-absolute p-0" type="submit"
                 aria-label="Tìm kiếm"><svg xmlns="http://www.w3.org/2000/svg"
                     version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
