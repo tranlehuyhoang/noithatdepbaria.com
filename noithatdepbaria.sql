@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Mar 31, 2025 at 06:40 AM
+-- Generation Time: Mar 31, 2025 at 09:24 AM
 -- Server version: 8.0.30
 -- PHP Version: 8.2.27
 
@@ -84,10 +84,10 @@ CREATE TABLE `cache` (
 --
 
 INSERT INTO `cache` (`key`, `value`, `expiration`) VALUES
-('77de68daecd823babbb58edb1c8e14d7106e83bb', 'i:2;', 1743393131),
-('77de68daecd823babbb58edb1c8e14d7106e83bb:timer', 'i:1743393131;', 1743393131),
-('livewire-rate-limiter:a17961fa74e9275d529f489537f179c05d50c2f3', 'i:1;', 1743390258),
-('livewire-rate-limiter:a17961fa74e9275d529f489537f179c05d50c2f3:timer', 'i:1743390258;', 1743390258);
+('1b6453892473a467d07372d45eb05abc2031647a', 'i:1;', 1743413085),
+('1b6453892473a467d07372d45eb05abc2031647a:timer', 'i:1743413085;', 1743413085),
+('livewire-rate-limiter:a17961fa74e9275d529f489537f179c05d50c2f3', 'i:1;', 1743412727),
+('livewire-rate-limiter:a17961fa74e9275d529f489537f179c05d50c2f3:timer', 'i:1743412727;', 1743412727);
 
 -- --------------------------------------------------------
 
@@ -229,7 +229,31 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (10, '2025_03_31_104140_create_blogs_table', 8),
 (11, '2025_03_31_105348_create_about_table', 9),
 (12, 'aaa2025_03_31_105348_create_about_table', 10),
-(13, '2025_03_31_110334_create_contacts_table', 11);
+(13, '2025_03_31_110334_create_contacts_table', 11),
+(14, '2025_03_31_161927_create_partners_table', 12),
+(15, 'aa2025_03_31_161927_create_partners_table', 13);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `partners`
+--
+
+CREATE TABLE `partners` (
+  `id` bigint UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `logo` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `website` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `partners`
+--
+
+INSERT INTO `partners` (`id`, `name`, `logo`, `website`, `created_at`, `updated_at`) VALUES
+(1, 'heli', '01JQNR78F8CNVGZQKVX4T9JP17.png', 'https://heli.com.vn', '2025-03-31 09:23:47', '2025-03-31 09:23:47');
 
 -- --------------------------------------------------------
 
@@ -340,7 +364,8 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('OQKEsVG6eFLDgEheCORP4bH9oMnLGJYeT9BD4cPM', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 OPR/117.0.0.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiRkYzMGNDRnliS0wzVWlFOHNGbzc1WlluRlFDeXI2enVKSWtZcVJTUyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6ODc6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9zZXJ2aWNlL2h1b25nLWRhbi10dS1kZWNvci1waG9uZy1uZ3UtZGVwLXZhLWNodWFuLXBob25nLXRodXktMjAyMyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1743403194);
+('D08R1TVYH3Ei0rTD41FOgDJuGaLIU4e0nvMOeHSw', 4, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 OPR/117.0.0.0', 'YTo3OntzOjY6Il90b2tlbiI7czo0MDoiNkkzd3ViNzYydkZqbE02bEVlV2tXejBZakZhbGQ0MVVleFVGZDRhcyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzY6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9hZG1pbi9wYXJ0bmVycyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6MzoidXJsIjthOjA6e31zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aTo0O3M6MTc6InBhc3N3b3JkX2hhc2hfd2ViIjtzOjYwOiIkMnkkMTIkRExhcWdPNFAzNFJzSzRobi5QZlhKdU5nVkx3OGN0VnM4cExzcXgzS2tRVVhDU2ozNkRURlMiO3M6ODoiZmlsYW1lbnQiO2E6MDp7fX0=', 1743413068),
+('OQKEsVG6eFLDgEheCORP4bH9oMnLGJYeT9BD4cPM', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 OPR/117.0.0.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiRkYzMGNDRnliS0wzVWlFOHNGbzc1WlluRlFDeXI2enVKSWtZcVJTUyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mjg6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC92aWRlb3MiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1743405045);
 
 -- --------------------------------------------------------
 
@@ -364,7 +389,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(3, 'admin', 'admin@gmail.com', NULL, '$2y$12$DYkQdIEuvCGb/7uRpkE5AOZuDK4PcBxf5C77B2lpEqed6GbIGLs1K', NULL, '2025-03-31 02:55:58', '2025-03-31 02:55:58');
+(4, 'noithatdepbaria@gmail.com', 'noithatdepbaria@gmail.com', NULL, '$2y$12$DLaqgO4P34RsK4hn.PfXJuNgVLw8ctVs8pLsqx3KkQUXCSj36DTFS', NULL, '2025-03-31 09:17:42', '2025-03-31 09:17:42');
 
 -- --------------------------------------------------------
 
@@ -453,6 +478,12 @@ ALTER TABLE `job_batches`
 -- Indexes for table `migrations`
 --
 ALTER TABLE `migrations`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `partners`
+--
+ALTER TABLE `partners`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -548,7 +579,13 @@ ALTER TABLE `jobs`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
+-- AUTO_INCREMENT for table `partners`
+--
+ALTER TABLE `partners`
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `products`
@@ -572,7 +609,7 @@ ALTER TABLE `services`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `videos`
