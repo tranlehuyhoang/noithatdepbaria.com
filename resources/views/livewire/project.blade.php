@@ -3,7 +3,7 @@
         <div>
 
             <head>
-                <title>Hướng dẫn tự decor phòng ngủ đẹp và chuẩn phong thủy 2023 </title>
+                <title>{{ $project->title }}</title>
                 <link rel="preload" as='style' type="text/css"
                     href="/assets/100/501/740/themes/929449/assets/main.scss.css?1736415638335">
                 <link rel="preload" as='style' type="text/css"
@@ -571,7 +571,7 @@
                                         d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
                                         class=""></path>
                                 </svg> </li>
-                            <li class="active">Hướng dẫn tự decor phòng ngủ đẹp và chuẩn phong thủy 2023</li>
+                            <li class="active">{{ $project->title }}</li>
                         </ul>
                     </div>
                 </section>
@@ -581,238 +581,15 @@
                             <div class="right-content col-lg-9 col-12 order-lg-2">
                                 <article class="article-main">
                                     <div class="article-details clearfix">
-                                        <h1 class="article-title">Hướng dẫn tự decor phòng ngủ đẹp và chuẩn phong thủy
-                                            2023</h1>
+                                        <h1 class="article-title">
+                                            {{ $project->title }}
+                                        </h1>
                                         <div class="time-post mb-2 d-inline-block">
-                                            <span>30/11/2023</span>
+                                            <span>{{ \Carbon\Carbon::parse( time: $project->created_at)->translatedFormat(' d/n/Y') }}</span>
                                         </div>
                                         <div class="rte" data-content>
                                             <div class="js-toc-content">
-
-
-
-
-                                                <p><em><strong>Bạn đang tìm kiếm ý tưởng decor phòng ngủ? Bạn muốn tham
-                                                            khảo nhiều
-                                                            phong cách trang trí phòng ngủ đẹp và chi tiết nhất? Tham
-                                                            khảo hướng dẫn
-                                                            decor phòng ngủ dưới đây để tìm ra ý tưởng trang trí phù hợp
-                                                            nhất với
-                                                            bạn nhé.</strong></em></p>
-                                                <h2><strong>1. Lưu ý trước khi decor phòng ngủ</strong></h2>
-                                                <p><strong>Decor phòng ngủ</strong>&nbsp;không chỉ cần khoa học, thẩm mỹ
-                                                    mà cần
-                                                    thuận phong thủy. Đối với người Việt, yếu tố phong thủy được đánh
-                                                    giá quan
-                                                    trọng. Nếu phong thủy tốt sẽ giúp giảm thiểu được tai hoạ khi vào
-                                                    vận xấu, giúp
-                                                    gia tăng sự thành công và may mắn khi vào vận tốt. Có 3 vị trí phong
-                                                    thủy quan
-                                                    trọng không được bỏ qua trong nhà đó là cửa chính, phòng ngủ và bếp.
-                                                </p>
-                                                <p>Theo đánh giá của các nhà khoa học, việc có một giấc ngủ ngon cũng
-                                                    quan trọng
-                                                    không kém gì việc ăn uống lành mạnh và tập thể dục.&nbsp;</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                                <p><strong>Decor phòng ngủ chuẩn phong thủy&nbsp;</strong>sẽ mang đến
-                                                    những giấc ngủ
-                                                    ngon, tinh thần phấn chấn. Ngược lại, phong thủy phòng ngủ bố trí
-                                                    sai cách sẽ
-                                                    mang lại nhiều phiền toái. Những nguyên tắc trong phòng ngủ hợp với
-                                                    phong thủy
-                                                    cần chú ý như hướng phòng, các cách đặt giường ngủ…</p>
-                                                <p style="text-align: center;"><img data-thumb="original"
-                                                        height="468" width="700"
-                                                        src="/assets/100/501/740/files/1-626afc62-4d0e-4630-b863-7ba9266eb8d1.jpg?v=1701362166430" />
-                                                </p>
-                                                <h2><strong>2. Lưu ý decor phòng ngủ đẹp và chuẩn phong thủy</strong>
-                                                </h2>
-                                                <h3><strong>2.1. Bố trí giường khi decor phòng ngủ&nbsp;</strong></h3>
-                                                <p>Giường ngủ cần có chân cao hơn mặt sàn từ 10cm. Dưới gầm giường phải
-                                                    tạo khoảng
-                                                    trống. Giường phải có kích thước cân đối với căn phòng, giúp hấp thu
-                                                    nguồn khí
-                                                    tốt khi ngủ.&nbsp;</p>
-                                                <p>Không nên đặt giường ngủ ở vị trí quá thoáng như trước cửa ra vào.
-                                                    Decor phòng
-                                                    ngủ chuẩn phong thủy là bạn nên đặt giường ở giữa căn phòng, để
-                                                    trống ở hai bên
-                                                    cạnh giường, đầu giường kê vào tường.&nbsp;</p>
-                                                <p><em><strong>Lưu ý:&nbsp;</strong></em>Khi đặt giường nên tránh vị trí
-                                                    ngay dưới
-                                                    cửa sổ hoặc đầu giường không nằm sát với tường vì sẽ gây những luồng
-                                                    khí không
-                                                    tốt, ảnh hưởng đến khí lực của gia chủ.</p>
-                                                <p>Giường ngủ không được sát hoặc đối diện cửa chính. Không đặt giường
-                                                    đối diện cửa
-                                                    ra vào. Vị trí tốt nhất đặt giường là chéo so với cửa ra vào và tạo
-                                                    khoảng cách
-                                                    càng rộng thì giấc ngủ càng sâu. Vị trí đầu giường ngủ tốt nhất cần
-                                                    có một chỗ
-                                                    tựa vững chắc, kê đầu giường sát vào một bức tường trong phòng. Bức
-                                                    tường này
-                                                    không nên cửa ra vào hoặc cửa sổ là lý tưởng nhất.</p>
-                                                <p style="text-align: center;"><img data-thumb="original"
-                                                        height="468" width="700"
-                                                        src="/assets/100/501/740/files/2-5c157a08-38ad-4fbf-905f-38d765510507.jpg?v=1701362180048" />
-                                                </p>
-                                                <h3><strong>2.2 Phối màu khi decor phòng ngủ</strong></h3>
-                                                <p>Khi decor phòng ngủ, màu sắc cần đảm bảo các tiêu chí như đúng sở
-                                                    thích, hợp
-                                                    phong thủy, hài hòa. Mỗi mệnh sẽ ứng với các màu sắc khác nhau, mỗi
-                                                    mệnh sẽ có
-                                                    những màu tương sinh, tương khắc khác nhau.&nbsp;</p>
-                                                <p>Gam màu nên dùng khi decor phòng ngủ nên là gam màu pastel và gam màu
-                                                    nóng. Màu
-                                                    pastel là lựa chọn hợp lý nhất cho khoảng thời gian nghỉ ngơi sau
-                                                    nhiều giờ
-                                                    stress. Các gam màu nóng mang lại cho bạn năng lượng.&nbsp;</p>
-                                                <h3><strong>2.3 Nguyên tắc sắp xếp nội thất khi decor phòng
-                                                        ngủ&nbsp;</strong></h3>
-                                                <p>Nội thất trong phòng ngủ cần được sắp xếp gọn gàng, đơn giản. Không
-                                                    nên để quá
-                                                    nhiều đồ ở gần đầu giường vì sẽ cản trở năng lượng tốt. Những vị trí
-                                                    gần giường
-                                                    sẽ là nơi tụ khí cho căn phòng ngủ.&nbsp;</p>
-                                                <p>Nếu bạn để nhiều đồ khi decor phòng ngủ sẽ gây cản trở sự lưu thông
-                                                    khí và ảnh
-                                                    hưởng đến sức khỏe của gia chủ. Nếu phòng ngủ lộn xộn, hãy thường
-                                                    xuyên dọn dẹp,
-                                                    sắp xếp phòng ngủ. Nên cất mọi thứ lên kệ sẽ khiến căn phòng của bạn
-                                                    trở nên
-                                                    rộng rãi hơn.</p>
-                                                <h3><strong>2.4 Decor phòng ngủ với gương soi đúng vị trí</strong></h3>
-                                                <p>Việc đặt gương trong phòng ngủ cũng cần được lưu ý vì nếu không hợp
-                                                    lý sẽ ảnh
-                                                    hưởng lớn đến sức khỏe, tài lộc của gia đình.&nbsp;</p>
-                                                <p>Theo phong thủy, không nên đặt gương đối diện giường ngủ khi ​​decor
-                                                    phòng ngủ vì
-                                                    sẽ làm cho mối quan hệ trong gia đình bị xung đột, bất hòa. Nếu bạn
-                                                    vẫn muốn sử
-                                                    dụng gương, bạn nên chọn những loại gương có cửa để che lại khi
-                                                    ngủ.&nbsp;</p>
-                                                <p>Ngoài ra, có thể đặt gương ở các vị trí như quay gương về phía tường
-                                                    sau khi đã
-                                                    sử dụng, bố trí gương trong phòng ngủ ở vị trí quay về hướng cửa sổ
-                                                    có cảnh vật
-                                                    đẹp hoặc treo gương đối diện với những bức tranh sinh động.</p>
-                                                <h2><strong>3. Gợi ý decor phòng ngủ đẹp kèm ảnh thực tế&nbsp;</strong>
-                                                </h2>
-                                                <p>Để decor phòng ngủ đẹp, trước tiên bạn cần có một căn phòng ngủ tiện
-                                                    nghi, đáp
-                                                    ứng được nhu cầu sinh hoạt và đảm bảo công năng.&nbsp;</p>
-                                                <p style="text-align: center;"><img data-thumb="original"
-                                                        height="468" width="700"
-                                                        src="/assets/100/501/740/files/3-8744c313-b3b6-41ce-92d6-394c41a6c527.jpg?v=1701362192233" />
-                                                </p>
-                                                <h3><strong>3.1 Mẫu decor phòng ngủ nhẹ nhàng, lãng mạn&nbsp;</strong>
-                                                </h3>
-                                                <p>Decor phòng ngủ xuất phát từ tình yêu với kiến trúc Pháp của gia chủ,
-                                                    cùng với vẻ
-                                                    đẹp giản dị từ các vật liệu thô mộc của Việt Nam, gia chủ và nhóm
-                                                    KTS đã lên ý
-                                                    tưởng với những thiết kế ấn tượng độc đáo mà rất lãng mạn. Phòng ngủ
-                                                    được đặt
-                                                    tại tầng 2 trong ngôi nhà 3 tầng, gồm phòng ngủ master dành cho bố
-                                                    mẹ, phòng ngủ
-                                                    của con nhỏ.&nbsp;</p>
-                                                <p>Mây và gỗ tự nhiên được dùng trong hầu hết các đồ nội thất, tạo nên
-                                                    không gian
-                                                    nhẹ nhàng, mộc mạc, hoài cổ nhưng không kém phần hiện đại.</p>
-                                                <p>Phòng ngủ đáp ứng đầy đủ các tiêu chí về phong thủy, tính thẩm mỹ cao
-                                                    thể hiện ở
-                                                    sự chỉn chu trong thiết kế, phối màu phù hợp theo mong muốn của gia
-                                                    chủ.&nbsp;
-                                                </p>
-                                                <h3><strong>3.2 Mẫu decor phòng ngủ cho người yêu thích màu đen huyền
-                                                        bí</strong>
-                                                </h3>
-                                                <p>House at Shelford Road là ngôi nhà phố nằm ở cuối đường cụt, được xây
-                                                    dựng với 4
-                                                    tầng. Tầng 1 gồm các không gian sinh hoạt chung như phòng khách,
-                                                    bếp, ăn, bể
-                                                    bơi… Tầng 2 gồm sân ngoài trời, phòng piano, phòng cho khách… Tầng 3
-                                                    gồm các
-                                                    không gian cá nhân hơn như phòng ngủ, phòng gia đình, phòng thay đồ…
-                                                    Đặc biệt,
-                                                    tầng 4 gồm phòng gym, phòng đa chức năng.</p>
-                                                <p>Chúng ta chú ý hơn đến decor phòng ngủ tại khu vực tầng 3. Gia chủ là
-                                                    người yêu
-                                                    thích màu đen, đề cao một không gian sống chất lượng với hệ thống
-                                                    thông gió tự
-                                                    nhiên. Do đó, việc sắp xếp nội thất, trang trí cho không gian căn
-                                                    phòng này cũng
-                                                    tuân theo tiêu chí đó.&nbsp;</p>
-                                                <p>Ánh sáng, màu sắc, cách sắp xếp các đồ nội thất trong phòng ngủ hài
-                                                    hòa sẽ giúp
-                                                    gia chủ có một không gian nghỉ ngơi trọn vẹn và thoải mái nhất. Một
-                                                    nơi đáng để
-                                                    về sau những giờ phút mệt nhoài ngoài cánh cửa.</p>
-                                                <h3><strong>3.3 Mẫu decor phòng ngủ phong cách nhẹ nhàng cho nhà có trẻ
-                                                        nhỏ</strong>
-                                                </h3>
-                                                <p>“Cuộc sống ngoài kia đã đủ mệt, nhà sẽ là nơi chữa lành tất cả. Nhà
-                                                    là nơi mà mọi
-                                                    bão giông dừng lại sau cánh cửa, nhà là nơi trở về để được yêu
-                                                    thương. Để dù cho
-                                                    có bất cứ điều gì xảy đến, chỉ cần có nhau thì ngày dài tháng rộng
-                                                    về sau sẽ đều
-                                                    là an yên.” - Gia chủ chia sẻ.&nbsp;</p>
-                                                <p>Nắm được mong muốn của gia chủ, đội ngũ KTS đã lên ý tưởng và thiết
-                                                    kế tổng thể
-                                                    ngôi nhà theo phong cách nhẹ nhàng, đơn giản để các bé có tuổi thơ
-                                                    vui vẻ trọn
-                                                    vẹn trong căn nhà mới.&nbsp;</p>
-                                                <p>Cùng với việc decor các phòng ngủ trong ngôi nhà tạo sự nhẹ nhàng thì
-                                                    những đường
-                                                    cong trên trần nhà, cửa, tường cũng giúp tổng thể không gian trở nên
-                                                    mềm mại,
-                                                    hài hoà thị giác, giảm độ thô cứng hơn.&nbsp;</p>
-                                                <h3><strong>3.4 Mẫu decor phòng ngủ nhỏ phong cách hiện đại</strong>
-                                                </h3>
-                                                <p>Up House là ngôi nhà 1 tầng nằm tại Sóc Sơn, Hà Nội. Công trình gồm 5
-                                                    khối độc
-                                                    lập được thiết kế để đáp ứng nhu cầu sinh hoạt của gia đình 3 thế
-                                                    hệ. Để tiết
-                                                    kiệm chi phí xây dựng, Up House ưu tiên sử dụng các vật liệu địa
-                                                    phương và những
-                                                    giải pháp tiết kiệm năng lượng chiếu sáng, năng lượng gió... Điều
-                                                    này được thể
-                                                    hiện ở thiết kế phòng ngủ:</p>
-                                                <p>Nếu không có quá nhiều kinh phí nhưng vẫn đảm bảo công năng sử dụng,
-                                                    sự tiên nghi
-                                                    cho gia đình, bạn có thể tham khảo cách decor phòng ngủ này nhé.</p>
+                                                {!! $project->description !!}
                                             </div>
                                         </div>
                                     </div>
@@ -859,204 +636,32 @@
                                     <div class="block-title text-center bold mb-2"><a href="/dich-vu"
                                             title="Dịch vụ">Dịch vụ khác</a></div>
                                     <div class="row">
-                                        <div class="col-md-4 mb-3">
-                                            <div class="item-blog mb-md-4 mb-2">
-                                                <a class="thumb ratioblog d-block position-relative rounded-10"
-                                                    href="/huong-dan-tu-decor-phong-ngu-dep-va-chuan-phong-thuy-2023"
-                                                    title="Hướng dẫn tự decor phòng ngủ đẹp và chuẩn phong thủy 2023">
-                                                    <img class="position-absolute"
-                                                        src="/assets/100/501/740/articles/1-15da8b7a-69a1-43cc-a22b-26b1f9d7371a.jpg?v=1701363821503"
-                                                        alt="Hướng dẫn tự decor phòng ngủ đẹp và chuẩn phong thủy 2023">
-                                                </a>
-                                                <div class="content py-3">
-                                                    <div class="time-post mb-2 d-md-block d-none">Thứ năm, 30/11/2023,
-                                                        11:36</div>
-                                                    <h3 class="bold mb-md-2 mb-1">
-                                                        <a href="/huong-dan-tu-decor-phong-ngu-dep-va-chuan-phong-thuy-2023"
-                                                            class="text2line"
-                                                            title="Hướng dẫn tự decor phòng ngủ đẹp và chuẩn phong thủy 2023">Hướng
-                                                            dẫn tự decor phòng ngủ đẹp và chuẩn phong thủy 2023</a>
-                                                    </h3>
-                                                    <p class="justify summary text4line">Bạn đang tìm kiếm ý tưởng
-                                                        decor phòng ngủ?
-                                                        Bạn muốn tham khảo nhiều phong cách trang trí phòng ngủ đẹp và
-                                                        chi tiết
-                                                        nhất? Tham khảo hướng dẫn decor phòng ngủ dưới đây để tìm ra ý
-                                                        tưởng trang
-                                                        trí phù hợp nhất với bạn nhé.
-                                                        1. Lưu ý trước khi decor phòng ngủ
-                                                        Decor phòng ngủ&nbsp;không chỉ cần khoa học, thẩm mỹ mà cần
-                                                        thuận phong
-                                                        thủy. Đối với người Việt, yếu tố phong thủy được đánh giá quan
-                                                        trọng....</p>
+                                        @foreach ($services as $service)
+                                            <div class="col-md-4 mb-3">
+                                                <div class="item-blog mb-md-4 mb-2">
+                                                    <a class="thumb ratioblog d-block position-relative rounded-10"
+                                                        href="{{ '/service/'. $service->slug }}"
+                                                        title="{{ $service->title }}">
+                                                        <img class="position-absolute"
+                                                            src="{{ Storage::url($service->banner) }}"
+                                                            alt="{{ $service->title }}">
+                                                    </a>
+                                                    <div class="content py-3">
+                                                        <div class="time-post mb-2 d-md-block d-none">
+                                                            {{ ucfirst(\Carbon\Carbon::parse( $service->created_at)->locale('vi')->translatedFormat('l, d/n/Y, H:i:s')) }}
+                                                        </div>
+                                                        <h3 class="bold mb-md-2 mb-1">
+                                                            <a href="{{ '/service/'. $service->slug }}"
+                                                                class="text2line"
+                                                                title="{{ $service->short_des }}">
+                                                                {{ $service->title }}
+                                                            </a>
+                                                        </h3>
+                                                        <p class="justify summary text4line">{{ $service->short_des }}</p>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-md-4 mb-3">
-                                            <div class="item-blog mb-md-4 mb-2">
-                                                <a class="thumb ratioblog d-block position-relative rounded-10"
-                                                    href="/ghe-sofa-bo-roi-phu-hop-voi-khong-gian-phong-khach-nao"
-                                                    title="Ghế sofa bộ rời phù hợp với không gian phòng khách nào?">
-                                                    <img class="position-absolute"
-                                                        src="/assets/100/501/740/articles/1-e7aec805-773d-496b-a0c5-68693018e642.jpg?v=1701361754090"
-                                                        alt="Ghế sofa bộ rời phù hợp với không gian phòng khách nào?">
-                                                </a>
-                                                <div class="content py-3">
-                                                    <div class="time-post mb-2 d-md-block d-none">Thứ năm, 30/11/2023,
-                                                        11:29</div>
-                                                    <h3 class="bold mb-md-2 mb-1">
-                                                        <a href="/ghe-sofa-bo-roi-phu-hop-voi-khong-gian-phong-khach-nao"
-                                                            class="text2line"
-                                                            title="Ghế sofa bộ rời phù hợp với không gian phòng khách nào?">Ghế
-                                                            sofa bộ rời phù hợp với không gian phòng khách nào?</a>
-                                                    </h3>
-                                                    <p class="justify summary text4line">Những bộ&nbsp;ghế sofa sang
-                                                        trọng&nbsp;hay
-                                                        hiện đại, đơn giản hay cổ điển đều mang lại phong cách riêng.
-                                                        Bạn thích kiểu
-                                                        dáng, thiết kế của những bộ ghế sofa bộ rời nhưng không biết có
-                                                        phù hợp với
-                                                        phòng khách nhà bạn hay không. Bạn có thể tham khảo bài viết
-                                                        dưới đây để
-                                                        biết ghế sofa bộ rời phù hợp với không gian phòng khách nào nhé.
-                                                        1. Ghế sofa bộ rời phù hợp với không gian phòng khách rộng
-                                                        Điều...</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 mb-3">
-                                            <div class="item-blog mb-md-4 mb-2">
-                                                <a class="thumb ratioblog d-block position-relative rounded-10"
-                                                    href="/bi-quyet-chon-sofa-cho-phong-khach-nho"
-                                                    title="Bí quyết chọn sofa cho phòng khách nhỏ">
-                                                    <img class="position-absolute"
-                                                        src="/assets/100/501/740/articles/3-23f953d8-34eb-4cf1-a22a-db13998581ea.jpg?v=1701361427303"
-                                                        alt="Bí quyết chọn sofa cho phòng khách nhỏ">
-                                                </a>
-                                                <div class="content py-3">
-                                                    <div class="time-post mb-2 d-md-block d-none">Thứ năm, 30/11/2023,
-                                                        11:23</div>
-                                                    <h3 class="bold mb-md-2 mb-1">
-                                                        <a href="/bi-quyet-chon-sofa-cho-phong-khach-nho"
-                                                            class="text2line"
-                                                            title="Bí quyết chọn sofa cho phòng khách nhỏ">Bí quyết
-                                                            chọn sofa cho
-                                                            phòng khách nhỏ</a>
-                                                    </h3>
-                                                    <p class="justify summary text4line">Với không gian phòng khách
-                                                        nhỏ, việc lựa
-                                                        chọn sofa trở nên không còn đơn giản đối với nhiều gia đình.
-                                                        Nhưng điều đó
-                                                        không có nghĩa là quá khó khăn. Hãy để Showroom Hùng Túy giúp
-                                                        bạn giải quyết
-                                                        mối lo ngại này.
-                                                        1. Kiểm tra kích thước phòng khách
-                                                        Nhà của bạn có diện tích phòng khách nhỏ vì thế trước khi mua
-                                                        sofa bạn cần
-                                                        đo đạc xem kích thước của căn phòng như thế nào. Và xem xét...
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 mb-3">
-                                            <div class="item-blog mb-md-4 mb-2">
-                                                <a class="thumb ratioblog d-block position-relative rounded-10"
-                                                    href="/4-nguyen-tac-lua-chon-den-trang-tri-ban-nen-biet"
-                                                    title="4 nguyên tắc lựa chọn đèn trang trí bạn nên biết">
-                                                    <img class="position-absolute"
-                                                        src="/assets/100/501/740/articles/1-0e7d483f-2f8e-447d-a4cb-26e97552fcab.jpg?v=1701361061007"
-                                                        alt="4 nguyên tắc lựa chọn đèn trang trí bạn nên biết">
-                                                </a>
-                                                <div class="content py-3">
-                                                    <div class="time-post mb-2 d-md-block d-none">Thứ năm, 30/11/2023,
-                                                        11:17</div>
-                                                    <h3 class="bold mb-md-2 mb-1">
-                                                        <a href="/4-nguyen-tac-lua-chon-den-trang-tri-ban-nen-biet"
-                                                            class="text2line"
-                                                            title="4 nguyên tắc lựa chọn đèn trang trí bạn nên biết">4
-                                                            nguyên tắc
-                                                            lựa chọn đèn trang trí bạn nên biết</a>
-                                                    </h3>
-                                                    <p class="justify summary text4line">Việc thiết kế hệ thống đèn
-                                                        chiếu sáng nội
-                                                        thất trong gia đình thì lựa chọn đèn chiếu sáng và trang trí rất
-                                                        quan trọng.
-                                                        Không chỉ đảm bảo chất lượng chiếu sáng mà cần có tính thẩm mỹ
-                                                        nhất định. Vì
-                                                        thế bạn đã biết cách lựa chọn đèn trang trí chưa? Nếu như còn
-                                                        đang băn khoăn
-                                                        thì tham khảo những thông tin dưới đây nhé.
-                                                        Bí quyết lựa chọn đèn trang trí đúng chuẩn
-                                                        Đèn trang trí&nbsp;hiện nay đa...</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 mb-3">
-                                            <div class="item-blog mb-md-4 mb-2">
-                                                <a class="thumb ratioblog d-block position-relative rounded-10"
-                                                    href="/y-tuong-trang-tri-cay-gia-decor-trong-noi-that-xu-huong-hot"
-                                                    title="Ý tưởng trang trí cây giả decor trong nội thất xu hướng hót">
-                                                    <img class="position-absolute"
-                                                        src="/assets/100/501/740/articles/1-5c7ff00a-6797-472b-9d41-46dcfa42e22b.jpg?v=1701360890750"
-                                                        alt="Ý tưởng trang trí cây giả decor trong nội thất xu hướng hót">
-                                                </a>
-                                                <div class="content py-3">
-                                                    <div class="time-post mb-2 d-md-block d-none">Thứ năm, 30/11/2023,
-                                                        11:14</div>
-                                                    <h3 class="bold mb-md-2 mb-1">
-                                                        <a href="/y-tuong-trang-tri-cay-gia-decor-trong-noi-that-xu-huong-hot"
-                                                            class="text2line"
-                                                            title="Ý tưởng trang trí cây giả decor trong nội thất xu hướng hót">Ý
-                                                            tưởng trang trí cây giả decor trong nội thất xu hướng
-                                                            hót</a>
-                                                    </h3>
-                                                    <p class="justify summary text4line">Cây giả decor&nbsp;đã trở
-                                                        thành một phần
-                                                        quan trọng trong việc tạo không gian sống và làm việc thú vị
-                                                        hơn. Với sự
-                                                        tiện lợi và tính thẩm mỹ cao, những chiếc cây giả không chỉ làm
-                                                        phong phú
-                                                        thêm không gian xanh mà còn mang lại cảm giác gần gũi với thiên
-                                                        nhiên mà
-                                                        không cần đến việc chăm sóc đặc biệt như cây thật. Những ý tưởng
-                                                        trang trí
-                                                        với cây giả không chỉ đơn thuần là việc...</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 mb-3">
-                                            <div class="item-blog mb-md-4 mb-2">
-                                                <a class="thumb ratioblog d-block position-relative rounded-10"
-                                                    href="/noi-that-go-soi-su-giao-thoa-cua-ve-dep-va-chat-luong"
-                                                    title="Nội thất gỗ sồi – sự giao thoa của vẻ đẹp và chất lượng">
-                                                    <img class="position-absolute"
-                                                        src="/assets/100/501/740/articles/3.jpg?v=1700065992007"
-                                                        alt="Nội thất gỗ sồi – sự giao thoa của vẻ đẹp và chất lượng">
-                                                </a>
-                                                <div class="content py-3">
-                                                    <div class="time-post mb-2 d-md-block d-none">Thứ tư, 15/11/2023,
-                                                        11:33</div>
-                                                    <h3 class="bold mb-md-2 mb-1">
-                                                        <a href="/noi-that-go-soi-su-giao-thoa-cua-ve-dep-va-chat-luong"
-                                                            class="text2line"
-                                                            title="Nội thất gỗ sồi – sự giao thoa của vẻ đẹp và chất lượng">Nội
-                                                            thất gỗ sồi – sự giao thoa của vẻ đẹp và chất lượng</a>
-                                                    </h3>
-                                                    <p class="justify summary text4line">Ngày nay, xu hướng tìm về với
-                                                        vẻ đẹp đơn
-                                                        giản, bền vững, gần gũi với thiên nhiên càng trở nên phổ biến.
-                                                        Gỗ đã không
-                                                        đơn thuần chỉ là một chất liệu, mà nó đã trở thành biểu tượng
-                                                        cho vẻ đẹp
-                                                        giản đơn, mộc mạc kết hợp với nét đẹp hiện đại, sang
-                                                        trọng.&nbsp;
-                                                        Vẻ đẹp của tự nhiên
-                                                        Nội thất gỗ mang&nbsp;vẻ đẹp của thời gian, từng vân gỗ “kể”
-                                                        những câu
-                                                        chuyện về sự sống và sự thăng...</p>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        @endforeach
                                     </div>
                                 </div>
                             </div>
@@ -1075,115 +680,13 @@
                                                         fill="#ffffff" opacity="1" data-original="#000000"></path>
                                                 </g>
                                             </svg>DANH MỤC</div>
-                                        <nav class="nav-category">
-                                            <ul class="navbar-pills">
-                                                <li class="nav-item  position-relative">
-                                                    <a title="Hiện đại" href="/hien-dai" class="nav-link pr-5">Hiện
-                                                        đại</a>
-                                                    <i class="open_mnu down_icon"></i>
-                                                    <ul class="menu_down" style="display:none;">
-                                                        <li class="nav-item">
-                                                            <a title="Giường" class="nav-link"
-                                                                href="/giuong">Giường</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a title="Tủ" class="nav-link" href="/tu">Tủ</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a title="Đèn" class="nav-link" href="/den">Đèn</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a title="Cây trang trí" class="nav-link"
-                                                                href="/cay-trang-tri">Cây
-                                                                trang trí</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a title="Tranh treo tường" class="nav-link"
-                                                                href="/tranh-treo-tuong">Tranh treo tường</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li class="nav-item  position-relative">
-                                                    <a title="Cổ điển" href="/co-dien" class="nav-link pr-5">Cổ
-                                                        điển</a>
-                                                    <i class="open_mnu down_icon"></i>
-                                                    <ul class="menu_down" style="display:none;">
-                                                        <li class="nav-item">
-                                                            <a title="Giường" class="nav-link"
-                                                                href="/giuong">Giường</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a title="Tủ" class="nav-link" href="/tu">Tủ</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a title="Đèn" class="nav-link" href="/den">Đèn</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a title="Cây trang trí" class="nav-link"
-                                                                href="/cay-trang-tri">Cây
-                                                                trang trí</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a title="Tranh treo tường" class="nav-link"
-                                                                href="/">Tranh
-                                                                treo tường</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li class="nav-item  position-relative">
-                                                    <a title="Đơn giản" href="/don-gian" class="nav-link pr-5">Đơn
-                                                        giản</a>
-                                                    <i class="open_mnu down_icon"></i>
-                                                    <ul class="menu_down" style="display:none;">
-                                                        <li class="nav-item">
-                                                            <a title="Giường" class="nav-link"
-                                                                href="/giuong">Giường</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a title="Tủ" class="nav-link" href="/tu">Tủ</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a title="Đèn" class="nav-link" href="/den">Đèn</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a title="Cây trang trí" class="nav-link"
-                                                                href="/cay-trang-tri">Cây
-                                                                trang trí</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a title="Tranh treo tường" class="nav-link"
-                                                                href="/tranh-treo-tuong">Tranh treo tường</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li class="nav-item  position-relative">
-                                                    <a title="Sang trọng" href="/sang-trong"
-                                                        class="nav-link pr-5">Sang trọng</a>
-                                                    <i class="open_mnu down_icon"></i>
-                                                    <ul class="menu_down" style="display:none;">
-                                                        <li class="nav-item">
-                                                            <a title="Giường" class="nav-link"
-                                                                href="/giuong">Giường</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a title="Tủ" class="nav-link" href="/tu">Tủ</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a title="Đèn" class="nav-link" href="/den">Đèn</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a title="Cây trang trí" class="nav-link"
-                                                                href="/cay-trang-tri">Cây
-                                                                trang trí</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a title="Tranh treo tường" class="nav-link"
-                                                                href="/tranh-treo-tuong">Tranh treo tường</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </nav>
+                                            <nav class="nav-category">
+                                                @foreach ($categories as $category)
+                                                    <div class="nav-item  position-relative">
+                                                        <a title="{{ $category->title }}" href="/" class="nav-link pr-5">{{ $category->title }}</a>
+                                                    </div>
+                                                @endforeach
+                                            </nav>
                                     </div>
                                     <script>
                                         $(".open_mnu").click(function() {
@@ -1191,11 +694,10 @@
                                         });
                                     </script>
                                     <div class="aside-item aside-item-search rounded-10 mb-5">
-                                        <form action="/search" method="get" class="position-relative"
+                                        <form action="/blogs" method="get" class="position-relative"
                                             role="search">
-                                            <input type="text" name="query" class="form-control py-0 pl-3 pr-5"
+                                            <input type="text" name="keyword" class="form-control py-0 pl-3 pr-5"
                                                 placeholder="Từ khóa" autocomplete="off" />
-                                            <input type="hidden" name="type" value="article">
                                             <button class="btn btn-default position-absolute p-0" type="submit"
                                                 aria-label="Tìm kiếm"><svg xmlns="http://www.w3.org/2000/svg"
                                                     version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -1214,59 +716,26 @@
                                         <div class="aside-title bold mb-3 pb-3 border-bottom"><a href="/projects"
                                                 >Dự án</a></div>
                                         <div class="blog_content">
+                                            @foreach ($projects as $project)
                                             <div class="item d-flex flex-wrap">
                                                 <a class="post-thumb scale_hover"
-                                                    href="/huong-dan-tu-decor-phong-ngu-dep-va-chuan-phong-thuy-2023"
-                                                    title="Hướng dẫn tự decor phòng ngủ đẹp và chuẩn phong thủy 2023">
+                                                    href="{{ '/project/'.$project->slug }}"
+                                                    title="{{ $project->title }}">
                                                     <img class="w-100 h-100 rounded-5 "
-                                                        src="/assets/100/501/740/articles/1-15da8b7a-69a1-43cc-a22b-26b1f9d7371a.jpg?v=1701363821503"
-                                                        alt="Hướng dẫn tự decor phòng ngủ đẹp và chuẩn phong thủy 2023">
+                                                        src="{{Storage::url($project->banner)}}"
+                                                        alt="{{ $project->title }}">
                                                 </a>
                                                 <div class="post-content">
-                                                    <span>30/11/2023</span>
+                                                    <span>{{ \Carbon\Carbon::parse( time: $project->created_at)->translatedFormat(' d/n/Y') }}</span>
                                                     <h3 class="mb-0">
-                                                        <a title="Hướng dẫn tự decor phòng ngủ đẹp và chuẩn phong thủy 2023"
-                                                            href="/huong-dan-tu-decor-phong-ngu-dep-va-chuan-phong-thuy-2023">Hướng
-                                                            dẫn tự decor phòng ngủ đẹp và chuẩn phong thủy 2023</a>
+                                                        <a title="{{ $project->title }}"
+                                                            href="{{ '/project/'.$project->slug }}">
+                                                            {{ $project->title }}
+                                                        </a>
                                                     </h3>
                                                 </div>
                                             </div>
-                                            <div class="item d-flex flex-wrap">
-                                                <a class="post-thumb scale_hover"
-                                                    href="/ghe-sofa-bo-roi-phu-hop-voi-khong-gian-phong-khach-nao"
-                                                    title="Ghế sofa bộ rời phù hợp với không gian phòng khách nào?">
-                                                    <img class="w-100 h-100 rounded-5 "
-                                                        src="/assets/100/501/740/articles/1-e7aec805-773d-496b-a0c5-68693018e642.jpg?v=1701361754090"
-                                                        alt="Ghế sofa bộ rời phù hợp với không gian phòng khách nào?">
-                                                </a>
-                                                <div class="post-content">
-                                                    <span>30/11/2023</span>
-                                                    <h3 class="mb-0">
-                                                        <a title="Ghế sofa bộ rời phù hợp với không gian phòng khách nào?"
-                                                            href="/ghe-sofa-bo-roi-phu-hop-voi-khong-gian-phong-khach-nao">Ghế
-                                                            sofa
-                                                            bộ rời phù hợp với không gian phòng khách nào?</a>
-                                                    </h3>
-                                                </div>
-                                            </div>
-                                            <div class="item d-flex flex-wrap">
-                                                <a class="post-thumb scale_hover"
-                                                    href="/bi-quyet-chon-sofa-cho-phong-khach-nho"
-                                                    title="Bí quyết chọn sofa cho phòng khách nhỏ">
-                                                    <img class="w-100 h-100 rounded-5 "
-                                                        src="/assets/100/501/740/articles/3-23f953d8-34eb-4cf1-a22a-db13998581ea.jpg?v=1701361427303"
-                                                        alt="Bí quyết chọn sofa cho phòng khách nhỏ">
-                                                </a>
-                                                <div class="post-content">
-                                                    <span>30/11/2023</span>
-                                                    <h3 class="mb-0">
-                                                        <a title="Bí quyết chọn sofa cho phòng khách nhỏ"
-                                                            href="/bi-quyet-chon-sofa-cho-phong-khach-nho">Bí quyết
-                                                            chọn sofa cho
-                                                            phòng khách nhỏ</a>
-                                                    </h3>
-                                                </div>
-                                            </div>
+                                            @endforeach
                                         </div>
                                     </div>
                                 </div>

@@ -578,89 +578,28 @@
                         <div class="list-blogs">
 
                             <div class="row">
-
-                                <div class="col-md-6">
-                                    <div class="item-blog item-blog-project position-relative rounded-10">
-                                        <a class="thumb d-block ratio3by2 position-relative"
-                                            href="/project/mang-phong-cach-hien-dai-toi-gian-vao-can-nha"
-                                            title="Mang phong cách hiện đại, tối giản vào căn nhà">
-                                            <img class="position-absolute"
-                                                src="/assets/100/501/740/articles/9.jpg"
-                                                alt="Mang phong cách hiện đại, tối giản vào căn nhà">
-                                        </a>
-                                        <div class="info position-absolute">
-                                            <h3 class="font-weight-bold">
-                                                <a  href="/project/mang-phong-cach-hien-dai-toi-gian-vao-can-nha"
-                                                    title="Mang phong cách hiện đại, tối giản vào căn nhà">Mang phong
-                                                    cách hiện
-                                                    đại, tối giản vào căn nhà</a>
-                                            </h3>
-                                            <span class="add">Hà Nội</span>
+                                @foreach ($projects as $project)
+                                    <div class="col-md-6">
+                                        <div class="item-blog item-blog-project position-relative rounded-10">
+                                            <a class="thumb d-block ratio3by2 position-relative"
+                                                href="{{ '/project/'.$project->slug }}"
+                                                title="{{ $project->title }}">
+                                                <img class="position-absolute"
+                                                    src="{{Storage::url($project->banner)}}"
+                                                    alt="{{ $project->title }}">
+                                            </a>
+                                            <div class="info position-absolute">
+                                                <h3 class="font-weight-bold">
+                                                    <a  href="{{ '/project/'.$project->slug }}"
+                                                        title="{{ $project->title }}">
+                                                        {{ $project->title }}
+                                                    </a>
+                                                </h3>
+                                                <span class="add">{{ $project->address }}</span>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="item-blog item-blog-project position-relative rounded-10">
-                                        <a class="thumb d-block ratio3by2 position-relative"
-                                            href="/project/mang-phong-cach-hien-dai-toi-gian-vao-can-nha"
-                                            title="Mang phong cách hiện đại, tối giản vào căn nhà">
-                                            <img class="position-absolute"
-                                                src="/assets/100/501/740/articles/9.jpg"
-                                                alt="Mang phong cách hiện đại, tối giản vào căn nhà">
-                                        </a>
-                                        <div class="info position-absolute">
-                                            <h3 class="font-weight-bold">
-                                                <a  href="/project/mang-phong-cach-hien-dai-toi-gian-vao-can-nha"
-                                                    title="Mang phong cách hiện đại, tối giản vào căn nhà">Mang phong
-                                                    cách hiện
-                                                    đại, tối giản vào căn nhà</a>
-                                            </h3>
-                                            <span class="add">Hà Nội</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="item-blog item-blog-project position-relative rounded-10">
-                                        <a class="thumb d-block ratio3by2 position-relative"
-                                            href="/project/mang-phong-cach-hien-dai-toi-gian-vao-can-nha"
-                                            title="Mang phong cách hiện đại, tối giản vào căn nhà">
-                                            <img class="position-absolute"
-                                                src="/assets/100/501/740/articles/9.jpg"
-                                                alt="Mang phong cách hiện đại, tối giản vào căn nhà">
-                                        </a>
-                                        <div class="info position-absolute">
-                                            <h3 class="font-weight-bold">
-                                                <a  href="/project/mang-phong-cach-hien-dai-toi-gian-vao-can-nha"
-                                                    title="Mang phong cách hiện đại, tối giản vào căn nhà">Mang phong
-                                                    cách hiện
-                                                    đại, tối giản vào căn nhà</a>
-                                            </h3>
-                                            <span class="add">Hà Nội</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="item-blog item-blog-project position-relative rounded-10">
-                                        <a class="thumb d-block ratio3by2 position-relative"
-                                            href="/project/mang-phong-cach-hien-dai-toi-gian-vao-can-nha"
-                                            title="Mang phong cách hiện đại, tối giản vào căn nhà">
-                                            <img class="position-absolute"
-                                                src="/assets/100/501/740/articles/9.jpg"
-                                                alt="Mang phong cách hiện đại, tối giản vào căn nhà">
-                                        </a>
-                                        <div class="info position-absolute">
-                                            <h3 class="font-weight-bold">
-                                                <a  href="/project/mang-phong-cach-hien-dai-toi-gian-vao-can-nha"
-                                                    title="Mang phong cách hiện đại, tối giản vào căn nhà">Mang phong
-                                                    cách hiện
-                                                    đại, tối giản vào căn nhà</a>
-                                            </h3>
-                                            <span class="add">Hà Nội</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-
+                                @endforeach
                             </div>
                             <div class="pagenav m-0">
 
