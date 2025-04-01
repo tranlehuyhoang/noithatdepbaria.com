@@ -21,6 +21,8 @@ class Service extends Component
         if (!$this->service) {
             abort(404);
         }
+        $this->service->increment('view');
+        $this->service->save();
     }
     public function render()
     {

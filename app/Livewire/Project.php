@@ -20,6 +20,8 @@ class Project extends Component
         if (!$this->project) {
             abort(404);
         }
+        $this->project->increment('view');
+        $this->project->save();
 
     }
     public function render()

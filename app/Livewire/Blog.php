@@ -20,6 +20,8 @@ class Blog extends Component
         if (!$this->blog) {
             abort(404);
         }
+        $this->blog->increment('view');
+        $this->blog->save();
     }
     public function render()
     {
