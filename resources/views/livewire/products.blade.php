@@ -575,106 +575,14 @@
                                 <div class="aside-item mb-4">
                                     <nav class="nav-category">
                                         <ul class="navbar-pills">
-                                            <li class="nav-item  position-relative">
-                                                <a title="Hiện đại" href="/hien-dai" class="nav-link pr-5">Hiện
-                                                    đại</a>
-                                                <i class="open_mnu down_icon"></i>
-                                                <ul class="menu_down" style="display:none;">
-                                                    <li class="nav-item">
-                                                        <a title="Giường" class="nav-link" href="/giuong">Giường</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a title="Tủ" class="nav-link" href="/tu">Tủ</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a title="Đèn" class="nav-link" href="/den">Đèn</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a title="Cây trang trí" class="nav-link"
-                                                            href="/cay-trang-tri">Cây trang
-                                                            trí</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a title="Tranh treo tường" class="nav-link"
-                                                            href="/tranh-treo-tuong">Tranh treo tường</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="nav-item  position-relative">
-                                                <a title="Cổ điển" href="/co-dien" class="nav-link pr-5">Cổ điển</a>
-                                                <i class="open_mnu down_icon"></i>
-                                                <ul class="menu_down" style="display:none;">
-                                                    <li class="nav-item">
-                                                        <a title="Giường" class="nav-link" href="/giuong">Giường</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a title="Tủ" class="nav-link" href="/tu">Tủ</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a title="Đèn" class="nav-link" href="/den">Đèn</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a title="Cây trang trí" class="nav-link"
-                                                            href="/cay-trang-tri">Cây trang
-                                                            trí</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a title="Tranh treo tường" class="nav-link"
-                                                            href="/">Tranh treo
-                                                            tường</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="nav-item  position-relative">
-                                                <a title="Đơn giản" href="/don-gian" class="nav-link pr-5">Đơn
-                                                    giản</a>
-                                                <i class="open_mnu down_icon"></i>
-                                                <ul class="menu_down" style="display:none;">
-                                                    <li class="nav-item">
-                                                        <a title="Giường" class="nav-link" href="/giuong">Giường</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a title="Tủ" class="nav-link" href="/tu">Tủ</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a title="Đèn" class="nav-link" href="/den">Đèn</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a title="Cây trang trí" class="nav-link"
-                                                            href="/cay-trang-tri">Cây trang
-                                                            trí</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a title="Tranh treo tường" class="nav-link"
-                                                            href="/tranh-treo-tuong">Tranh treo tường</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="nav-item  position-relative">
-                                                <a title="Sang trọng" href="/sang-trong" class="nav-link pr-5">Sang
-                                                    trọng</a>
-                                                <i class="open_mnu down_icon"></i>
-                                                <ul class="menu_down" style="display:none;">
-                                                    <li class="nav-item">
-                                                        <a title="Giường" class="nav-link" href="/giuong">Giường</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a title="Tủ" class="nav-link" href="/tu">Tủ</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a title="Đèn" class="nav-link" href="/den">Đèn</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a title="Cây trang trí" class="nav-link"
-                                                            href="/cay-trang-tri">Cây trang
-                                                            trí</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a title="Tranh treo tường" class="nav-link"
-                                                            href="/tranh-treo-tuong">Tranh treo tường</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
+                                            @foreach ($categories as $category)
+                                                <li class="nav-item  position-relative">
+                                                    <a title="{{ $category->title }}" href="{{ '/products/?category='.$category->id }}" class="nav-link pr-5">
+                                                        {{ $category->title }}
+                                                    </a>
+                                                    {{-- <i class="open_mnu down_icon"></i> --}}
+                                                </li>
+                                            @endforeach
                                         </ul>
                                     </nav>
                                 </div>
@@ -683,7 +591,7 @@
                                         $(this).toggleClass('cls_mn').next().slideToggle();
                                     });
                                 </script>
-                                <div class="aside-title-module pb-2 mb-3 bold border-bottom">Bộ lọc</div>
+                                {{-- <div class="aside-title-module pb-2 mb-3 bold border-bottom">Bộ lọc</div>
                                 <div class="aside-filter position-sticky">
                                     <div class="filter-container">
                                         <div class="filter-container__selected-filter" style="display: none;">
@@ -1030,7 +938,7 @@
                                             </div>
                                         </aside>
                                     </div>
-                                </div>
+                                </div> --}}
                             </aside>
                             <div class="block-collection col-lg-9 col-12 mb-5">
                                 <ul class="sort list-unstyled position-relative">
@@ -1038,18 +946,18 @@
                                         <span class="val">Sắp xếp theo</span>
                                         <ul class="content_ul list-unstyled">
                                             <li><a href="javascript:;" class="py-md-1 px-md-2 p-0 default"
-                                                    title="Mặc định" onclick="sortby('')">Mặc định</a></li>
+                                                    title="Mặc định" wire:click="sortby('')">Mặc định</a></li>
                                             <li><a href="javascript:;" class="py-md-1 px-md-2 p-0 alpha-asc"
-                                                    title="A &rarr; Z" onclick="sortby('alpha-asc')">A &rarr; Z</a>
+                                                    title="A &rarr; Z" wire:click="sortby('alpha-asc')">A &rarr; Z</a>
                                             </li>
                                             <li><a href="javascript:;" class="py-md-1 px-md-2 p-0 alpha-desc"
-                                                    title="Z &rarr; A" onclick="sortby('alpha-desc')">Z &rarr; A</a>
+                                                    title="Z &rarr; A" wire:click="sortby('alpha-desc')">Z &rarr; A</a>
                                             </li>
                                             <li><a href="javascript:;" class="py-md-1 px-md-2 p-0 created-desc"
-                                                    title="Mới nhất" onclick="sortby('created-desc')">Hàng mới
+                                                    title="Mới nhất" wire:click="sortby('created-desc')">Hàng mới
                                                     nhất</a></li>
                                             <li><a href="javascript:;" class="py-md-1 px-md-2 p-0 created-asc"
-                                                    title="Cũ nhất" onclick="sortby('created-asc')">Hàng cũ nhất</a>
+                                                    title="Cũ nhất" wire:click="sortby('created-asc')">Hàng cũ nhất</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -1057,16 +965,17 @@
                                 <div class="category-products">
                                     <div class="products-view products-view-grid list_hover_pro">
                                         <div class="row">
+                                            @foreach ($products as $product)
                                             <div class="col-6 col-md-4 item_product_main">
                                                 <form
                                                     class="variants product-action product-item " >
                                                     <div class="product-thumbnail position-relative">
                                                         <a class="product-thumb position-relative ratio1by1 scale_hover d-block"
-                                                            href="/product/cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang"
-                                                            title="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng">
+                                                            href="/product/{{ $product->slug }}"
+                                                            title="{{ $product->title }}">
                                                             <img class="position-absolute"
-                                                                src="/assets/thumb/large/100/501/740/products/35.jpg"
-                                                                alt="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng"
+                                                                src="{{Storage::url($product->images[0])}}"
+                                                                alt="{{ $product->title }}"
                                                                 width="302" height="302">
                                                         </a>
                                                         <span class="setWishlist position-absolute"
@@ -1075,716 +984,31 @@
                                                     </div>
                                                     <div class="product-info position-relative p-md-3 p-2">
                                                         <h3 class="product-name bold mb-3"><a
-                                                                href="/product/cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang"
+                                                                href="/product/{{ $product->slug }}"
                                                                 class="text1line"
-                                                                title="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng">Cuckoo
-                                                                đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe,
-                                                                nhà
-                                                                hàng</a></h3>
+                                                                title="{{ $product->title }}">
+                                                                {{ $product->title }}
+                                                            </a>
+                                                        </h3>
                                                         <div class="price-box bold mb-3">
 
                                                             <span class="price bold">Liên hệ</span>
                                                         </div>
                                                         <div class="action">
                                                             <input type="hidden" name="variantId"
-                                                                value="113777979" />
-                                                            <button
+                                                                value="{{ $product->id }}" />
+                                                            <a href="/contact/"
                                                                 class="btn-cart btn-views w-100 add_to_cart  d-flex align-items-center justify-content-center"
-                                                                title="Thêm vào giỏ">Liên hệ để mua hàng</button>
+                                                                title="Thêm vào giỏ">Liên hệ để mua hàng</a>
                                                         </div>
                                                     </div>
                                                 </form>
                                             </div>
-                                            <div class="col-6 col-md-4 item_product_main">
-                                                <form
-                                                    class="variants product-action product-item " >
-                                                    <div class="product-thumbnail position-relative">
-                                                        <a class="product-thumb position-relative ratio1by1 scale_hover d-block"
-                                                            href="/product/cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang"
-                                                            title="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng">
-                                                            <img class="position-absolute"
-                                                                src="/assets/thumb/large/100/501/740/products/35.jpg"
-                                                                alt="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng"
-                                                                width="302" height="302">
-                                                        </a>
-                                                        <span class="setWishlist position-absolute"
-                                                            data-wish="cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang"
-                                                            tabindex="0" title="Thêm vào yêu thích"></span>
-                                                    </div>
-                                                    <div class="product-info position-relative p-md-3 p-2">
-                                                        <h3 class="product-name bold mb-3"><a
-                                                                href="/product/cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang"
-                                                                class="text1line"
-                                                                title="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng">Cuckoo
-                                                                đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe,
-                                                                nhà
-                                                                hàng</a></h3>
-                                                        <div class="price-box bold mb-3">
-
-                                                            <span class="price bold">Liên hệ</span>
-                                                        </div>
-                                                        <div class="action">
-                                                            <input type="hidden" name="variantId"
-                                                                value="113777979" />
-                                                            <button
-                                                                class="btn-cart btn-views w-100 add_to_cart  d-flex align-items-center justify-content-center"
-                                                                title="Thêm vào giỏ">Liên hệ để mua hàng</button>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                            <div class="col-6 col-md-4 item_product_main">
-                                                <form
-                                                    class="variants product-action product-item " >
-                                                    <div class="product-thumbnail position-relative">
-                                                        <a class="product-thumb position-relative ratio1by1 scale_hover d-block"
-                                                            href="/product/cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang"
-                                                            title="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng">
-                                                            <img class="position-absolute"
-                                                                src="/assets/thumb/large/100/501/740/products/35.jpg"
-                                                                alt="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng"
-                                                                width="302" height="302">
-                                                        </a>
-                                                        <span class="setWishlist position-absolute"
-                                                            data-wish="cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang"
-                                                            tabindex="0" title="Thêm vào yêu thích"></span>
-                                                    </div>
-                                                    <div class="product-info position-relative p-md-3 p-2">
-                                                        <h3 class="product-name bold mb-3"><a
-                                                                href="/product/cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang"
-                                                                class="text1line"
-                                                                title="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng">Cuckoo
-                                                                đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe,
-                                                                nhà
-                                                                hàng</a></h3>
-                                                        <div class="price-box bold mb-3">
-
-                                                            <span class="price bold">Liên hệ</span>
-                                                        </div>
-                                                        <div class="action">
-                                                            <input type="hidden" name="variantId"
-                                                                value="113777979" />
-                                                            <button
-                                                                class="btn-cart btn-views w-100 add_to_cart  d-flex align-items-center justify-content-center"
-                                                                title="Thêm vào giỏ">Liên hệ để mua hàng</button>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                            <div class="col-6 col-md-4 item_product_main">
-                                                <form
-                                                    class="variants product-action product-item " >
-                                                    <div class="product-thumbnail position-relative">
-                                                        <a class="product-thumb position-relative ratio1by1 scale_hover d-block"
-                                                            href="/product/cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang"
-                                                            title="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng">
-                                                            <img class="position-absolute"
-                                                                src="/assets/thumb/large/100/501/740/products/35.jpg"
-                                                                alt="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng"
-                                                                width="302" height="302">
-                                                        </a>
-                                                        <span class="setWishlist position-absolute"
-                                                            data-wish="cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang"
-                                                            tabindex="0" title="Thêm vào yêu thích"></span>
-                                                    </div>
-                                                    <div class="product-info position-relative p-md-3 p-2">
-                                                        <h3 class="product-name bold mb-3"><a
-                                                                href="/product/cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang"
-                                                                class="text1line"
-                                                                title="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng">Cuckoo
-                                                                đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe,
-                                                                nhà
-                                                                hàng</a></h3>
-                                                        <div class="price-box bold mb-3">
-
-                                                            <span class="price bold">Liên hệ</span>
-                                                        </div>
-                                                        <div class="action">
-                                                            <input type="hidden" name="variantId"
-                                                                value="113777979" />
-                                                            <button
-                                                                class="btn-cart btn-views w-100 add_to_cart  d-flex align-items-center justify-content-center"
-                                                                title="Thêm vào giỏ">Liên hệ để mua hàng</button>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                            <div class="col-6 col-md-4 item_product_main">
-                                                <form
-                                                    class="variants product-action product-item " >
-                                                    <div class="product-thumbnail position-relative">
-                                                        <a class="product-thumb position-relative ratio1by1 scale_hover d-block"
-                                                            href="/product/cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang"
-                                                            title="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng">
-                                                            <img class="position-absolute"
-                                                                src="/assets/thumb/large/100/501/740/products/35.jpg"
-                                                                alt="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng"
-                                                                width="302" height="302">
-                                                        </a>
-                                                        <span class="setWishlist position-absolute"
-                                                            data-wish="cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang"
-                                                            tabindex="0" title="Thêm vào yêu thích"></span>
-                                                    </div>
-                                                    <div class="product-info position-relative p-md-3 p-2">
-                                                        <h3 class="product-name bold mb-3"><a
-                                                                href="/product/cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang"
-                                                                class="text1line"
-                                                                title="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng">Cuckoo
-                                                                đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe,
-                                                                nhà
-                                                                hàng</a></h3>
-                                                        <div class="price-box bold mb-3">
-
-                                                            <span class="price bold">Liên hệ</span>
-                                                        </div>
-                                                        <div class="action">
-                                                            <input type="hidden" name="variantId"
-                                                                value="113777979" />
-                                                            <button
-                                                                class="btn-cart btn-views w-100 add_to_cart  d-flex align-items-center justify-content-center"
-                                                                title="Thêm vào giỏ">Liên hệ để mua hàng</button>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                            <div class="col-6 col-md-4 item_product_main">
-                                                <form
-                                                    class="variants product-action product-item " >
-                                                    <div class="product-thumbnail position-relative">
-                                                        <a class="product-thumb position-relative ratio1by1 scale_hover d-block"
-                                                            href="/product/cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang"
-                                                            title="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng">
-                                                            <img class="position-absolute"
-                                                                src="/assets/thumb/large/100/501/740/products/35.jpg"
-                                                                alt="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng"
-                                                                width="302" height="302">
-                                                        </a>
-                                                        <span class="setWishlist position-absolute"
-                                                            data-wish="cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang"
-                                                            tabindex="0" title="Thêm vào yêu thích"></span>
-                                                    </div>
-                                                    <div class="product-info position-relative p-md-3 p-2">
-                                                        <h3 class="product-name bold mb-3"><a
-                                                                href="/product/cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang"
-                                                                class="text1line"
-                                                                title="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng">Cuckoo
-                                                                đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe,
-                                                                nhà
-                                                                hàng</a></h3>
-                                                        <div class="price-box bold mb-3">
-
-                                                            <span class="price bold">Liên hệ</span>
-                                                        </div>
-                                                        <div class="action">
-                                                            <input type="hidden" name="variantId"
-                                                                value="113777979" />
-                                                            <button
-                                                                class="btn-cart btn-views w-100 add_to_cart  d-flex align-items-center justify-content-center"
-                                                                title="Thêm vào giỏ">Liên hệ để mua hàng</button>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                            <div class="col-6 col-md-4 item_product_main">
-                                                <form
-                                                    class="variants product-action product-item " >
-                                                    <div class="product-thumbnail position-relative">
-                                                        <a class="product-thumb position-relative ratio1by1 scale_hover d-block"
-                                                            href="/product/cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang"
-                                                            title="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng">
-                                                            <img class="position-absolute"
-                                                                src="/assets/thumb/large/100/501/740/products/35.jpg"
-                                                                alt="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng"
-                                                                width="302" height="302">
-                                                        </a>
-                                                        <span class="setWishlist position-absolute"
-                                                            data-wish="cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang"
-                                                            tabindex="0" title="Thêm vào yêu thích"></span>
-                                                    </div>
-                                                    <div class="product-info position-relative p-md-3 p-2">
-                                                        <h3 class="product-name bold mb-3"><a
-                                                                href="/product/cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang"
-                                                                class="text1line"
-                                                                title="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng">Cuckoo
-                                                                đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe,
-                                                                nhà
-                                                                hàng</a></h3>
-                                                        <div class="price-box bold mb-3">
-
-                                                            <span class="price bold">Liên hệ</span>
-                                                        </div>
-                                                        <div class="action">
-                                                            <input type="hidden" name="variantId"
-                                                                value="113777979" />
-                                                            <button
-                                                                class="btn-cart btn-views w-100 add_to_cart  d-flex align-items-center justify-content-center"
-                                                                title="Thêm vào giỏ">Liên hệ để mua hàng</button>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                            <div class="col-6 col-md-4 item_product_main">
-                                                <form
-                                                    class="variants product-action product-item " >
-                                                    <div class="product-thumbnail position-relative">
-                                                        <a class="product-thumb position-relative ratio1by1 scale_hover d-block"
-                                                            href="/product/cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang"
-                                                            title="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng">
-                                                            <img class="position-absolute"
-                                                                src="/assets/thumb/large/100/501/740/products/35.jpg"
-                                                                alt="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng"
-                                                                width="302" height="302">
-                                                        </a>
-                                                        <span class="setWishlist position-absolute"
-                                                            data-wish="cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang"
-                                                            tabindex="0" title="Thêm vào yêu thích"></span>
-                                                    </div>
-                                                    <div class="product-info position-relative p-md-3 p-2">
-                                                        <h3 class="product-name bold mb-3"><a
-                                                                href="/product/cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang"
-                                                                class="text1line"
-                                                                title="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng">Cuckoo
-                                                                đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe,
-                                                                nhà
-                                                                hàng</a></h3>
-                                                        <div class="price-box bold mb-3">
-
-                                                            <span class="price bold">Liên hệ</span>
-                                                        </div>
-                                                        <div class="action">
-                                                            <input type="hidden" name="variantId"
-                                                                value="113777979" />
-                                                            <button
-                                                                class="btn-cart btn-views w-100 add_to_cart  d-flex align-items-center justify-content-center"
-                                                                title="Thêm vào giỏ">Liên hệ để mua hàng</button>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                            <div class="col-6 col-md-4 item_product_main">
-                                                <form
-                                                    class="variants product-action product-item " >
-                                                    <div class="product-thumbnail position-relative">
-                                                        <a class="product-thumb position-relative ratio1by1 scale_hover d-block"
-                                                            href="/product/cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang"
-                                                            title="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng">
-                                                            <img class="position-absolute"
-                                                                src="/assets/thumb/large/100/501/740/products/35.jpg"
-                                                                alt="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng"
-                                                                width="302" height="302">
-                                                        </a>
-                                                        <span class="setWishlist position-absolute"
-                                                            data-wish="cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang"
-                                                            tabindex="0" title="Thêm vào yêu thích"></span>
-                                                    </div>
-                                                    <div class="product-info position-relative p-md-3 p-2">
-                                                        <h3 class="product-name bold mb-3"><a
-                                                                href="/product/cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang"
-                                                                class="text1line"
-                                                                title="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng">Cuckoo
-                                                                đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe,
-                                                                nhà
-                                                                hàng</a></h3>
-                                                        <div class="price-box bold mb-3">
-
-                                                            <span class="price bold">Liên hệ</span>
-                                                        </div>
-                                                        <div class="action">
-                                                            <input type="hidden" name="variantId"
-                                                                value="113777979" />
-                                                            <button
-                                                                class="btn-cart btn-views w-100 add_to_cart  d-flex align-items-center justify-content-center"
-                                                                title="Thêm vào giỏ">Liên hệ để mua hàng</button>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                            <div class="col-6 col-md-4 item_product_main">
-                                                <form
-                                                    class="variants product-action product-item " >
-                                                    <div class="product-thumbnail position-relative">
-                                                        <a class="product-thumb position-relative ratio1by1 scale_hover d-block"
-                                                            href="/product/cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang"
-                                                            title="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng">
-                                                            <img class="position-absolute"
-                                                                src="/assets/thumb/large/100/501/740/products/35.jpg"
-                                                                alt="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng"
-                                                                width="302" height="302">
-                                                        </a>
-                                                        <span class="setWishlist position-absolute"
-                                                            data-wish="cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang"
-                                                            tabindex="0" title="Thêm vào yêu thích"></span>
-                                                    </div>
-                                                    <div class="product-info position-relative p-md-3 p-2">
-                                                        <h3 class="product-name bold mb-3"><a
-                                                                href="/product/cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang"
-                                                                class="text1line"
-                                                                title="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng">Cuckoo
-                                                                đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe,
-                                                                nhà
-                                                                hàng</a></h3>
-                                                        <div class="price-box bold mb-3">
-
-                                                            <span class="price bold">Liên hệ</span>
-                                                        </div>
-                                                        <div class="action">
-                                                            <input type="hidden" name="variantId"
-                                                                value="113777979" />
-                                                            <button
-                                                                class="btn-cart btn-views w-100 add_to_cart  d-flex align-items-center justify-content-center"
-                                                                title="Thêm vào giỏ">Liên hệ để mua hàng</button>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                            <div class="col-6 col-md-4 item_product_main">
-                                                <form
-                                                    class="variants product-action product-item " >
-                                                    <div class="product-thumbnail position-relative">
-                                                        <a class="product-thumb position-relative ratio1by1 scale_hover d-block"
-                                                            href="/product/cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang"
-                                                            title="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng">
-                                                            <img class="position-absolute"
-                                                                src="/assets/thumb/large/100/501/740/products/35.jpg"
-                                                                alt="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng"
-                                                                width="302" height="302">
-                                                        </a>
-                                                        <span class="setWishlist position-absolute"
-                                                            data-wish="cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang"
-                                                            tabindex="0" title="Thêm vào yêu thích"></span>
-                                                    </div>
-                                                    <div class="product-info position-relative p-md-3 p-2">
-                                                        <h3 class="product-name bold mb-3"><a
-                                                                href="/product/cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang"
-                                                                class="text1line"
-                                                                title="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng">Cuckoo
-                                                                đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe,
-                                                                nhà
-                                                                hàng</a></h3>
-                                                        <div class="price-box bold mb-3">
-
-                                                            <span class="price bold">Liên hệ</span>
-                                                        </div>
-                                                        <div class="action">
-                                                            <input type="hidden" name="variantId"
-                                                                value="113777979" />
-                                                            <button
-                                                                class="btn-cart btn-views w-100 add_to_cart  d-flex align-items-center justify-content-center"
-                                                                title="Thêm vào giỏ">Liên hệ để mua hàng</button>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                            <div class="col-6 col-md-4 item_product_main">
-                                                <form
-                                                    class="variants product-action product-item " >
-                                                    <div class="product-thumbnail position-relative">
-                                                        <a class="product-thumb position-relative ratio1by1 scale_hover d-block"
-                                                            href="/product/cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang"
-                                                            title="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng">
-                                                            <img class="position-absolute"
-                                                                src="/assets/thumb/large/100/501/740/products/35.jpg"
-                                                                alt="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng"
-                                                                width="302" height="302">
-                                                        </a>
-                                                        <span class="setWishlist position-absolute"
-                                                            data-wish="cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang"
-                                                            tabindex="0" title="Thêm vào yêu thích"></span>
-                                                    </div>
-                                                    <div class="product-info position-relative p-md-3 p-2">
-                                                        <h3 class="product-name bold mb-3"><a
-                                                                href="/product/cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang"
-                                                                class="text1line"
-                                                                title="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng">Cuckoo
-                                                                đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe,
-                                                                nhà
-                                                                hàng</a></h3>
-                                                        <div class="price-box bold mb-3">
-
-                                                            <span class="price bold">Liên hệ</span>
-                                                        </div>
-                                                        <div class="action">
-                                                            <input type="hidden" name="variantId"
-                                                                value="113777979" />
-                                                            <button
-                                                                class="btn-cart btn-views w-100 add_to_cart  d-flex align-items-center justify-content-center"
-                                                                title="Thêm vào giỏ">Liên hệ để mua hàng</button>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                            <div class="col-6 col-md-4 item_product_main">
-                                                <form
-                                                    class="variants product-action product-item " >
-                                                    <div class="product-thumbnail position-relative">
-                                                        <a class="product-thumb position-relative ratio1by1 scale_hover d-block"
-                                                            href="/product/cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang"
-                                                            title="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng">
-                                                            <img class="position-absolute"
-                                                                src="/assets/thumb/large/100/501/740/products/35.jpg"
-                                                                alt="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng"
-                                                                width="302" height="302">
-                                                        </a>
-                                                        <span class="setWishlist position-absolute"
-                                                            data-wish="cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang"
-                                                            tabindex="0" title="Thêm vào yêu thích"></span>
-                                                    </div>
-                                                    <div class="product-info position-relative p-md-3 p-2">
-                                                        <h3 class="product-name bold mb-3"><a
-                                                                href="/product/cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang"
-                                                                class="text1line"
-                                                                title="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng">Cuckoo
-                                                                đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe,
-                                                                nhà
-                                                                hàng</a></h3>
-                                                        <div class="price-box bold mb-3">
-
-                                                            <span class="price bold">Liên hệ</span>
-                                                        </div>
-                                                        <div class="action">
-                                                            <input type="hidden" name="variantId"
-                                                                value="113777979" />
-                                                            <button
-                                                                class="btn-cart btn-views w-100 add_to_cart  d-flex align-items-center justify-content-center"
-                                                                title="Thêm vào giỏ">Liên hệ để mua hàng</button>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                            <div class="col-6 col-md-4 item_product_main">
-                                                <form
-                                                    class="variants product-action product-item " >
-                                                    <div class="product-thumbnail position-relative">
-                                                        <a class="product-thumb position-relative ratio1by1 scale_hover d-block"
-                                                            href="/product/cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang"
-                                                            title="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng">
-                                                            <img class="position-absolute"
-                                                                src="/assets/thumb/large/100/501/740/products/35.jpg"
-                                                                alt="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng"
-                                                                width="302" height="302">
-                                                        </a>
-                                                        <span class="setWishlist position-absolute"
-                                                            data-wish="cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang"
-                                                            tabindex="0" title="Thêm vào yêu thích"></span>
-                                                    </div>
-                                                    <div class="product-info position-relative p-md-3 p-2">
-                                                        <h3 class="product-name bold mb-3"><a
-                                                                href="/product/cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang"
-                                                                class="text1line"
-                                                                title="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng">Cuckoo
-                                                                đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe,
-                                                                nhà
-                                                                hàng</a></h3>
-                                                        <div class="price-box bold mb-3">
-
-                                                            <span class="price bold">Liên hệ</span>
-                                                        </div>
-                                                        <div class="action">
-                                                            <input type="hidden" name="variantId"
-                                                                value="113777979" />
-                                                            <button
-                                                                class="btn-cart btn-views w-100 add_to_cart  d-flex align-items-center justify-content-center"
-                                                                title="Thêm vào giỏ">Liên hệ để mua hàng</button>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                            <div class="col-6 col-md-4 item_product_main">
-                                                <form
-                                                    class="variants product-action product-item " >
-                                                    <div class="product-thumbnail position-relative">
-                                                        <a class="product-thumb position-relative ratio1by1 scale_hover d-block"
-                                                            href="/product/cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang"
-                                                            title="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng">
-                                                            <img class="position-absolute"
-                                                                src="/assets/thumb/large/100/501/740/products/35.jpg"
-                                                                alt="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng"
-                                                                width="302" height="302">
-                                                        </a>
-                                                        <span class="setWishlist position-absolute"
-                                                            data-wish="cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang"
-                                                            tabindex="0" title="Thêm vào yêu thích"></span>
-                                                    </div>
-                                                    <div class="product-info position-relative p-md-3 p-2">
-                                                        <h3 class="product-name bold mb-3"><a
-                                                                href="/product/cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang"
-                                                                class="text1line"
-                                                                title="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng">Cuckoo
-                                                                đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe,
-                                                                nhà
-                                                                hàng</a></h3>
-                                                        <div class="price-box bold mb-3">
-
-                                                            <span class="price bold">Liên hệ</span>
-                                                        </div>
-                                                        <div class="action">
-                                                            <input type="hidden" name="variantId"
-                                                                value="113777979" />
-                                                            <button
-                                                                class="btn-cart btn-views w-100 add_to_cart  d-flex align-items-center justify-content-center"
-                                                                title="Thêm vào giỏ">Liên hệ để mua hàng</button>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                            <div class="col-6 col-md-4 item_product_main">
-                                                <form
-                                                    class="variants product-action product-item " >
-                                                    <div class="product-thumbnail position-relative">
-                                                        <a class="product-thumb position-relative ratio1by1 scale_hover d-block"
-                                                            href="/product/cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang"
-                                                            title="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng">
-                                                            <img class="position-absolute"
-                                                                src="/assets/thumb/large/100/501/740/products/35.jpg"
-                                                                alt="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng"
-                                                                width="302" height="302">
-                                                        </a>
-                                                        <span class="setWishlist position-absolute"
-                                                            data-wish="cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang"
-                                                            tabindex="0" title="Thêm vào yêu thích"></span>
-                                                    </div>
-                                                    <div class="product-info position-relative p-md-3 p-2">
-                                                        <h3 class="product-name bold mb-3"><a
-                                                                href="/product/cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang"
-                                                                class="text1line"
-                                                                title="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng">Cuckoo
-                                                                đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe,
-                                                                nhà
-                                                                hàng</a></h3>
-                                                        <div class="price-box bold mb-3">
-
-                                                            <span class="price bold">Liên hệ</span>
-                                                        </div>
-                                                        <div class="action">
-                                                            <input type="hidden" name="variantId"
-                                                                value="113777979" />
-                                                            <button
-                                                                class="btn-cart btn-views w-100 add_to_cart  d-flex align-items-center justify-content-center"
-                                                                title="Thêm vào giỏ">Liên hệ để mua hàng</button>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                            <div class="col-6 col-md-4 item_product_main">
-                                                <form
-                                                    class="variants product-action product-item " >
-                                                    <div class="product-thumbnail position-relative">
-                                                        <a class="product-thumb position-relative ratio1by1 scale_hover d-block"
-                                                            href="/product/cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang"
-                                                            title="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng">
-                                                            <img class="position-absolute"
-                                                                src="/assets/thumb/large/100/501/740/products/35.jpg"
-                                                                alt="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng"
-                                                                width="302" height="302">
-                                                        </a>
-                                                        <span class="setWishlist position-absolute"
-                                                            data-wish="cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang"
-                                                            tabindex="0" title="Thêm vào yêu thích"></span>
-                                                    </div>
-                                                    <div class="product-info position-relative p-md-3 p-2">
-                                                        <h3 class="product-name bold mb-3"><a
-                                                                href="/product/cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang"
-                                                                class="text1line"
-                                                                title="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng">Cuckoo
-                                                                đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe,
-                                                                nhà
-                                                                hàng</a></h3>
-                                                        <div class="price-box bold mb-3">
-
-                                                            <span class="price bold">Liên hệ</span>
-                                                        </div>
-                                                        <div class="action">
-                                                            <input type="hidden" name="variantId"
-                                                                value="113777979" />
-                                                            <button
-                                                                class="btn-cart btn-views w-100 add_to_cart  d-flex align-items-center justify-content-center"
-                                                                title="Thêm vào giỏ">Liên hệ để mua hàng</button>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                            <div class="col-6 col-md-4 item_product_main">
-                                                <form
-                                                    class="variants product-action product-item " >
-                                                    <div class="product-thumbnail position-relative">
-                                                        <a class="product-thumb position-relative ratio1by1 scale_hover d-block"
-                                                            href="/product/cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang"
-                                                            title="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng">
-                                                            <img class="position-absolute"
-                                                                src="/assets/thumb/large/100/501/740/products/35.jpg"
-                                                                alt="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng"
-                                                                width="302" height="302">
-                                                        </a>
-                                                        <span class="setWishlist position-absolute"
-                                                            data-wish="cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang"
-                                                            tabindex="0" title="Thêm vào yêu thích"></span>
-                                                    </div>
-                                                    <div class="product-info position-relative p-md-3 p-2">
-                                                        <h3 class="product-name bold mb-3"><a
-                                                                href="/product/cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang"
-                                                                class="text1line"
-                                                                title="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng">Cuckoo
-                                                                đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe,
-                                                                nhà
-                                                                hàng</a></h3>
-                                                        <div class="price-box bold mb-3">
-
-                                                            <span class="price bold">Liên hệ</span>
-                                                        </div>
-                                                        <div class="action">
-                                                            <input type="hidden" name="variantId"
-                                                                value="113777979" />
-                                                            <button
-                                                                class="btn-cart btn-views w-100 add_to_cart  d-flex align-items-center justify-content-center"
-                                                                title="Thêm vào giỏ">Liên hệ để mua hàng</button>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                            <div class="col-6 col-md-4 item_product_main">
-                                                <form
-                                                    class="variants product-action product-item " >
-                                                    <div class="product-thumbnail position-relative">
-                                                        <a class="product-thumb position-relative ratio1by1 scale_hover d-block"
-                                                            href="/product/cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang"
-                                                            title="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng">
-                                                            <img class="position-absolute"
-                                                                src="/assets/thumb/large/100/501/740/products/35.jpg"
-                                                                alt="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng"
-                                                                width="302" height="302">
-                                                        </a>
-                                                        <span class="setWishlist position-absolute"
-                                                            data-wish="cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang"
-                                                            tabindex="0" title="Thêm vào yêu thích"></span>
-                                                    </div>
-                                                    <div class="product-info position-relative p-md-3 p-2">
-                                                        <h3 class="product-name bold mb-3"><a
-                                                                href="/product/cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang"
-                                                                class="text1line"
-                                                                title="Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng">Cuckoo
-                                                                đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe,
-                                                                nhà
-                                                                hàng</a></h3>
-                                                        <div class="price-box bold mb-3">
-
-                                                            <span class="price bold">Liên hệ</span>
-                                                        </div>
-                                                        <div class="action">
-                                                            <input type="hidden" name="variantId"
-                                                                value="113777979" />
-                                                            <button
-                                                                class="btn-cart btn-views w-100 add_to_cart  d-flex align-items-center justify-content-center"
-                                                                title="Thêm vào giỏ">Liên hệ để mua hàng</button>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-
-
+                                            @endforeach
                                         </div>
                                     </div>
                                     <div class="pagenav m-0">
-                                        <nav>
+                                        {{-- <nav>
                                             <ul class="pagination clearfix">
 
                                                 <li class="page-item disabled"><a class="page-link hidden-xs"
@@ -1828,6 +1052,43 @@
                                                                 d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
                                                         </svg></a></li>
 
+                                            </ul>
+                                        </nav> --}}
+                                        <nav>
+                                            <ul class="pagination clearfix">
+                                                @php
+                                                    $queryParams = request()->query();
+                                                    unset($queryParams['page']);
+                                                    $queryString = http_build_query($queryParams);
+                                                @endphp
+                                                @if ($products->currentPage() > 1)
+                                                    <li class="page-item"><a class="page-link"
+                                                            href="/products?{{ $queryString }}&page={{ $products->currentPage() - 1 }}"><svg aria-hidden="true" focusable="false"
+                                                                data-prefix="far" data-icon="angle-left" role="img"
+                                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"
+                                                                class="svg-inline--fa fa-angle-left fa-w-6">
+                                                                <path fill="currentColor"
+                                                                    d="M4.2 247.5L151 99.5c4.7-4.7 12.3-4.7 17 0l19.8 19.8c4.7 4.7 4.7 12.3 0 17L69.3 256l118.5 119.7c4.7 4.7 4.7 12.3 0 17L168 412.5c-4.7 4.7-12.3 4.7-17 0L4.2 264.5c-4.7-4.7-4.7-12.3 0-17z"
+                                                                    class=""></path>
+                                                            </svg></a></li>
+                                                @endif
+                                                @for ($i = 1; $i <= $products->lastPage(); $i++)
+                                                    <li class="page-item {{ $i == $products->currentPage() ? 'active' : '' }}">
+                                                        <a class="page-link" href="/products?{{ $queryString }}&page={{ $i }}">{{ $i }}</a>
+                                                    </li>
+                                                @endfor
+                                                @if ($products->currentPage() < $products->lastPage())
+                                                    <li class="page-item"><a class="page-link"
+                                                            href="/products?{{ $queryString }}&page={{ $products->currentPage() + 1 }}"><svg aria-hidden="true"
+                                                                focusable="false" data-prefix="far"
+                                                                data-icon="angle-right" role="img"
+                                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"
+                                                                class="svg-inline--fa fa-angle-right fa-w-6">
+                                                                <path fill="currentColor"
+                                                                    d="M187.8 264.5L41 412.5c-4.7 4.7-12.3 4.7-17 0L4.2 392.7c-4.7-4.7-4.7-12.3 0-17L122.7 256 4.2 136.3c-4.7-4.7-4.7-12.3 0-17L24 99.5c4.7-4.7 12.3-4.7 17 0l146.8 148c4.7 4.7 4.7 12.3 0 17z"
+                                                                    class=""></path>
+                                                            </svg></a></li>
+                                                @endif
                                             </ul>
                                         </nav>
                                     </div>

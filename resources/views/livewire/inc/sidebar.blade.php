@@ -15,7 +15,7 @@
         <nav class="nav-category">
                 @foreach ($categories ?? [] as $category)
                 <div class="nav-item  position-relative">
-                    <a title="{{ $category->title }}" href="/" class="nav-link pr-5">
+                    <a title="{{ $category->title }}" href="{{ '/products/?category='.$category->id  }}" class="nav-link pr-5">
                         {{ $category->title }}
                     </a>
                 </div>

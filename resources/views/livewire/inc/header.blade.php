@@ -31,8 +31,8 @@
             </nav>
         </div>
         <div class="header-right d-flex align-items-center ml-auto">
-            <form action="/search" method="get" class="form-search position-relative" role="search">
-                <input type="text" name="query" class="search-auto form-control" placeholder="Tìm kiếm sản phẩm"
+            <form action="/products/" method="get" class="form-search position-relative" role="search">
+                <input type="text" name="name" class="search-auto form-control" placeholder="Tìm kiếm sản phẩm"
                     autocomplete="off" />
                 <button class="btn btn-default position-absolute p-0" type="submit" aria-label="Tìm kiếm"></button>
             </form>

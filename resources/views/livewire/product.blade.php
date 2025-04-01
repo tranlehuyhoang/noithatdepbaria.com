@@ -3,7 +3,7 @@
         <div>
 
             <head>
-                <title>Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng </title>
+                <title>{{ $product->title }}</title>
                 <link rel="preload" as='style' type="text/css"
                     href="/assets/100/501/740/themes/929449/assets/main.scss.css?1736415638335">
                 <link rel="preload" as='style' type="text/css"
@@ -574,7 +574,11 @@
                                         d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
                                         class=""></path>
                                 </svg> </li>
-                            <li><a href="/sang-trong" title="Sang trọng">Sang trọng</a> <svg aria-hidden="true"
+                            <li><a href="{{ '/products/?category='.$product->category_id  }}"
+                                    title="{{ $product->category->title }}">
+                                    {{ $product->category->title }}
+                                </a>
+                                <svg aria-hidden="true"
                                     focusable="false" data-prefix="fas" data-icon="chevron-right" role="img"
                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"
                                     class="svg-inline--fa fa-chevron-right fa-w-10">
@@ -582,7 +586,8 @@
                                         d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
                                         class=""></path>
                                 </svg> </li>
-                            <li class="active">Cuckoo đồng hồ treo tường chim gỗ trang trí cho gia đình, cafe, nhà hàng
+                            <li class="active">
+                                {{ $product->title }}
                             <li>
                         </ul>
                     </div>
@@ -598,51 +603,18 @@
                                         <div class="gallery-top position-relative">
                                             <div class="swiper-container">
                                                 <div class="swiper-wrapper" id="lightgallery">
+                                                    @foreach ($product->images as $image)
                                                     <a class="swiper-slide"
-                                                        href="/assets/thumb/1024x1024/100/501/740/products/35.jpg?v=1712254885227"
-                                                        title="Click để xem">
-                                                        <img height="540" width="540"
-                                                            src="/assets/100/501/740/products/35.jpg?v=1712254885227"
-                                                            alt="Cuckoo đồng hồ treo tường chim gỗ trang tr&#237; cho gia đ&#236;nh, cafe, nh&#224; h&#224;ng"
-                                                            data-image="/assets/100/501/740/products/35.jpg?v=1712254885227"
-                                                            class="img-responsive mx-auto d-block swiper-lazy" />
+                                                    href="{{ Storage::url($image) }}"
+                                                    title="Click để xem">
+                                                    <img height="540" width="540"
+                                                        src="{{ Storage::url($image) }}"
+                                                        alt="{{ $product->title }}"
+                                                        data-image="{{ Storage::url($image) }}"
+                                                        class="img-responsive mx-auto d-block swiper-lazy" />
                                                     </a>
-                                                    <a class="swiper-slide"
-                                                        href="/assets/thumb/1024x1024/100/501/740/products/36.jpg?v=1712254886233"
-                                                        title="Click để xem">
-                                                        <img height="540" width="540"
-                                                            src="/assets/100/501/740/products/36.jpg?v=1712254886233"
-                                                            alt="Cuckoo đồng hồ treo tường chim gỗ trang tr&#237; cho gia đ&#236;nh, cafe, nh&#224; h&#224;ng"
-                                                            data-image="/assets/100/501/740/products/36.jpg?v=1712254886233"
-                                                            class="img-responsive mx-auto d-block swiper-lazy" />
-                                                    </a>
-                                                    <a class="swiper-slide"
-                                                        href="/assets/thumb/1024x1024/100/501/740/products/37.jpg?v=1712254887013"
-                                                        title="Click để xem">
-                                                        <img height="540" width="540"
-                                                            src="/assets/100/501/740/products/37.jpg?v=1712254887013"
-                                                            alt="Cuckoo đồng hồ treo tường chim gỗ trang tr&#237; cho gia đ&#236;nh, cafe, nh&#224; h&#224;ng"
-                                                            data-image="/assets/100/501/740/products/37.jpg?v=1712254887013"
-                                                            class="img-responsive mx-auto d-block swiper-lazy" />
-                                                    </a>
-                                                    <a class="swiper-slide"
-                                                        href="/assets/thumb/1024x1024/100/501/740/products/38.jpg?v=1712254887737"
-                                                        title="Click để xem">
-                                                        <img height="540" width="540"
-                                                            src="/assets/100/501/740/products/38.jpg?v=1712254887737"
-                                                            alt="Cuckoo đồng hồ treo tường chim gỗ trang tr&#237; cho gia đ&#236;nh, cafe, nh&#224; h&#224;ng"
-                                                            data-image="/assets/100/501/740/products/38.jpg?v=1712254887737"
-                                                            class="img-responsive mx-auto d-block swiper-lazy" />
-                                                    </a>
-                                                    <a class="swiper-slide"
-                                                        href="/assets/thumb/1024x1024/100/501/740/products/39.jpg?v=1712254888287"
-                                                        title="Click để xem">
-                                                        <img height="540" width="540"
-                                                            src="/assets/100/501/740/products/39.jpg?v=1712254888287"
-                                                            alt="Cuckoo đồng hồ treo tường chim gỗ trang tr&#237; cho gia đ&#236;nh, cafe, nh&#224; h&#224;ng"
-                                                            data-image="/assets/100/501/740/products/39.jpg?v=1712254888287"
-                                                            class="img-responsive mx-auto d-block swiper-lazy" />
-                                                    </a>
+                                                    @endforeach
+
                                                 </div>
                                                 <div class="swiper-pagination"></div>
                                             </div>
@@ -652,57 +624,17 @@
                                         <div class="gallery-thumbs position-relative">
                                             <div class="swiper-container">
                                                 <div class="swiper-wrapper">
-
-                                                    <div class="swiper-slide" data-hash="0">
-                                                        <div class="ratio1by1 position-relative">
-                                                            <img src="/assets/thumb/medium/100/501/740/products/35.jpg?v=1712254885227"
-                                                                height="112" width="112"
-                                                                alt="Cuckoo đồng hồ treo tường chim gỗ trang tr&#237; cho gia đ&#236;nh, cafe, nh&#224; h&#224;ng"
-                                                                data-image="/assets/thumb/medium/100/501/740/products/35.jpg?v=1712254885227"
-                                                                class="position-absolute swiper-lazy" />
+                                                    @foreach ($product->images as $image)
+                                                        <div class="swiper-slide" data-hash="0">
+                                                            <div class="ratio1by1 position-relative">
+                                                                <img src="{{ Storage::url($image) }}"
+                                                                    height="112" width="112"
+                                                                    alt="{{ $product->title }}"
+                                                                    data-image="{{ Storage::url($image) }}"
+                                                                    class="position-absolute swiper-lazy" />
+                                                            </div>
                                                         </div>
-                                                    </div>
-
-                                                    <div class="swiper-slide" data-hash="1">
-                                                        <div class="ratio1by1 position-relative">
-                                                            <img src="/assets/thumb/medium/100/501/740/products/36.jpg?v=1712254886233"
-                                                                height="112" width="112"
-                                                                alt="Cuckoo đồng hồ treo tường chim gỗ trang tr&#237; cho gia đ&#236;nh, cafe, nh&#224; h&#224;ng"
-                                                                data-image="/assets/thumb/medium/100/501/740/products/36.jpg?v=1712254886233"
-                                                                class="position-absolute swiper-lazy" />
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="swiper-slide" data-hash="2">
-                                                        <div class="ratio1by1 position-relative">
-                                                            <img src="/assets/thumb/medium/100/501/740/products/37.jpg?v=1712254887013"
-                                                                height="112" width="112"
-                                                                alt="Cuckoo đồng hồ treo tường chim gỗ trang tr&#237; cho gia đ&#236;nh, cafe, nh&#224; h&#224;ng"
-                                                                data-image="/assets/thumb/medium/100/501/740/products/37.jpg?v=1712254887013"
-                                                                class="position-absolute swiper-lazy" />
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="swiper-slide" data-hash="3">
-                                                        <div class="ratio1by1 position-relative">
-                                                            <img src="/assets/thumb/medium/100/501/740/products/38.jpg?v=1712254887737"
-                                                                height="112" width="112"
-                                                                alt="Cuckoo đồng hồ treo tường chim gỗ trang tr&#237; cho gia đ&#236;nh, cafe, nh&#224; h&#224;ng"
-                                                                data-image="/assets/thumb/medium/100/501/740/products/38.jpg?v=1712254887737"
-                                                                class="position-absolute swiper-lazy" />
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="swiper-slide" data-hash="4">
-                                                        <div class="ratio1by1 position-relative">
-                                                            <img src="/assets/thumb/medium/100/501/740/products/39.jpg?v=1712254888287"
-                                                                height="112" width="112"
-                                                                alt="Cuckoo đồng hồ treo tường chim gỗ trang tr&#237; cho gia đ&#236;nh, cafe, nh&#224; h&#224;ng"
-                                                                data-image="/assets/thumb/medium/100/501/740/products/39.jpg?v=1712254888287"
-                                                                class="position-absolute swiper-lazy" />
-                                                        </div>
-                                                    </div>
-
+                                                    @endforeach
                                                 </div>
                                             </div>
                                             <div class="swiper-button-next"></div>
@@ -712,9 +644,7 @@
                                 </div>
                                 <div class="col-12 col-md-6 col-lg-6">
                                     <div class="details-pro position-sticky">
-                                        <h1 class="title-product bold">Cuckoo đồng hồ treo tường chim gỗ trang trí cho
-                                            gia đình,
-                                            cafe, nhà hàng</h1>
+                                        <h1 class="title-product bold">{{ $product->title }}</h1>
                                         <div class="reviews_details_product ">
                                             <div class="sapo-product-reviews-badge sapo-product-reviews-badge-detail"
                                                 data-id="35283033"></div>
@@ -732,14 +662,7 @@
                                             </div>
                                             <div class="product-summary mb-4">
                                                 <div class="title d-block mb-2">Mô tả</div>
-                                                <ul>
-                                                    <li>Vật chất: ván sợi mật độ trung bình</li>
-                                                    <li>Phong cách: 4 kiểu (tùy chọn)</li>
-                                                    <li>Nguồn bằng: 1 pin AA (không bao gồm)</li>
-                                                    <li>Trọng lượng vật phẩm: khoảng 125g / 4.41oz</li>
-                                                    <li>Kích thước gói: 138 * 60 * 263mm / 5,43 * 2,36 * 10,35in</li>
-                                                    <li>Trọng lượng gói: khoảng 200g / 7.05oz</li>
-                                                </ul>
+                                                {!! $product->short_dec !!}
                                             </div>
                                             <div class="form-product">
                                                 <div class="clearfix from-action-addcart ">
@@ -747,9 +670,10 @@
 
                                                         <div class="btn-mua button_actions clearfix d-flex">
 
-                                                            <button type="button"
+                                                            <a type="button"
+                                                                href="/contact/"
                                                                 class="btn btn-lg btn-gray btn_buy btn-buy-now bold d-flex align-items-center justify-content-center"
-                                                                title="Liên hệ để mua hàng">Liên hệ để mua hàng</button>
+                                                                title="Liên hệ để mua hàng">Liên hệ để mua hàng</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -880,32 +804,7 @@
                             </ul>
                             <div class="tab-float rte">
                                 <div id="tab-1" class="tab-content rte active">
-                                    <p>Đây là một chiếc đồng hồ treo tường có kích thước hoàn hảo mà bạn sẽ thích có
-                                        trong phòng
-                                        khách của mình. Nó dễ dàng bổ sung cho các đồ nội thất khác trong nhà của
-                                        bạn.&nbsp;</p>
-                                    <p><strong>Các tính năng:</strong></p>
-                                    <p>Nó trông phong cách độc đáo ở bất cứ nơi nào bạn treo nó.</p>
-                                    <p>Nó không có chức năng thông báo điểm tích hợp, con chim chỉ để trang trí.</p>
-                                    <p>Hoàn hảo như một vật trang trí cho gia đình, quán cà phê, nhà hàng, v.v.</p>
-                                    <p>Thích hợp cho phòng khách, phòng làm việc và phòng ngủ.</p>
-                                    <p>Thật tốt khi tặng nó những người bạn yêu nghệ thuật.</p>
-                                    <p><strong>Thông số kỹ thuật:</strong></p>
-                                    <p>Vật chất: ván sợi mật độ trung bình</p>
-                                    <p>Phong cách: 4 kiểu (tùy chọn)</p>
-                                    <p>Nguồn bằng: 1 pin AA (không bao gồm)</p>
-                                    <p>Trọng lượng vật phẩm: khoảng 125g / 4.41oz</p>
-                                    <p>Kích thước gói: 138 * 60 * 263mm / 5,43 * 2,36 * 10,35in</p>
-                                    <p>Trọng lượng gói: khoảng 200g / 7.05oz</p>
-                                    <p>Kích thước mặt hàng:</p>
-                                    <p>Kiểu 1: 241 * 116 * 50mm / 9,49 * 4,57 * 1,97in<br />
-                                        Kiểu 2: 225 * 118 * 50mm / 8,86 * 4,65 * 1,97in<br />
-                                        Kiểu 3: 225 * 115 * 50mm / 8,86 * 4,53 * 1,97in<br />
-                                        Kiểu 4: 231 * 118 * 50mm / 9,09 * 4,65 * 1,97in</p>
-                                    <p>Lưu ý:</p>
-                                    <p>1 Pin AA là cần thiết, nhưng không bao gồm trong giao hàng.</p>
-                                    <p>Danh sách gói:</p>
-                                    <p>1 * Đồng hồ&nbsp;</p>
+                                    {!! $product->description !!}
                                 </div>
                                 <div id="tab-2" class="tab-content rte">
                                     <p>Cám ơn quý khách đã quan tâm và truy cập vào website. Chúng tôi tôn trọng và cam
@@ -1048,312 +947,55 @@
                             <div class="product-relate-swiper slide-product position-relative">
                                 <div class="swiper-container">
                                     <div class="swiper-wrapper">
+                                        @foreach ($relatedProducts as $product)
                                         <div class="swiper-slide">
                                             <form
                                                 class="variants product-action product-item ">
                                                 <div class="product-thumbnail position-relative">
                                                     <a class="product-thumb position-relative ratio1by1 scale_hover d-block"
-                                                        href="/gia-de-ruou-than-meo-ai-cap-tuong-meo-trang-tri-nha-cua"
-                                                        title="Giá để rượu thần mèo Ai Cập, Tượng mèo trang trí nhà cửa">
+                                                        href="{{ '/product/'.$product->slug }}"
+                                                        title="{{ $product->title }}">
                                                         <img class="position-absolute"
-                                                            src="/assets/thumb/large/100/501/740/products/30.jpg?v=1712254258810"
-                                                            alt="Giá để rượu thần mèo Ai Cập, Tượng mèo trang trí nhà cửa"
+                                                            src="{{Storage::url(''.$product->images[0])}}"
+                                                            alt="{{ $product->title }}"
                                                             width="302" height="302">
                                                     </a>
                                                     <span class="setWishlist position-absolute"
-                                                        data-wish="gia-de-ruou-than-meo-ai-cap-tuong-meo-trang-tri-nha-cua"
+                                                        data-wish="{{ $product->title }}"
                                                         tabindex="0" title="Thêm vào yêu thích"></span>
                                                 </div>
                                                 <div class="product-info position-relative p-md-3 p-2">
                                                     <h3 class="product-name bold mb-3"><a
-                                                            href="/gia-de-ruou-than-meo-ai-cap-tuong-meo-trang-tri-nha-cua"
+                                                            href="{{ '/product/'.$product->slug }}"
                                                             class="text1line"
-                                                            title="Giá để rượu thần mèo Ai Cập, Tượng mèo trang trí nhà cửa">Giá
-                                                            để
-                                                            rượu thần mèo Ai Cập, Tượng mèo trang trí nhà cửa</a></h3>
+                                                            title="{{ $product->title }}">
+                                                            {{ $product->title }}
+                                                        </a>
+                                                    </h3>
                                                     <div class="price-box bold mb-3">
                                                         <span class="price bold">Liên hệ</span>
                                                     </div>
                                                     <div class="action">
                                                         <input type="hidden" name="variantId" value="113777964" />
-                                                        <button
+                                                        <a href="/contact/"
                                                             class="btn-cart btn-views w-100 add_to_cart  d-flex align-items-center justify-content-center"
-                                                            title="Thêm vào giỏ">Liên hệ để mua hàng</button>
+                                                            title="Thêm vào giỏ">Liên hệ để mua hàng</a>
                                                     </div>
                                                 </div>
                                             </form>
                                         </div>
-                                        <div class="swiper-slide">
-                                            <form
-                                                class="variants product-action product-item ">
-                                                <div class="product-thumbnail position-relative">
-                                                    <a class="product-thumb position-relative ratio1by1 scale_hover d-block"
-                                                        href="/gia-de-ruou-than-meo-ai-cap-tuong-meo-trang-tri-nha-cua"
-                                                        title="Giá để rượu thần mèo Ai Cập, Tượng mèo trang trí nhà cửa">
-                                                        <img class="position-absolute"
-                                                            src="/assets/thumb/large/100/501/740/products/30.jpg?v=1712254258810"
-                                                            alt="Giá để rượu thần mèo Ai Cập, Tượng mèo trang trí nhà cửa"
-                                                            width="302" height="302">
-                                                    </a>
-                                                    <span class="setWishlist position-absolute"
-                                                        data-wish="gia-de-ruou-than-meo-ai-cap-tuong-meo-trang-tri-nha-cua"
-                                                        tabindex="0" title="Thêm vào yêu thích"></span>
-                                                </div>
-                                                <div class="product-info position-relative p-md-3 p-2">
-                                                    <h3 class="product-name bold mb-3"><a
-                                                            href="/gia-de-ruou-than-meo-ai-cap-tuong-meo-trang-tri-nha-cua"
-                                                            class="text1line"
-                                                            title="Giá để rượu thần mèo Ai Cập, Tượng mèo trang trí nhà cửa">Giá
-                                                            để
-                                                            rượu thần mèo Ai Cập, Tượng mèo trang trí nhà cửa</a></h3>
-                                                    <div class="price-box bold mb-3">
-                                                        <span class="price bold">Liên hệ</span>
-                                                    </div>
-                                                    <div class="action">
-                                                        <input type="hidden" name="variantId" value="113777964" />
-                                                        <button
-                                                            class="btn-cart btn-views w-100 add_to_cart  d-flex align-items-center justify-content-center"
-                                                            title="Thêm vào giỏ">Liên hệ để mua hàng</button>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <form
-                                                class="variants product-action product-item ">
-                                                <div class="product-thumbnail position-relative">
-                                                    <a class="product-thumb position-relative ratio1by1 scale_hover d-block"
-                                                        href="/gia-de-ruou-than-meo-ai-cap-tuong-meo-trang-tri-nha-cua"
-                                                        title="Giá để rượu thần mèo Ai Cập, Tượng mèo trang trí nhà cửa">
-                                                        <img class="position-absolute"
-                                                            src="/assets/thumb/large/100/501/740/products/30.jpg?v=1712254258810"
-                                                            alt="Giá để rượu thần mèo Ai Cập, Tượng mèo trang trí nhà cửa"
-                                                            width="302" height="302">
-                                                    </a>
-                                                    <span class="setWishlist position-absolute"
-                                                        data-wish="gia-de-ruou-than-meo-ai-cap-tuong-meo-trang-tri-nha-cua"
-                                                        tabindex="0" title="Thêm vào yêu thích"></span>
-                                                </div>
-                                                <div class="product-info position-relative p-md-3 p-2">
-                                                    <h3 class="product-name bold mb-3"><a
-                                                            href="/gia-de-ruou-than-meo-ai-cap-tuong-meo-trang-tri-nha-cua"
-                                                            class="text1line"
-                                                            title="Giá để rượu thần mèo Ai Cập, Tượng mèo trang trí nhà cửa">Giá
-                                                            để
-                                                            rượu thần mèo Ai Cập, Tượng mèo trang trí nhà cửa</a></h3>
-                                                    <div class="price-box bold mb-3">
-                                                        <span class="price bold">Liên hệ</span>
-                                                    </div>
-                                                    <div class="action">
-                                                        <input type="hidden" name="variantId" value="113777964" />
-                                                        <button
-                                                            class="btn-cart btn-views w-100 add_to_cart  d-flex align-items-center justify-content-center"
-                                                            title="Thêm vào giỏ">Liên hệ để mua hàng</button>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <form
-                                                class="variants product-action product-item ">
-                                                <div class="product-thumbnail position-relative">
-                                                    <a class="product-thumb position-relative ratio1by1 scale_hover d-block"
-                                                        href="/gia-de-ruou-than-meo-ai-cap-tuong-meo-trang-tri-nha-cua"
-                                                        title="Giá để rượu thần mèo Ai Cập, Tượng mèo trang trí nhà cửa">
-                                                        <img class="position-absolute"
-                                                            src="/assets/thumb/large/100/501/740/products/30.jpg?v=1712254258810"
-                                                            alt="Giá để rượu thần mèo Ai Cập, Tượng mèo trang trí nhà cửa"
-                                                            width="302" height="302">
-                                                    </a>
-                                                    <span class="setWishlist position-absolute"
-                                                        data-wish="gia-de-ruou-than-meo-ai-cap-tuong-meo-trang-tri-nha-cua"
-                                                        tabindex="0" title="Thêm vào yêu thích"></span>
-                                                </div>
-                                                <div class="product-info position-relative p-md-3 p-2">
-                                                    <h3 class="product-name bold mb-3"><a
-                                                            href="/gia-de-ruou-than-meo-ai-cap-tuong-meo-trang-tri-nha-cua"
-                                                            class="text1line"
-                                                            title="Giá để rượu thần mèo Ai Cập, Tượng mèo trang trí nhà cửa">Giá
-                                                            để
-                                                            rượu thần mèo Ai Cập, Tượng mèo trang trí nhà cửa</a></h3>
-                                                    <div class="price-box bold mb-3">
-                                                        <span class="price bold">Liên hệ</span>
-                                                    </div>
-                                                    <div class="action">
-                                                        <input type="hidden" name="variantId" value="113777964" />
-                                                        <button
-                                                            class="btn-cart btn-views w-100 add_to_cart  d-flex align-items-center justify-content-center"
-                                                            title="Thêm vào giỏ">Liên hệ để mua hàng</button>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <form
-                                                class="variants product-action product-item ">
-                                                <div class="product-thumbnail position-relative">
-                                                    <a class="product-thumb position-relative ratio1by1 scale_hover d-block"
-                                                        href="/gia-de-ruou-than-meo-ai-cap-tuong-meo-trang-tri-nha-cua"
-                                                        title="Giá để rượu thần mèo Ai Cập, Tượng mèo trang trí nhà cửa">
-                                                        <img class="position-absolute"
-                                                            src="/assets/thumb/large/100/501/740/products/30.jpg?v=1712254258810"
-                                                            alt="Giá để rượu thần mèo Ai Cập, Tượng mèo trang trí nhà cửa"
-                                                            width="302" height="302">
-                                                    </a>
-                                                    <span class="setWishlist position-absolute"
-                                                        data-wish="gia-de-ruou-than-meo-ai-cap-tuong-meo-trang-tri-nha-cua"
-                                                        tabindex="0" title="Thêm vào yêu thích"></span>
-                                                </div>
-                                                <div class="product-info position-relative p-md-3 p-2">
-                                                    <h3 class="product-name bold mb-3"><a
-                                                            href="/gia-de-ruou-than-meo-ai-cap-tuong-meo-trang-tri-nha-cua"
-                                                            class="text1line"
-                                                            title="Giá để rượu thần mèo Ai Cập, Tượng mèo trang trí nhà cửa">Giá
-                                                            để
-                                                            rượu thần mèo Ai Cập, Tượng mèo trang trí nhà cửa</a></h3>
-                                                    <div class="price-box bold mb-3">
-                                                        <span class="price bold">Liên hệ</span>
-                                                    </div>
-                                                    <div class="action">
-                                                        <input type="hidden" name="variantId" value="113777964" />
-                                                        <button
-                                                            class="btn-cart btn-views w-100 add_to_cart  d-flex align-items-center justify-content-center"
-                                                            title="Thêm vào giỏ">Liên hệ để mua hàng</button>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <form
-                                                class="variants product-action product-item ">
-                                                <div class="product-thumbnail position-relative">
-                                                    <a class="product-thumb position-relative ratio1by1 scale_hover d-block"
-                                                        href="/gia-de-ruou-than-meo-ai-cap-tuong-meo-trang-tri-nha-cua"
-                                                        title="Giá để rượu thần mèo Ai Cập, Tượng mèo trang trí nhà cửa">
-                                                        <img class="position-absolute"
-                                                            src="/assets/thumb/large/100/501/740/products/30.jpg?v=1712254258810"
-                                                            alt="Giá để rượu thần mèo Ai Cập, Tượng mèo trang trí nhà cửa"
-                                                            width="302" height="302">
-                                                    </a>
-                                                    <span class="setWishlist position-absolute"
-                                                        data-wish="gia-de-ruou-than-meo-ai-cap-tuong-meo-trang-tri-nha-cua"
-                                                        tabindex="0" title="Thêm vào yêu thích"></span>
-                                                </div>
-                                                <div class="product-info position-relative p-md-3 p-2">
-                                                    <h3 class="product-name bold mb-3"><a
-                                                            href="/gia-de-ruou-than-meo-ai-cap-tuong-meo-trang-tri-nha-cua"
-                                                            class="text1line"
-                                                            title="Giá để rượu thần mèo Ai Cập, Tượng mèo trang trí nhà cửa">Giá
-                                                            để
-                                                            rượu thần mèo Ai Cập, Tượng mèo trang trí nhà cửa</a></h3>
-                                                    <div class="price-box bold mb-3">
-                                                        <span class="price bold">Liên hệ</span>
-                                                    </div>
-                                                    <div class="action">
-                                                        <input type="hidden" name="variantId" value="113777964" />
-                                                        <button
-                                                            class="btn-cart btn-views w-100 add_to_cart  d-flex align-items-center justify-content-center"
-                                                            title="Thêm vào giỏ">Liên hệ để mua hàng</button>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <form
-                                                class="variants product-action product-item ">
-                                                <div class="product-thumbnail position-relative">
-                                                    <a class="product-thumb position-relative ratio1by1 scale_hover d-block"
-                                                        href="/gia-de-ruou-than-meo-ai-cap-tuong-meo-trang-tri-nha-cua"
-                                                        title="Giá để rượu thần mèo Ai Cập, Tượng mèo trang trí nhà cửa">
-                                                        <img class="position-absolute"
-                                                            src="/assets/thumb/large/100/501/740/products/30.jpg?v=1712254258810"
-                                                            alt="Giá để rượu thần mèo Ai Cập, Tượng mèo trang trí nhà cửa"
-                                                            width="302" height="302">
-                                                    </a>
-                                                    <span class="setWishlist position-absolute"
-                                                        data-wish="gia-de-ruou-than-meo-ai-cap-tuong-meo-trang-tri-nha-cua"
-                                                        tabindex="0" title="Thêm vào yêu thích"></span>
-                                                </div>
-                                                <div class="product-info position-relative p-md-3 p-2">
-                                                    <h3 class="product-name bold mb-3"><a
-                                                            href="/gia-de-ruou-than-meo-ai-cap-tuong-meo-trang-tri-nha-cua"
-                                                            class="text1line"
-                                                            title="Giá để rượu thần mèo Ai Cập, Tượng mèo trang trí nhà cửa">Giá
-                                                            để
-                                                            rượu thần mèo Ai Cập, Tượng mèo trang trí nhà cửa</a></h3>
-                                                    <div class="price-box bold mb-3">
-                                                        <span class="price bold">Liên hệ</span>
-                                                    </div>
-                                                    <div class="action">
-                                                        <input type="hidden" name="variantId" value="113777964" />
-                                                        <button
-                                                            class="btn-cart btn-views w-100 add_to_cart  d-flex align-items-center justify-content-center"
-                                                            title="Thêm vào giỏ">Liên hệ để mua hàng</button>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <form
-                                                class="variants product-action product-item ">
-                                                <div class="product-thumbnail position-relative">
-                                                    <a class="product-thumb position-relative ratio1by1 scale_hover d-block"
-                                                        href="/gia-de-ruou-than-meo-ai-cap-tuong-meo-trang-tri-nha-cua"
-                                                        title="Giá để rượu thần mèo Ai Cập, Tượng mèo trang trí nhà cửa">
-                                                        <img class="position-absolute"
-                                                            src="/assets/thumb/large/100/501/740/products/30.jpg?v=1712254258810"
-                                                            alt="Giá để rượu thần mèo Ai Cập, Tượng mèo trang trí nhà cửa"
-                                                            width="302" height="302">
-                                                    </a>
-                                                    <span class="setWishlist position-absolute"
-                                                        data-wish="gia-de-ruou-than-meo-ai-cap-tuong-meo-trang-tri-nha-cua"
-                                                        tabindex="0" title="Thêm vào yêu thích"></span>
-                                                </div>
-                                                <div class="product-info position-relative p-md-3 p-2">
-                                                    <h3 class="product-name bold mb-3"><a
-                                                            href="/gia-de-ruou-than-meo-ai-cap-tuong-meo-trang-tri-nha-cua"
-                                                            class="text1line"
-                                                            title="Giá để rượu thần mèo Ai Cập, Tượng mèo trang trí nhà cửa">Giá
-                                                            để
-                                                            rượu thần mèo Ai Cập, Tượng mèo trang trí nhà cửa</a></h3>
-                                                    <div class="price-box bold mb-3">
-                                                        <span class="price bold">Liên hệ</span>
-                                                    </div>
-                                                    <div class="action">
-                                                        <input type="hidden" name="variantId" value="113777964" />
-                                                        <button
-                                                            class="btn-cart btn-views w-100 add_to_cart  d-flex align-items-center justify-content-center"
-                                                            title="Thêm vào giỏ">Liên hệ để mua hàng</button>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-
+                                        @endforeach
                                     </div>
                                 </div>
                                 <div class="swiper-button-prev"></div>
                                 <div class="swiper-button-next"></div>
                             </div>
-                            <a href="sang-trong" class="position-absolute more-product view-all"
+                            <a href="{{ '/products/?category='.$product->category_id  }}" class="position-absolute more-product view-all"
                                 title="Xem tất cả">Xem tất
                                 cả</a>
 
                         </div>
-                        <div class="productRelate recent-page-viewed position-relative mb-5">
-                            <h2 class="block-title position-relative bold mb-2">
-                                <a href="/san-pham-da-xem" title="Sản phẩm đã xem">Sản phẩm đã xem</a>
-                            </h2>
-                            <div class="recent-viewed slide-product position-relative">
-                                <div class="swiper-container">
-                                    <div class="swiper-wrapper"></div>
-                                </div>
-                                <div class="swiper-button-prev"></div>
-                                <div class="swiper-button-next"></div>
-                            </div>
-                            <a href="/san-pham-da-xem" class="position-absolute more-product view-all"
-                                title="Xem tất cả">Xem tất
-                                cả</a>
-                        </div>
+
                         <script>
                             if (localStorage.last_viewed_products != undefined) {
                                 document.querySelector('.recent-page-viewed').classList.remove('d-none');
