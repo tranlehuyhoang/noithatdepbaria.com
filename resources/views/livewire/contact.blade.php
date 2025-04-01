@@ -606,45 +606,38 @@
                         <div class="row m-0 border">
                             <div class="form-contact col-lg-7 col-md-6 col-12 order-lg-2">
                                 <h2 class="title bold mb-3">Gửi liên hệ cho chúng tôi</h2>
-                                <div id="pagelogin">
-                                    <form method="post" action="/postcontact" id="contact"
-                                        accept-charset="UTF-8"><input name="FormType" type="hidden"
-                                            value="contact" /><input name="utf8" type="hidden"
-                                            value="true" /><input type="hidden"
-                                            id="Token-30e72845c9b14143b7802a396795a933" name="Token" />
-                                        <script src="https://www.google.com/recaptcha/api.js?render=6Ldtu4IUAAAAAMQzG1gCw3wFlx_GytlZyLrXcsuK"></script>
-                                        <script>
-                                            grecaptcha.ready(function() {
-                                                grecaptcha.execute("6Ldtu4IUAAAAAMQzG1gCw3wFlx_GytlZyLrXcsuK", {
-                                                    action: "contact"
-                                                }).then(function(token) {
-                                                    document.getElementById("Token-30e72845c9b14143b7802a396795a933").value = token
-                                                });
-                                            });
-                                        </script>
-                                        <div class="group_contact row">
-                                            <div class="col-md-6">
-                                                <input placeholder="Họ và tên" type="text" class="form-control"
-                                                    required value="" name="contact[Name]">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <input type="number" placeholder="Điện thoại*" name="contact[phone]"
-                                                    class="form-control" required>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <input placeholder="Email" type="email"
-                                                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required
-                                                    id="email1" class="form-control" value=""
-                                                    name="contact[email]">
-                                            </div>
-                                            <div class="col-md-12">
-                                                <input placeholder="Tiêu đề" type="text" class="form-control"
-                                                    name="contact[Tiêu đề]">
-                                                <textarea placeholder="Nội dung" name="contact[body]" id="comment" class="form-control content-area"
-                                                    rows="3" Required></textarea>
-                                                <button type="submit" class="btn-lienhe bold rounded-5">GỬI THÔNG
-                                                    TIN</button>
-                                            </div>
+                                <div>
+                                    @if (session()->has('message'))
+                                        <div class="alert alert-success">
+                                            {{ session('message') }}
+                                        </div>
+                                    @endif
+
+                                    <form wire:submit.prevent="submit" class="group_contact row">
+                                        <div class="col-md-6">
+                                            <input placeholder="Họ và tên" type="text" class="form-control" wire:model="name">
+                                            @error('name') <span class="text-danger">{{ $message }}</span> @enderror
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <input type="number" placeholder="Điện thoại*" wire:model="phone" class="form-control">
+                                            @error('phone') <span class="text-danger">{{ $message }}</span> @enderror
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <input placeholder="Email" type="email" wire:model="email" class="form-control">
+                                            @error('email') <span class="text-danger">{{ $message }}</span> @enderror
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <input placeholder="Tiêu đề" type="text" class="form-control" wire:model="title">
+                                            @error('title') <span class="text-danger">{{ $message }}</span> @enderror
+
+                                            <textarea placeholder="Nội dung" wire:model="content" class="form-control content-area" rows="3"></textarea>
+                                            @error('content') <span class="text-danger">{{ $message }}</span> @enderror
+                                        </div>
+                                        <div class="col-md-12 mt-3">
+                                            <button type="submit" class="btn-lienhe bold rounded-5">GỬI THÔNG TIN</button>
                                         </div>
                                     </form>
                                 </div>
