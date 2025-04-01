@@ -51,7 +51,7 @@ class Contact extends Component
         ]);
 
         // Send email
-        Mail::to('vanquoc26520@gmail.com')->send(new ContactMail([
+        Mail::to(env('EMAIL_SEND_CONTACT', '2509roblox@gmail.com'))->send(new ContactMail([
             'name' => $this->name,
             'email' => $this->email,
             'phone' => $this->phone,
