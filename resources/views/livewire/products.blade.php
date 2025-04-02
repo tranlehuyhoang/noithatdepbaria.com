@@ -565,7 +565,7 @@
                         </div>
                     </section>
                     <div class="container">
-                        <h1 class="title-page p-md-4 p-2 mb-md-5 mb-3 bold lazyload_bg d-flex align-items-center"
+                        <h1 wire:ignore class="title-page p-md-4 p-2 mb-md-5 mb-3 bold lazyload_bg d-flex align-items-center"
                             data-src="/assets/100/501/740/themes/929449/assets/coll_bg.jpg?1736415638335">
                             Tất cả sản
                             phẩm</h1>
@@ -974,6 +974,7 @@
                                                             href="/product/{{ $product->slug }}"
                                                             title="{{ $product->title }}">
                                                             <img class="position-absolute"
+                                                                style="height: 100% !important; width: 100% !important; object-fit: cover;"
                                                                 src="{{Storage::url($product->images[0])}}"
                                                                 alt="{{ $product->title }}"
                                                                 width="302" height="302">

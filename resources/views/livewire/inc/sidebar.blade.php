@@ -52,7 +52,7 @@
             @foreach ($blogs ?? [] as $blog)
                 <div class="item d-flex flex-wrap">
                     <a class="post-thumb scale_hover"
-                        href="{{ 'blog/'. $blog->title }}"
+                        href="{{ '/blog/'. $blog->slug }}"
                         title="{{ $blog->title }}">
                         <img class="w-100 h-100 rounded-5 "
                             src="{{ Storage::url($blog->banner) }}"
@@ -62,7 +62,7 @@
                         <span>{{ \Carbon\Carbon::parse( $blog->created_at)->translatedFormat(' d/n/Y') }}</span>
                         <h3 class="mb-0">
                             <a title="{{ $blog->title }}"
-                                href="{{ "blog/". $blog->title }}">{{ $blog->short_desc }}
+                                href="{{ "/blog/". $blog->slug }}">{{ $blog->short_desc }}
                             </a>
                         </h3>
                     </div>

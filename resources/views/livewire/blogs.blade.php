@@ -531,6 +531,7 @@
                                                     href="{{ '/blog/' . $blog->slug }}"
                                                     title="{{ $blog->title }}">
                                                     <img class=" position-absolute"
+                                                        style="height: 100% !important; width: 100% !important; object-fit: cover;"
                                                         src="{{ Storage::url($blog->banner) }}"
                                                         alt="{{ $blog->title }}">
                                                 </a>

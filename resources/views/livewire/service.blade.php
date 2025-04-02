@@ -668,6 +668,7 @@
                                                         href="{{ '/service/'. $service->slug }}"
                                                         title="{{ $service->title }}">
                                                         <img class="position-absolute"
+                                                            style="height: 100% !important; width: 100% !important; object-fit: cover;"
                                                             src="{{ Storage::url($service->banner) }}"
                                                             alt="{{ $service->title }}">
                                                     </a>
