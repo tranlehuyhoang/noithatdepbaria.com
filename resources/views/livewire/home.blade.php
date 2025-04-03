@@ -531,33 +531,141 @@
                         </div>
                     </div>
                     <div class="container-fluid px-0">
-                        <div class="row no-gutters">
+                        <img src="{{asset('assets/dots_right.png')}}" alt="" style="
+                        position: absolute;
+                        right: 0;
+                    ">
+                        <div class="row no-gutters  mb-5">
                           <!-- Left image section with curved green border -->
                           <div class="col-md-5 position-relative">
-                            <div class="rounded-right bg-success" style="position: absolute; top: 0; bottom: 0; left: 0; right: 0; z-index: 1;"></div>
-                            <div class="position-relative" style="z-index: 2; padding: 15px 15px 15px 0;">
-                              <img src="/banner2.png" alt="Interior Design" class="img-fluid rounded" style="width: 100%; height: 100%; object-fit: cover;">
+                              <div class="position-relative" style="z-index: 2; padding: 15px 15px 15px 0;">
+                                <div style="z-index: -1; position: absolute; top: 0; bottom: 0; left: 0; right: 5rem; background: #0a8f3c; border-radius: 2rem;" class="rounded-right"></div>
+                              <img src="/banner2.png" alt="Interior Design" class="img-fluid rounded lazyload" data-src="/banner2.png" style="width: 100%; height: 100%; object-fit: cover;max-height: 716px; border-top-right-radius: 80px 80px !important;">
                             </div>
                           </div>
 
                           <!-- Right content section -->
-                          <div class="col-md-7 px-4 py-5 d-flex align-items-center">
+                          <div class="pl-5 col-md-7 px-4 py-5 d-flex align-items-center">
                             <div class="content-wrapper">
-                              <h2 class="text-success font-weight-bold mb-4">Welcome to Nhật Anh</h2>
-                              <p class="text-dark mb-4">
+                              <h2 class="text-success font-weight-bold mb-4" style="font-size: 42px;">Welcome to Nhật Anh</h2>
+                              <p class="text-dark mb-4" style="
+                              max-width: 900px;
+                              text-align: justify;
+                          ">
                                 Ở thời đại hiện nay, không gian sống và làm việc không chỉ đơn thuần là nơi để tồn tại mà còn là nơi để tỏa sáng và thể hiện bản thân. Với sứ mệnh làm cho mọi không gian trở nên độc đáo và đầy sáng tạo, Nhật Anh đã trở thành một tên tuổi uy tín trong lĩnh vực thiết kế và xây dựng nội thất tại Việt Nam. Nhật Anh là một công ty thiết kế và xây dựng nội thất chuyên nghiệp, thành lập với tâm huyết và đam mê về sự sáng tạo và không gian sống.
                               </p>
-                              <div class="mt-4">
-                                <a href="#" class="btn btn-outline-success px-4">Xem Thêm</a>
+                              <div class="mt-4" >
+                                <a href="#" class="btn btn-outline-success px-4" style="
+                                background: #0a8f3c;
+                                border-radius: 2rem;
+                                color: white;
+                                font-size: 1.2rem;
+                                padding: .2rem;
+                            ">Xem Thêm</a>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    <section class="section_cate">
-                        <div class="container">
+                    <section class="section_cate p-0">
+                        <div class=" ">
                             <div class="row">
-
+                                <div class="col-md-6 p-6 d-flex align-items-center justify-content-center position-relative" style="background-image: url('{{asset('assets/thumbnail_2_0-65.jpg')}}'); background-size: cover; background-position: center; height: 600px;">
+                                    <div class="overlay position-absolute" style="top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5);"></div>
+                                    <div class="text-center position-relative">
+                                        <h2 class="mb-5 text-white" style="font-size: 4rem; ">Phòng Ăn</h2>
+                                        <a href="#" class="btn btn-outline-light mt-4" style="
+    border: none;
+    border-radius: 1rem;
+    background: #80808080;
+">
+                                            Xem thêm
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right ml-2" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 p-6 d-flex align-items-center justify-content-center position-relative" style="background-image: url('{{asset('assets/TU-AO-CUA-LUA-3.jpeg')}}'); background-size: cover; background-position: center; height: 600px;">
+                                    <div class="overlay position-absolute" style="top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5);"></div>
+                                    <div class="text-center position-relative">
+                                        <h2 class="mb-5 text-white" style="font-size: 4rem; ">Phòng Ngủ</h2>
+                                        <a href="#" class="btn btn-outline-light mt-4" style="
+    border: none;
+    border-radius: 1rem;
+    background: #80808080;
+">
+                                            Xem thêm
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right ml-2" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="section_cate p-0" style="background: white;">
+                        <div class="container" style="
+                        padding: 4rem 0;
+                    ">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="project-info">
+                                        <h2 class="text-uppercase mb-4" style="font-size: 2.5rem;">Dự án </h2>
+                                        <div class="d-flex align-items-center">
+                                            <hr style="width: 50px; border-top: 2px solid #000; margin:0  15px 0 0 ; ">
+                                            <span>Đam mê của chúng tôi</span>
+                                        </div>
+                                        <div class="project-slider swiper-container" style="
+                                        margin-top: 5rem;
+                                    ">
+                                            <div class="swiper-wrapper">
+                                                @foreach($projects as $project)
+                                                <div class="swiper-slide" style="width: 513px;background: #e9e9e987;padding: 1rem;">
+                                                    <h3 class="mb-3">{{ $project->title }}</h3>
+                                                    <p class="mb-4">{{ $project->short_desc }}</p>
+                                                    <div class="d-flex align-items-center mb-4">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-geo-alt mr-2" viewBox="0 0 16 16">
+                                                            <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"/>
+                                                        </svg>
+                                                        <span>{{ $project->address }}</span>
+                                                    </div>
+                                                    <a href="/project/{{ $project->slug }}" class="btn btn-outline-dark px-4">
+                                                        Xem thêm
+                                                      
+                                                    </a>
+                                                </div>
+                                                @endforeach
+                                            </div>
+                                            <div class="swiper-pagination"></div>
+                                            <div class="swiper-button-next"></div>
+                                            <div class="swiper-button-prev"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="project-grid">
+                                        <div class="row g-3">
+                                            <div class="col-md-8">
+                                                @if($projects->count() > 0)
+                                                <div class="project-image position-relative">
+                                                    <img src="{{ asset('storage/'.$projects[2]->banner) }}" class="img-fluid w-100" alt="{{ $projects[2]->title }}" style="height: 423px; object-fit: cover;">
+                                                    
+                                                </div>
+                                                @endif
+                                            </div>
+                                            <div class="col-md-4">
+                                                @foreach($projects->take(2) as $key => $project)
+                                                <div class="project-image position-relative {{ $key == 0 ? 'mb-3' : 'mt-3 ' }}">
+                                                    <img src="{{ asset('storage/'.$project->banner) }}" class="img-fluid w-100" alt="{{ $project->title }}" style="height: 200px; object-fit: cover; {{ $key == 1 ? 'height: 207px;' : '' }}">
+                                                    
+                                                </div>
+                                                @endforeach
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </section>
@@ -566,20 +674,11 @@
                         data-section="ajax-tab-1">
                         <div class="container">
                             <h2 class="block-title position-relative text-center bold mb-3">
-                                <a href="/collections/all" title="Bộ sưu tập">Bộ sưu tập</a>
+                                <hr style="width: 30%; display: inline-block; margin-right: 20px;">
+                                <a href="/products" title="Bộ sưu tập">Sản phẩm nổi bật</a>
+                                <hr style="width: 30%; display: inline-block; margin-left: 20px;">
                             </h2>
-                            <ul
-                                class="tabs tabs-title tab-pc tabtitle ajax clearfix d-flex list-unstyled mb-md-4 mb-3">
-                                <li class="tab-link tab_cate px-4 mb-md-2 has-content current" data-tab="tab-1"
-                                    data-url="/hien-dai">Hiện đại</li>
-                                <li class="tab-link tab_cate px-4 mb-md-2 " data-tab="tab-2" data-url="/co-dien">Cổ
-                                    điển</li>
-                                <li class="tab-link tab_cate px-4 mb-md-2 " data-tab="tab-3" data-url="/don-gian">Đơn
-                                    giản</li>
-                                <li class="tab-link tab_cate px-4 mb-md-2 " data-tab="tab-4" data-url="/sang-trong">
-                                    Sang trọng
-                                </li>
-                            </ul>
+                           
                             <div class="tab-1 tab-content current">
                                 <div class="row">
                                     <div class="col-lg-3 col-md-4 col-6 item_product_main">
@@ -908,8 +1007,8 @@
                                         </div>
                                         <div class="swiper-pagination"></div>
                                     </div>
-                                    <div class="swiper-button-prev"></div>
-                                    <div class="swiper-button-next"></div>
+                                    {{-- <div class="swiper-button-prev"></div>
+                                    <div class="swiper-button-next"></div> --}}
                                 </div>
                                 <div class="title col-lg-6 col-md-5 mb-md-5 mb-2">
                                     <a href="san-pham-noi-bat" title="Nội thất phòng khách"
@@ -921,6 +1020,12 @@
                                         <span class="position-absolute pr-4">Xem thêm</span>
                                     </a>
                                 </div>
+                                <style>
+                                    .swiper-button-prev,
+                                    .swiper-button-next {
+                                  display: none;
+                                    }
+                                </style>
                             </div>
                         </div>
                     </section>

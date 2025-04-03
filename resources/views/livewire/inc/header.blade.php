@@ -1,10 +1,10 @@
 <header class="header header-index position-fixed">
     <div class="container-fluid d-flex align-items-center">
-        <div class="menu-bar d-xl-none d-block mr-4">
-            <span class="line-1"></span>
-            <span class="line-2"></span>
-            <span class="line-3"></span>
-        </div>
+        <div class="menu-bar d-xl-none d-block mr-4" bis_skin_checked="1">
+			<span class="line-1"></span>
+			<span class="line-2"></span>
+			<span class="line-3"></span>
+		</div>
         <a href="/" class="logo-index" title="OH! Decor">
             <img src="/logo_white.png" alt="">
         </a>

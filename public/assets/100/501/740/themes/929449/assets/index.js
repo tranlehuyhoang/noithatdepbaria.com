@@ -7,6 +7,24 @@ window.addEventListener('DOMContentLoaded', (event) => {
 			clickable: true,
 		}
 	});
+
+	var projectSwiper = new Swiper('.project-slider', {
+		slidesPerView: 1,
+		loop: true,
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: false,
+		},
+		pagination: {
+			el: '.project-slider .swiper-pagination',
+			clickable: true,
+		},
+		navigation: {
+			nextEl: '.project-slider .swiper-button-next',
+			prevEl: '.project-slider .swiper-button-prev',
+		},
+	});
+
 	if ($('.cate-slider').length > 0) {
 		var swiper = new Swiper('.cate-slider', {
 			slidesPerView: 2.5,
