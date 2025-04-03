@@ -84,6 +84,23 @@ class ProductResource extends Resource
                                     ->options(Category::all()->pluck('title', 'id'))
                                     ->searchable(),
                             ]),
+                        Forms\Components\Tabs\Tab::make('SEO')
+                            ->schema([
+                                Forms\Components\TextInput::make('seo_title')
+                                    ->label('Tiêu đề SEO')
+                                    ->helperText('Tiêu đề hiển thị trên kết quả tìm kiếm')
+                                    ->maxLength(60)
+                                    ->columnSpanFull(),
+                                Forms\Components\TextInput::make('seo_keywords')
+                                    ->label('Từ khóa SEO')
+                                    ->helperText('Các từ khóa phân cách bằng dấu phẩy')
+                                    ->maxLength(255)
+                                    ->columnSpanFull(),
+                                Forms\Components\Textarea::make('seo_description')
+                                    ->label('Mô tả SEO')
+                                    ->helperText('Mô tả ngắn hiển thị trên kết quả tìm kiếm')
+                                    ->columnSpanFull(),
+                            ]),
                     ])->columnSpanFull(),
             ]);
     }

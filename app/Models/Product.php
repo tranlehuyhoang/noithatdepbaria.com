@@ -18,6 +18,9 @@ class Product extends Model
         'short_dec',
         'description',
         'category_id',
+        'seo_title',
+        'seo_keywords',
+        'seo_description',
     ];
 
     // Định nghĩa mối quan hệ với Category

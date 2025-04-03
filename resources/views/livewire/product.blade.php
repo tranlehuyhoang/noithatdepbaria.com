@@ -3,7 +3,9 @@
         <div>
 
             <head>
-                <title>{{ $product->title }}</title>
+                <title>{{ $product->seo_title ?: $product->title }} - {{env('APP_NAME')}}</title>
+                <meta name="keywords" content="{{ $product->seo_keywords ?: $product->title }}">
+                <meta name="description" content="{{ $product->seo_description ?: $product->short_dec ?: $product->title }}">
                 <link rel="preload" as='style' type="text/css"
                     href="/assets/100/501/740/themes/929449/assets/main.scss.css?1736415638335">
                 <link rel="preload" as='style' type="text/css"
@@ -592,7 +594,11 @@
                         </ul>
                     </div>
                 </section>
-
+                       <style>
+                                    .layout-product .details-product { 
+                                        background: none !important;
+                                    }
+                                </style>
                 <section class="product layout-product" itemscope itemtype="https://schema.org/Product">
 
                     <div class="details-product pb-4">
@@ -604,14 +610,14 @@
                                             <div class="swiper-container">
                                                 <div class="swiper-wrapper" id="lightgallery">
                                                     @foreach ($product->images as $image)
-                                                    <a class="swiper-slide"
+                                                    <a class="swiper-slide h-100 w-100"
                                                     href="{{ Storage::url($image) }}"
                                                     title="Click để xem">
                                                     <img height="540" width="540"
                                                         src="{{ Storage::url($image) }}"
                                                         alt="{{ $product->title }}"
                                                         data-image="{{ Storage::url($image) }}"
-                                                        class="img-responsive mx-auto d-block swiper-lazy" />
+                                                        class="img-responsive mx-auto d-block swiper-lazy w-full h-full" />
                                                     </a>
                                                     @endforeach
 
