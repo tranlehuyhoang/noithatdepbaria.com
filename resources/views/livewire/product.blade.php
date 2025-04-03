@@ -613,7 +613,11 @@
                                                     <a class="swiper-slide h-100 w-100"
                                                     href="{{ Storage::url($image) }}"
                                                     title="Click để xem">
-                                                    <img height="540" width="540"
+                                                    <img style="
+                                                    width: 100% !important;
+                                                    height: 100% !important;
+                                                    object-fit: cover;
+                                                " height="540" width="540"
                                                         src="{{ Storage::url($image) }}"
                                                         alt="{{ $product->title }}"
                                                         data-image="{{ Storage::url($image) }}"
@@ -633,7 +637,11 @@
                                                     @foreach ($product->images as $image)
                                                         <div class="swiper-slide" data-hash="0">
                                                             <div class="ratio1by1 position-relative">
-                                                                <img src="{{ Storage::url($image) }}"
+                                                                <img style="
+                                                                width: 100% !important;
+                                                                height: 100% !important;
+                                                                object-fit: cover;
+                                                            " src="{{ Storage::url($image) }}"
                                                                     height="112" width="112"
                                                                     alt="{{ $product->title }}"
                                                                     data-image="{{ Storage::url($image) }}"
@@ -961,7 +969,11 @@
                                                     <a class="product-thumb position-relative ratio1by1 scale_hover d-block"
                                                         href="{{ '/product/'.$product->slug }}"
                                                         title="{{ $product->title }}">
-                                                        <img class="position-absolute"
+                                                        <img  style="
+                                                        width: 100% !important;
+                                                        height: 100% !important;
+                                                        object-fit: cover;
+                                                    " class="position-absolute"
                                                             src="{{Storage::url(''.$product->images[0])}}"
                                                             alt="{{ $product->title }}"
                                                             width="302" height="302">
