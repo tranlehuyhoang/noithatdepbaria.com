@@ -62,14 +62,13 @@ window.addEventListener('DOMContentLoaded', (event) => {
 		});
 	}
 	var swiperwish = new Swiper('.brand-swiper', {
-		slidesPerView: 5,
-		loop: false,
+		slidesPerView: 6,
+		loop: true,
 		grabCursor: true,
-		spaceBetween: 30,
+		spaceBetween: 60,
 		roundLengths: true,
 		slideToClickedSlide: false,
 		autoplay: true,
-		slidesPerColumn: 2,
 		slidesPerColumnFill: 'row',
 		breakpoints: {
 			300: {
@@ -89,12 +88,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
 				spaceBetween: 20
 			},
 			991: {
-				slidesPerView: 5,
+				slidesPerView: 6,
 				spaceBetween: 20
 			},
 			1200: {
-				slidesPerView: 5,
-				spaceBetween: 20
+				slidesPerView: 6,
+				spaceBetween: 40
 			}
 		}
 	});

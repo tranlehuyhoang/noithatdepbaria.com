@@ -1,15 +1,26 @@
 <header class="header header-index position-fixed">
-    <div class="container-fluid d-flex align-items-center">
+    <div class="container-fluid d-flex align-items-center justify-content-center">
         <div class="menu-bar d-xl-none d-block mr-4" bis_skin_checked="1">
-			<span class="line-1"></span>
-			<span class="line-2"></span>
-			<span class="line-3"></span>
+			<span class="line-1" style="background-color: black;"></span>
+			<span class="line-2" style="background-color: black;"></span>
+			<span class="line-3" style="background-color: black;"></span>
 		</div>
         <a href="/" class="logo-index" title="OH! Decor">
-            <img src="/logo_white.png" alt="">
+            <img src="{{asset('assets/logo.jpg')}}" alt="">
         </a>
         <nav class="header-nav">
             <ul class="item-big">
+                <div class="menu-bar d-xl-none d-block mr-4 current nxcmmbmb" bis_skin_checked="1">
+                    <svg fill="#000000" height="800px" width="800px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                    viewBox="0 0 460.775 460.775" xml:space="preserve">
+               <path d="M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55
+                   c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55
+                   c-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505
+                   c-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55
+                   l171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719
+                   c6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z"/>
+               </svg>
+                </div>
                 <li class="nav-item px-2 mr-xl-3 active">
                     <a class="a-img" href="/" title="Trang chủ">
                         <img src="/home.png"
@@ -36,11 +47,11 @@
             class="search-auto form-control"
             placeholder="Nhập từ khóa"
             autocomplete="off"
-            style="background-color: #F2F2F2; border: 1px solid #ced4da; color: #6D6059;"
+            style="background-color: #F2F2F2; border: 1px solid #ced4da; color: #6D6059; padding-right: 40px;"
         />
         <button
             class="btn btn-default position-absolute p-0"
-            style="right: 10px; top: 50%; transform: translateY(-50%);"
+         style="top: 50%;transform: translateY(-50%);left: 12rem;"
             type="submit"
             aria-label="Tìm kiếm"
         >

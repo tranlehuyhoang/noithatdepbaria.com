@@ -525,7 +525,7 @@
                         <div class="container-fluid m-0 p-0">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <img src="/banner.png" class="banner w-100" alt="" style="height: 770px;" />
+                                    <img src="/banner.png" class="banner w-100" alt="" style="height: 770px; object-fit: cover;" />
                                 </div>
                             </div>
                         </div>
@@ -540,7 +540,7 @@
                           <div class="col-md-5 position-relative">
                               <div class="position-relative" style="z-index: 2; padding: 15px 15px 15px 0;">
                                 <div style="z-index: -1; position: absolute; top: 0; bottom: 0; left: 0; right: 5rem; background: #0a8f3c; border-radius: 2rem;" class="rounded-right"></div>
-                              <img src="/banner2.png" alt="Interior Design" class="img-fluid rounded lazyload" data-src="/banner2.png" style="width: 100%; height: 100%; object-fit: cover;max-height: 716px; border-top-right-radius: 80px 80px !important;">
+                              <img id="klw3k5k23k23" src="/banner2.png" alt="Interior Design" class="img-fluid rounded lazyload" data-src="/banner2.png" style="width: 100%; height: 100%; object-fit: cover;max-height: 716px; border-top-right-radius: 80px 80px !important;">
                             </div>
                           </div>
 
@@ -570,7 +570,7 @@
                     <section class="section_cate p-0">
                         <div class=" ">
                             <div class="row">
-                                <div class="col-md-6 p-6 d-flex align-items-center justify-content-center position-relative" style="background-image: url('{{asset('assets/thumbnail_2_0-65.jpg')}}'); background-size: cover; background-position: center; height: 600px;">
+                                <div class="cate_item_1_wrapper col-md-6 p-6 d-flex align-items-center justify-content-center position-relative" style="background-image: url('{{asset('assets/thumbnail_2_0-65.jpg')}}'); background-size: cover; background-position: center; height: 500px;">
                                     <div class="overlay position-absolute" style="top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5);"></div>
                                     <div class="text-center position-relative">
                                         <h2 class="mb-5 text-white" style="font-size: 4rem; ">Phòng Ăn</h2>
@@ -586,7 +586,7 @@
                                         </a>
                                     </div>
                                 </div>
-                                <div class="col-md-6 p-6 d-flex align-items-center justify-content-center position-relative" style="background-image: url('{{asset('assets/TU-AO-CUA-LUA-3.jpeg')}}'); background-size: cover; background-position: center; height: 600px;">
+                                <div class="cate_item_2_wrapper col-md-6 p-6 d-flex align-items-center justify-content-center position-relative" style="background-image: url('{{asset('assets/TU-AO-CUA-LUA-3.jpeg')}}'); background-size: cover; background-position: center; height: 500px;">
                                     <div class="overlay position-absolute" style="top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5);"></div>
                                     <div class="text-center position-relative">
                                         <h2 class="mb-5 text-white" style="font-size: 4rem; ">Phòng Ngủ</h2>
@@ -639,8 +639,7 @@
                                                 @endforeach
                                             </div>
                                             <div class="swiper-pagination"></div>
-                                            <div class="swiper-button-next"></div>
-                                            <div class="swiper-button-prev"></div>
+                                         
                                         </div>
                                     </div>
                                 </div>
@@ -674,660 +673,161 @@
                         data-section="ajax-tab-1">
                         <div class="container">
                             <h2 class="block-title position-relative text-center bold mb-3">
-                                <hr style="width: 30%; display: inline-block; margin-right: 20px;">
-                                <a href="/products" title="Bộ sưu tập">Sản phẩm nổi bật</a>
+                                <hr class="d-none d-md-inline-block" style="width: 30%; display: inline-block; margin-right: 20px;">
+                                <a href="/products" title="Bộ sưu tập" style="color: #0a8f3c;">Sản phẩm nổi bật</a>
                                 <hr style="width: 30%; display: inline-block; margin-left: 20px;">
                             </h2>
                            
                             <div class="tab-1 tab-content current">
                                 <div class="row">
-                                    <div class="col-lg-3 col-md-4 col-6 item_product_main">
+                                    @foreach($products as $product)
+                                    <div class=" col-lg-3 col-md-4 col-6 item_product_main">
                                         <form action="/cart/add" method="post"
-                                            class="variants product-action product-item " data-cart-form
-                                            data-id="product-actions-33704833" enctype="multipart/form-data">
-                                            <div class="product-thumbnail position-relative">
-                                                <a class="product-thumb position-relative ratio1by1 scale_hover d-block"
-                                                    href="/den-nguoi-om-bong-den" title="Đèn người ôm bóng đèn">
-                                                    <img class="lazyload position-absolute"
-                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                                                        data-src="/assets/thumb/large/100/501/740/products/1-5a1c9c12-8f2a-4ce3-9a8e-3d2872d3a2d6.jpg?v=1701320547190"
-                                                        alt="Đèn người ôm bóng đèn" width="302" height="302">
+                                            class="variants product-action product-item" data-cart-form
+                                            data-id="product-actions-{{ $product->id }}" enctype="multipart/form-data">
+                                            <div class="product-thumbnail position-relative" style="
+                                            height: 300px;
+                                            overflow: hidden;
+                                            border-radius: 8px;
+                                        ">
+                                                <a class="product-thumb position-relative d-block h-100" href="/product/{{ $product->slug }}" title="{{ $product->title }}">
+                                                    <img class="lazyload position-absolute w-100 h-100"
+                                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
+                                                    data-src="{{ asset('storage/'.$product->images[0]) }}"
+                                                    alt="{{ $product->title }}" style="object-fit: cover;">
                                                 </a>
+                                                @if($product->discount > 0)
+                                                <span class="onsale position-absolute d-block rounded-5 text-center">-{{ $product->discount }}%</span>
+                                                @endif
                                                 <span class="setWishlist position-absolute"
-                                                    data-wish="den-nguoi-om-bong-den" tabindex="0"
+                                                    data-wish="{{ $product->slug }}" tabindex="0"
                                                     title="Thêm vào yêu thích"></span>
                                             </div>
                                             <div class="product-info position-relative p-md-3 p-2">
-                                                <h3 class="product-name bold mb-3"><a href="/den-nguoi-om-bong-den"
-                                                        class="text1line" title="Đèn người ôm bóng đèn">Đèn người ôm
-                                                        bóng đèn</a>
+                                                <h3 class="product-name bold mb-3">
+                                                    <a href="/product/{{ $product->slug }}"
+                                                        class="text1line" title="{{ $product->title }}">{{ $product->title }}</a>
                                                 </h3>
-                                                <div class="price-box bold mb-3">
-                                                    <span class="price bold">15.000.000₫</span>
-                                                </div>
+                                                <p style="text-align: center;" class="text2line mb-3" style="font-size: 14px; color: #666;">{{ $product->short_dec }}</p>
                                                 <div class="action">
-                                                    <input type="hidden" name="variantId" value="104226189" />
-                                                    <button
-                                                        class="btn-cart btn-views w-100 add_to_cart  d-flex align-items-center justify-content-center"
-                                                        title="Thêm vào giỏ">Thêm vào giỏ</button>
+                                                    <input type="hidden" name="variantId" value="{{ $product->id }}" />
+                                                    <a href="/contact" class="btn-cart btn-views w-100 d-flex align-items-center justify-content-center" title="Liên hệ ngay">
+                                                        Liên hệ ngay
+                                                    </a>
                                                 </div>
                                             </div>
                                         </form>
                                     </div>
-                                    <div class="col-lg-3 col-md-4 col-6 item_product_main">
-                                        <form action="/cart/add" method="post"
-                                            class="variants product-action product-item " data-cart-form
-                                            data-id="product-actions-33704799" enctype="multipart/form-data">
-                                            <div class="product-thumbnail position-relative">
-                                                <a class="product-thumb position-relative ratio1by1 scale_hover d-block"
-                                                    href="/den-trang-tri-left-heat" title="Đèn trang trí left heat">
-                                                    <img class="lazyload position-absolute"
-                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                                                        data-src="/assets/thumb/large/100/501/740/products/1-5fd67d62-06e6-4398-a5f4-9ae167e37dc6.jpg?v=1701320294470"
-                                                        alt="Đèn trang trí left heat" width="302" height="302">
-                                                </a>
-                                                <span
-                                                    class="onsale position-absolute d-block rounded-5 text-center">-10%</span>
-                                                <span class="setWishlist position-absolute"
-                                                    data-wish="den-trang-tri-left-heat" tabindex="0"
-                                                    title="Thêm vào yêu thích"></span>
-                                            </div>
-                                            <div class="product-info position-relative p-md-3 p-2">
-                                                <h3 class="product-name bold mb-3"><a href="/den-trang-tri-left-heat"
-                                                        class="text1line" title="Đèn trang trí left heat">Đèn trang
-                                                        trí left
-                                                        heat</a></h3>
-                                                <div class="price-box bold mb-3">
-                                                    <del>5.500.000₫</del>
-
-                                                    <span class="price bold">4.950.000₫</span>
-                                                </div>
-                                                <div class="action">
-                                                    <input type="hidden" name="variantId" value="104226129" />
-                                                    <button
-                                                        class="btn-cart btn-views w-100 add_to_cart  d-flex align-items-center justify-content-center"
-                                                        title="Thêm vào giỏ">Thêm vào giỏ</button>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <div class="col-lg-3 col-md-4 col-6 item_product_main">
-                                        <form action="/cart/add" method="post"
-                                            class="variants product-action product-item " data-cart-form
-                                            data-id="product-actions-33452503" enctype="multipart/form-data">
-                                            <div class="product-thumbnail position-relative">
-                                                <a class="product-thumb position-relative ratio1by1 scale_hover d-block"
-                                                    href="/ghe-da-armchair-oakway" title="Ghế da Armchair Oakway">
-                                                    <img class="lazyload position-absolute"
-                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                                                        data-src="/assets/thumb/large/100/501/740/products/frame-1000002981.jpg?v=1699895731600"
-                                                        alt="Ghế da Armchair Oakway" width="302" height="302">
-                                                </a>
-                                                <span
-                                                    class="onsale position-absolute d-block rounded-5 text-center">-50%</span>
-                                                <span class="setWishlist position-absolute"
-                                                    data-wish="ghe-da-armchair-oakway" tabindex="0"
-                                                    title="Thêm vào yêu thích"></span>
-                                            </div>
-                                            <div class="product-info position-relative p-md-3 p-2">
-                                                <h3 class="product-name bold mb-3"><a href="/ghe-da-armchair-oakway"
-                                                        class="text1line" title="Ghế da Armchair Oakway">Ghế da
-                                                        Armchair
-                                                        Oakway</a></h3>
-                                                <div class="price-box bold mb-3">
-                                                    <del>12.380.000₫</del>
-
-                                                    <span class="price bold">6.190.000₫</span>
-                                                </div>
-                                                <div class="action">
-                                                    <input type="hidden" name="variantId" value="102719241" />
-                                                    <button
-                                                        class="btn-cart btn-views w-100 add_to_cart  d-flex align-items-center justify-content-center"
-                                                        title="Thêm vào giỏ">Thêm vào giỏ</button>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <div class="col-lg-3 col-md-4 col-6 item_product_main">
-                                        <form action="/cart/add" method="post"
-                                            class="variants product-action product-item " data-cart-form
-                                            data-id="product-actions-33452502" enctype="multipart/form-data">
-                                            <div class="product-thumbnail position-relative">
-                                                <a class="product-thumb position-relative ratio1by1 scale_hover d-block"
-                                                    href="/den-chum-rosemas-pha-le" title="Đèn chùm Rosemas pha lê">
-                                                    <img class="lazyload position-absolute"
-                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                                                        data-src="/assets/thumb/large/100/501/740/products/anh.jpg?v=1699895673857"
-                                                        alt="Đèn chùm Rosemas pha lê" width="302" height="302">
-                                                </a>
-                                                <span
-                                                    class="onsale position-absolute d-block rounded-5 text-center">-10%</span>
-                                                <span class="setWishlist position-absolute"
-                                                    data-wish="den-chum-rosemas-pha-le" tabindex="0"
-                                                    title="Thêm vào yêu thích"></span>
-                                            </div>
-                                            <div class="product-info position-relative p-md-3 p-2">
-                                                <h3 class="product-name bold mb-3"><a href="/den-chum-rosemas-pha-le"
-                                                        class="text1line" title="Đèn chùm Rosemas pha lê">Đèn chùm
-                                                        Rosemas pha
-                                                        lê</a></h3>
-                                                <div class="price-box bold mb-3">
-                                                    <del>36.530.000₫</del>
-
-                                                    <span class="price bold">33.050.000₫</span>
-                                                </div>
-                                                <div class="action">
-                                                    <input type="hidden" name="variantId" value="102956172" />
-                                                    <button
-                                                        class="btn-cart btn-views w-100 add_to_cart  d-flex align-items-center justify-content-center"
-                                                        title="Thêm vào giỏ">Thêm vào giỏ</button>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
+                                    @endforeach
                                 </div>
-                                <a href="hien-dai" class="more-product d-block m-auto py-2 pr-4 bold">Xem thêm</a>
+                                <a href="/products" class="more-product d-block m-auto py-2 pr-4 bold">Xem thêm</a>
                             </div>
-                            <div class="tab-2 tab-content"></div>
-                            <div class="tab-3 tab-content"></div>
-                            <div class="tab-4 tab-content"></div>
+                        
                         </div>
                     </section>
-                    <section class="section_banner">
+                
+                    <section class="section_blog" style="background: none;">
                         <div class="container">
-                            <a href="/collections/all" class="m-banner lazyload_bg text-center d-block"
-                                data-src="banner.png?1736415638335"
-                                title="NGUỒN CẢM HỨNG VÔ TẬN">
-                                <span class="title d-inline-block bold position-relative">NGUỒN CẢM HỨNG VÔ TẬN</span>
-                                <span class="desc d-block m-0 mx-auto position-relative">Khám phá nội thất thiết kế
-                                    đương đại mang
-                                    đến cảm giác thoải mái, sang trọng. Cá nhân hoá trong từng sản phẩm phù hợp với mọi
-                                    không gian
-                                    sống.</span>
-                            </a>
-                        </div>
-                    </section>
-                    <section class="section_product">
-                        <div class="container">
+                            <h2 class="block-title position-relative text-start bold mb-4">
+                                <a href="/tin-tuc" title="Tin tức" style="color: #0a8f3c;">Tin tức</a>
+                                <hr style="width: 40%; display: inline-block; margin-left: 20px;">
+                            </h2>
                             <div class="row">
-                                <div
-                                    class="block-product block-product-1 position-relative col-lg-6 col-md-7 mb-5 p-0">
-                                    <div class="product_1-swiper swiper-container">
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide">
-                                                <form action="/cart/add" method="post"
-                                                    class="variants product-action product-item " data-cart-form
-                                                    data-id="product-actions-33452503" enctype="multipart/form-data">
-                                                    <div class="product-thumbnail position-relative">
-                                                        <a class="product-thumb position-relative ratio1by1 scale_hover d-block"
-                                                            href="/ghe-da-armchair-oakway"
-                                                            title="Ghế da Armchair Oakway">
-                                                            <img class="lazyload position-absolute"
-                                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                                                                data-src="/assets/thumb/large/100/501/740/products/frame-1000002981.jpg?v=1699895731600"
-                                                                alt="Ghế da Armchair Oakway" width="302"
-                                                                height="302">
-                                                        </a>
-                                                        <span
-                                                            class="onsale position-absolute d-block rounded-5 text-center">-50%</span>
-                                                        <span class="setWishlist position-absolute"
-                                                            data-wish="ghe-da-armchair-oakway" tabindex="0"
-                                                            title="Thêm vào yêu thích"></span>
-                                                    </div>
-                                                    <div class="product-info position-relative p-md-3 p-2">
-                                                        <h3 class="product-name bold mb-3"><a
-                                                                href="/ghe-da-armchair-oakway" class="text1line"
-                                                                title="Ghế da Armchair Oakway">Ghế da Armchair
-                                                                Oakway</a></h3>
-                                                        <div class="price-box bold mb-3">
-                                                            <del>12.380.000₫</del>
-
-                                                            <span class="price bold">6.190.000₫</span>
-                                                        </div>
-                                                        <div class="action">
-                                                            <input type="hidden" name="variantId"
-                                                                value="102719241" />
-                                                            <button
-                                                                class="btn-cart btn-views w-100 add_to_cart  d-flex align-items-center justify-content-center"
-                                                                title="Thêm vào giỏ">Thêm vào giỏ</button>
-                                                        </div>
-                                                    </div>
-                                                </form>
+                                @foreach($blogs as $blog)
+                                <div class="col-lg-4">
+                                    <div class="item-blog mb-md-4 mb-2">
+                                        <a class="thumb ratioblog d-block position-relative" style="height: 250px; overflow: hidden; border-radius: 8px;"
+                                            href="/blog/{{ $blog->slug }}"
+                                            title="{{ $blog->title }}">
+                                            <img class="lazyload position-absolute w-100 h-100"
+                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
+                                                data-src="{{ asset('storage/'.$blog->banner) }}"
+                                                alt="{{ $blog->title }}" style="object-fit: cover;">
+                                        </a>
+                                        <div class="content p-3">
+                                            <div class="time-post mb-2 d-md-block d-none">
+                                                @php
+                                                    $thu = ['Chủ nhật', 'Thứ hai', 'Thứ ba', 'Thứ tư', 'Thứ năm', 'Thứ sáu', 'Thứ bảy'];
+                                                    $thang = ['01' => '01', '02' => '02', '03' => '03', '04' => '04', '05' => '05', '06' => '06', '07' => '07', '08' => '08', '09' => '09', '10' => '10', '11' => '11', '12' => '12'];
+                                                    $ngay = $blog->created_at->format('d');
+                                                    $nam = $blog->created_at->format('Y');
+                                                    $gio = $blog->created_at->format('H:i');
+                                                    $thuIndex = $blog->created_at->format('w');
+                                                    $thangIndex = $blog->created_at->format('m');
+                                                @endphp
+                                                {{ $thu[$thuIndex] }}, {{ $ngay }}/{{ $thang[$thangIndex] }}/{{ $nam }}, {{ $gio }}
                                             </div>
-                                            <div class="swiper-slide">
-                                                <form action="/cart/add" method="post"
-                                                    class="variants product-action product-item " data-cart-form
-                                                    data-id="product-actions-33452502" enctype="multipart/form-data">
-                                                    <div class="product-thumbnail position-relative">
-                                                        <a class="product-thumb position-relative ratio1by1 scale_hover d-block"
-                                                            href="/den-chum-rosemas-pha-le"
-                                                            title="Đèn chùm Rosemas pha lê">
-                                                            <img class="lazyload position-absolute"
-                                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                                                                data-src="/assets/thumb/large/100/501/740/products/anh.jpg?v=1699895673857"
-                                                                alt="Đèn chùm Rosemas pha lê" width="302"
-                                                                height="302">
-                                                        </a>
-                                                        <span
-                                                            class="onsale position-absolute d-block rounded-5 text-center">-10%</span>
-                                                        <span class="setWishlist position-absolute"
-                                                            data-wish="den-chum-rosemas-pha-le" tabindex="0"
-                                                            title="Thêm vào yêu thích"></span>
-                                                    </div>
-                                                    <div class="product-info position-relative p-md-3 p-2">
-                                                        <h3 class="product-name bold mb-3"><a
-                                                                href="/den-chum-rosemas-pha-le" class="text1line"
-                                                                title="Đèn chùm Rosemas pha lê">Đèn chùm Rosemas
-                                                                pha lê</a></h3>
-                                                        <div class="price-box bold mb-3">
-                                                            <del>36.530.000₫</del>
-
-                                                            <span class="price bold">33.050.000₫</span>
-                                                        </div>
-                                                        <div class="action">
-                                                            <input type="hidden" name="variantId"
-                                                                value="102956172" />
-                                                            <button
-                                                                class="btn-cart btn-views w-100 add_to_cart  d-flex align-items-center justify-content-center"
-                                                                title="Thêm vào giỏ">Thêm vào giỏ</button>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <form action="/cart/add" method="post"
-                                                    class="variants product-action product-item " data-cart-form
-                                                    data-id="product-actions-33452501" enctype="multipart/form-data">
-                                                    <div class="product-thumbnail position-relative">
-                                                        <a class="product-thumb position-relative ratio1by1 scale_hover d-block"
-                                                            href="/ghe-da-armchair-royal"
-                                                            title="Ghế da Armchair Royal">
-                                                            <img class="lazyload position-absolute"
-                                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                                                                data-src="/assets/thumb/large/100/501/740/products/anh-2.jpg?v=1699895641527"
-                                                                alt="Ghế da Armchair Royal" width="302"
-                                                                height="302">
-                                                        </a>
-                                                        <span
-                                                            class="onsale position-absolute d-block rounded-5 text-center">-15%</span>
-                                                        <span class="setWishlist position-absolute"
-                                                            data-wish="ghe-da-armchair-royal" tabindex="0"
-                                                            title="Thêm vào yêu thích"></span>
-                                                    </div>
-                                                    <div class="product-info position-relative p-md-3 p-2">
-                                                        <h3 class="product-name bold mb-3"><a
-                                                                href="/ghe-da-armchair-royal" class="text1line"
-                                                                title="Ghế da Armchair Royal">Ghế da Armchair
-                                                                Royal</a></h3>
-                                                        <div class="price-box bold mb-3">
-                                                            <del>11.690.000₫</del>
-
-                                                            <span class="price bold">9.936.000₫</span>
-                                                        </div>
-                                                        <div class="action">
-                                                            <input type="hidden" name="variantId"
-                                                                value="102719239" />
-                                                            <button
-                                                                class="btn-cart btn-views w-100 add_to_cart  d-flex align-items-center justify-content-center"
-                                                                title="Thêm vào giỏ">Thêm vào giỏ</button>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <form action="/cart/add" method="post"
-                                                    class="variants product-action product-item " data-cart-form
-                                                    data-id="product-actions-33452498" enctype="multipart/form-data">
-                                                    <div class="product-thumbnail position-relative">
-                                                        <a class="product-thumb position-relative ratio1by1 scale_hover d-block"
-                                                            href="/ban-go-xep-canh" title="Bàn gỗ xếp cạnh">
-                                                            <img class="lazyload position-absolute"
-                                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                                                                data-src="/assets/thumb/large/100/501/740/products/anh-1.jpg?v=1699895611053"
-                                                                alt="Bàn gỗ xếp cạnh" width="302" height="302">
-                                                        </a>
-                                                        <span class="setWishlist position-absolute"
-                                                            data-wish="ban-go-xep-canh" tabindex="0"
-                                                            title="Thêm vào yêu thích"></span>
-                                                    </div>
-                                                    <div class="product-info position-relative p-md-3 p-2">
-                                                        <h3 class="product-name bold mb-3"><a href="/ban-go-xep-canh"
-                                                                class="text1line" title="Bàn gỗ xếp cạnh">Bàn gỗ xếp
-                                                                cạnh</a></h3>
-                                                        <div class="price-box bold mb-3">
-                                                            <span class="price">Liên hệ</span>
-                                                        </div>
-                                                        <div class="action">
-                                                            <a class="d-flex align-items-center justify-content-center"
-                                                                href="/ban-go-xep-canh" title="Chi tiết">Chi tiết</a>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
+                                            <h3 class="bold mb-md-2 mb-1">
+                                                <a href="/blog/{{ $blog->slug }}"
+                                                    class="text2line"
+                                                    title="{{ $blog->title }}">{{ $blog->title }}</a>
+                                            </h3>
+                                            <p class="justify summary text4line">{{ $blog->short_desc }}</p>
                                         </div>
-                                        <div class="swiper-pagination"></div>
                                     </div>
-                                    {{-- <div class="swiper-button-prev"></div>
-                                    <div class="swiper-button-next"></div> --}}
                                 </div>
-                                <div class="title col-lg-6 col-md-5 mb-md-5 mb-2">
-                                    <a href="san-pham-noi-bat" title="Nội thất phòng khách"
-                                        class="position-relative text-center d-block">
-                                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                                            data-src="/assets/100/501/740/themes/929449/assets/product_1_bg.jpg?1736415638335"
-                                            class="position-absolute lazyload" alt="">
-                                        <b class="position-absolute">Nội thất phòng khách</b>
-                                        <span class="position-absolute pr-4">Xem thêm</span>
-                                    </a>
-                                </div>
-                                <style>
-                                    .swiper-button-prev,
-                                    .swiper-button-next {
-                                  display: none;
-                                    }
-                                </style>
+                                @endforeach
                             </div>
                         </div>
                     </section>
-                    <section class="section_product title-left">
-                        <div class="container">
-                            <div class="row">
-                                <div
-                                    class="block-product block-product-2 position-relative col-lg-6 col-md-7 mb-5 p-0">
-                                    <div class="product_2-swiper swiper-container">
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide">
-                                                <form action="/cart/add" method="post"
-                                                    class="variants product-action product-item " data-cart-form
-                                                    data-id="product-actions-33452495" enctype="multipart/form-data">
-                                                    <div class="product-thumbnail position-relative">
-                                                        <a class="product-thumb position-relative ratio1by1 scale_hover d-block"
-                                                            href="/sofa-chicago-3-cho" title="Sofa Chicago 3 chỗ">
-                                                            <img class="lazyload position-absolute"
-                                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                                                                data-src="/assets/thumb/large/100/501/740/products/1-aaa5fda3-ba46-4b44-b1c7-f855f0e50144.jpg?v=1701275609160"
-                                                                alt="Sofa Chicago 3 chỗ" width="302"
-                                                                height="302">
-                                                        </a>
-                                                        <span class="setWishlist position-absolute"
-                                                            data-wish="sofa-chicago-3-cho" tabindex="0"
-                                                            title="Thêm vào yêu thích"></span>
-                                                    </div>
-                                                    <div class="product-info position-relative p-md-3 p-2">
-                                                        <h3 class="product-name bold mb-3"><a
-                                                                href="/sofa-chicago-3-cho" class="text1line"
-                                                                title="Sofa Chicago 3 chỗ">Sofa Chicago 3
-                                                                chỗ</a></h3>
-                                                        <div class="price-box bold mb-3">
-                                                            <span class="price bold">12.000.000₫</span>
-                                                        </div>
-                                                        <div class="action">
-                                                            <input type="hidden" name="variantId"
-                                                                value="102719229" />
-                                                            <button
-                                                                class="btn-cart btn-views w-100 add_to_cart  d-flex align-items-center justify-content-center"
-                                                                title="Thêm vào giỏ">Thêm vào giỏ</button>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <form action="/cart/add" method="post"
-                                                    class="variants product-action product-item " data-cart-form
-                                                    data-id="product-actions-33452494" enctype="multipart/form-data">
-                                                    <div class="product-thumbnail position-relative">
-                                                        <a class="product-thumb position-relative ratio1by1 scale_hover d-block"
-                                                            href="/ban-nuoc-fence" title="Bàn nước Fence">
-                                                            <img class="lazyload position-absolute"
-                                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                                                                data-src="/assets/thumb/large/100/501/740/products/3.jpg?v=1699895460887"
-                                                                alt="Bàn nước Fence" width="302" height="302">
-                                                        </a>
-                                                        <span class="setWishlist position-absolute"
-                                                            data-wish="ban-nuoc-fence" tabindex="0"
-                                                            title="Thêm vào yêu thích"></span>
-                                                    </div>
-                                                    <div class="product-info position-relative p-md-3 p-2">
-                                                        <h3 class="product-name bold mb-3"><a href="/ban-nuoc-fence"
-                                                                class="text1line" title="Bàn nước Fence">Bàn nước
-                                                                Fence</a></h3>
-                                                        <div class="price-box bold mb-3">
-                                                            <span class="price bold">13.000.000₫</span>
-                                                        </div>
-                                                        <div class="action">
-                                                            <input type="hidden" name="variantId"
-                                                                value="102719220" />
-                                                            <button
-                                                                class="btn-cart btn-views w-100 add_to_cart  d-flex align-items-center justify-content-center"
-                                                                title="Thêm vào giỏ">Thêm vào giỏ</button>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <form action="/cart/add" method="post"
-                                                    class="variants product-action product-item " data-cart-form
-                                                    data-id="product-actions-33452493" enctype="multipart/form-data">
-                                                    <div class="product-thumbnail position-relative">
-                                                        <a class="product-thumb position-relative ratio1by1 scale_hover d-block"
-                                                            href="/ghe-albert-coffee" title="Ghế Albert Coffee">
-                                                            <img class="lazyload position-absolute"
-                                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                                                                data-src="/assets/thumb/large/100/501/740/products/2.jpg?v=1699895421757"
-                                                                alt="Ghế Albert Coffee" width="302"
-                                                                height="302">
-                                                        </a>
-                                                        <span class="setWishlist position-absolute"
-                                                            data-wish="ghe-albert-coffee" tabindex="0"
-                                                            title="Thêm vào yêu thích"></span>
-                                                    </div>
-                                                    <div class="product-info position-relative p-md-3 p-2">
-                                                        <h3 class="product-name bold mb-3"><a
-                                                                href="/ghe-albert-coffee" class="text1line"
-                                                                title="Ghế Albert Coffee">Ghế Albert Coffee</a>
-                                                        </h3>
-                                                        <div class="price-box bold mb-3">
-                                                            <span class="price bold">8.400.000₫</span>
-                                                        </div>
-                                                        <div class="action">
-                                                            <input type="hidden" name="variantId"
-                                                                value="102719219" />
-                                                            <button
-                                                                class="btn-cart btn-views w-100 add_to_cart  d-flex align-items-center justify-content-center"
-                                                                title="Thêm vào giỏ">Thêm vào giỏ</button>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <form action="/cart/add" method="post"
-                                                    class="variants product-action product-item " data-cart-form
-                                                    data-id="product-actions-33452491" enctype="multipart/form-data">
-                                                    <div class="product-thumbnail position-relative">
-                                                        <a class="product-thumb position-relative ratio1by1 scale_hover d-block"
-                                                            href="/ban-an-6-cho-coastal" title="Bàn ăn 6 chỗ Coastal">
-                                                            <img class="lazyload position-absolute"
-                                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                                                                data-src="/assets/thumb/large/100/501/740/products/1.jpg?v=1699895385360"
-                                                                alt="Bàn ăn 6 chỗ Coastal" width="302"
-                                                                height="302">
-                                                        </a>
-                                                        <span class="setWishlist position-absolute"
-                                                            data-wish="ban-an-6-cho-coastal" tabindex="0"
-                                                            title="Thêm vào yêu thích"></span>
-                                                    </div>
-                                                    <div class="product-info position-relative p-md-3 p-2">
-                                                        <h3 class="product-name bold mb-3"><a
-                                                                href="/ban-an-6-cho-coastal" class="text1line"
-                                                                title="Bàn ăn 6 chỗ Coastal">Bàn ăn 6 chỗ
-                                                                Coastal</a></h3>
-                                                        <div class="price-box bold mb-3">
-                                                            <span class="price bold">3.000.000₫</span>
-                                                        </div>
-                                                        <div class="action">
-                                                            <input type="hidden" name="variantId"
-                                                                value="102719217" />
-                                                            <button
-                                                                class="btn-cart btn-views w-100 add_to_cart  d-flex align-items-center justify-content-center"
-                                                                title="Thêm vào giỏ">Thêm vào giỏ</button>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-pagination"></div>
-                                    </div>
-                                    <div class="swiper-button-prev"></div>
-                                    <div class="swiper-button-next"></div>
-                                </div>
-                                <div class="title col-lg-6 col-md-5 mb-md-5 mb-2">
-                                    <a href="san-pham-moi" title="Nội thất phòng bếp"
-                                        class="position-relative text-center d-block">
-                                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                                            data-src="/assets/100/501/740/themes/929449/assets/product_2_bg.jpg?1736415638335"
-                                            class="position-absolute lazyload" alt="">
-                                        <b class="position-absolute">Nội thất phòng bếp</b>
-                                        <span class="position-absolute pr-4">Xem thêm</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+
                     <section class="section_brand">
+                        
                         <div class="container">
+                            <h2 class="block-title position-relative text-start bold mb-4" style="display: flex; align-items: center;">
+                                <a href="/tin-tuc" title="Tin tức" style="color: #0a8f3c;">Đối tác khách hàng</a>
+                                <hr style="width: 30%; display: inline-block; margin-left: 20px;">
+                            </h2>
+                           <div class="row m-0">
                             <div class="brand-swiper swiper-container">
-                                <div class="swiper-wrapper">
+                                <div class="swiper-wrapper" style="max-width: 100vw;">
+                                 
+                                   
                                     <div class="swiper-slide">
-                                        <a href="#" title="brand">
-                                            <img src="/assets/thumb/medium/100/501/740/themes/929449/assets/img_brand_1.png?1736415638335"
-                                                alt="brand" width="10" height="10"
-                                                class="img-responsive" />
+                                        <a href="#" title="brand" style="display: block; height: 200px; display: flex; align-items: center; justify-content: center;">
+                                            <img src="{{asset('assets/image-Photoroom.png')}}"
+                                                alt="brand" class="img-responsive" style="height: 100%; object-fit: contain;" />
                                         </a>
                                     </div>
                                     <div class="swiper-slide">
-                                        <a href="#" title="brand">
-                                            <img src="/assets/thumb/medium/100/501/740/themes/929449/assets/img_brand_2.png?1736415638335"
-                                                alt="brand" width="10" height="10"
-                                                class="img-responsive" />
+                                        <a href="#" title="brand" style="display: block; height: 200px; display: flex; align-items: center; justify-content: center;">
+                                            <img src="{{asset('assets/307454489_619458766551221_6020370482269677923_n-Photoroom.png')}}"
+                                                alt="brand" class="img-responsive" style="height: 100%; object-fit: contain;" />
+                                        </a>
+                                    </div>
+                                   
+                                    <div class="swiper-slide">
+                                        <a href="#" title="brand" style="display: block; height: 200px; display: flex; align-items: center; justify-content: center;">
+                                            <img src="{{asset('assets/thiet-ke-logo-noi-that-bee-art-06-Photoroom.png')}}"
+                                                alt="brand" class="img-responsive" style="height: 100%; object-fit: contain;" />
+                                        </a>
+                                    </div>
+                                   
+                                    <div class="swiper-slide">
+                                        <a href="#" title="brand" style="display: block; height: 200px; display: flex; align-items: center; justify-content: center;">
+                                            <img src="{{asset('assets/thiet-ke-logo-noi-that-bee-art-02-Photoroom.png')}}"
+                                                alt="brand" class="img-responsive" style="height: 100%; object-fit: contain;" />
                                         </a>
                                     </div>
                                     <div class="swiper-slide">
-                                        <a href="#" title="brand">
-                                            <img src="/assets/thumb/medium/100/501/740/themes/929449/assets/img_brand_3.png?1736415638335"
-                                                alt="brand" width="10" height="10"
-                                                class="img-responsive" />
+                                        <a href="#" title="brand" style="display: block; height: 200px; display: flex; align-items: center; justify-content: center;">
+                                            <img src="{{asset('assets/images (4)-Photoroom.png')}}"
+                                                alt="brand" class="img-responsive" style="height: 100%; object-fit: contain;" />
                                         </a>
                                     </div>
                                     <div class="swiper-slide">
-                                        <a href="#" title="brand">
-                                            <img src="/assets/thumb/medium/100/501/740/themes/929449/assets/img_brand_4.png?1736415638335"
-                                                alt="brand" width="10" height="10"
-                                                class="img-responsive" />
+                                        <a href="#" title="brand" style="display: block; height: 200px; display: flex; align-items: center; justify-content: center;">
+                                            <img src="{{asset('assets/image-Photoroom (1).png')}}"
+                                                alt="brand" class="img-responsive" style="height: 100%; object-fit: contain;" />
                                         </a>
                                     </div>
-                                    <div class="swiper-slide">
-                                        <a href="#" title="brand">
-                                            <img src="/assets/thumb/medium/100/501/740/themes/929449/assets/img_brand_5.png?1736415638335"
-                                                alt="brand" width="10" height="10"
-                                                class="img-responsive" />
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="#" title="brand">
-                                            <img src="/assets/thumb/medium/100/501/740/themes/929449/assets/img_brand_6.png?1736415638335"
-                                                alt="brand" width="10" height="10"
-                                                class="img-responsive" />
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="#" title="brand">
-                                            <img src="/assets/thumb/medium/100/501/740/themes/929449/assets/img_brand_7.png?1736415638335"
-                                                alt="brand" width="10" height="10"
-                                                class="img-responsive" />
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="#" title="brand">
-                                            <img src="/assets/thumb/medium/100/501/740/themes/929449/assets/img_brand_8.png?1736415638335"
-                                                alt="brand" width="10" height="10"
-                                                class="img-responsive" />
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="#" title="brand">
-                                            <img src="/assets/thumb/medium/100/501/740/themes/929449/assets/img_brand_9.png?1736415638335"
-                                                alt="brand" width="10" height="10"
-                                                class="img-responsive" />
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="#" title="brand">
-                                            <img src="/assets/thumb/medium/100/501/740/themes/929449/assets/img_brand_10.png?1736415638335"
-                                                alt="brand" width="10" height="10"
-                                                class="img-responsive" />
-                                        </a>
-                                    </div>
+                                 
                                 </div>
                             </div>
+                           </div>
                         </div>
                     </section>
-                    <section class="section_feedback position-relative">
-                        <div class="container">
-                            <div class="list-feedback">
-                                <div class="block-title text-center bold p-0 mb-2">Đánh giá từ khách hàng</div>
-                                <p class="block-desc text-center mb-4">Hơn 1.000 khách hàng đã hài lòng về dịch vụ và
-                                    sản phẩm của
-                                    chúng tôi</p>
-                                <div class="swiper_feedback swiper-container">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <span class="vote d-inline-block mb-2"></span>
-                                            <p class="mb-md-5 mb-2">Mình rất đánh giá cao về độ hoàn thiện của sản
-                                                phẩm. Mẫu mã và
-                                                màu sắc cũng rất đa dạng, nhiều lựa chọn.</p>
-                                            <div class="info position-relative py-4">
-                                                <img width="89" height="89" class="lazyload position-absolute"
-                                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                                                    data-src="/assets/thumb/small/100/501/740/themes/929449/assets/feedback_1.jpg?1736415638335"
-                                                    alt="brand" />
-                                                <span class="bold">Bạn Diễm Hằng</span><span class="block-xs"> -
-                                                </span><span class="work">Hà Nội</span>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <span class="vote d-inline-block mb-2"></span>
-                                            <p class="mb-md-5 mb-2">Nhân viên của HELLO rất nhiệt tình và chuyên
-                                                nghiệp, mình có
-                                                thiện cảm ngay từ khi được tư vấn sản phẩm.</p>
-                                            <div class="info position-relative py-4">
-                                                <img width="89" height="89" class="lazyload position-absolute"
-                                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                                                    data-src="/assets/thumb/small/100/501/740/themes/929449/assets/feedback_2.jpg?1736415638335"
-                                                    alt="brand" />
-                                                <span class="bold">Anh Trần Hà</span><span class="block-xs"> -
-                                                </span><span class="work">Hồ Chí Minh</span>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <span class="vote d-inline-block mb-2"></span>
-                                            <p class="mb-md-5 mb-2">Chất lượng dịch vụ khi mình đến lựa chọn sản phẩm
-                                                là điều mình
-                                                cảm thấy ấn tượng khi đến với HELLO </p>
-                                            <div class="info position-relative py-4">
-                                                <img width="89" height="89" class="lazyload position-absolute"
-                                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                                                    data-src="/assets/thumb/small/100/501/740/themes/929449/assets/feedback_3.jpg?1736415638335"
-                                                    alt="brand" />
-                                                <span class="bold">Bạn Hà Thu</span><span class="block-xs"> -
-                                                </span><span class="work">Đà Nẵng</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-pagination"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+                 
 
                     <script>
                         jQuery("body").on("click", '.decor-dot', function(e) {
@@ -1337,116 +837,7 @@
                             $(this).find('.detail').toggleClass('active');
                         });
                     </script>
-                    <section class="section_blog">
-                        <div class="container">
-                            <h2 class="block-title position-relative text-center bold mb-4">
-                                <a href="tin-tuc" title="Blog chia sẻ">Blog chia sẻ</a>
-                            </h2>
-                            <div class="row">
-                                <div class="col-lg-4">
-                                    <div class="item-blog mb-md-4 mb-2">
-                                        <a class="thumb ratioblog d-block position-relative "
-                                            href="/huong-dan-tu-decor-phong-ngu-dep-va-chuan-phong-thuy-2023"
-                                            title="Hướng dẫn tự decor phòng ngủ đẹp và chuẩn phong thủy 2023">
-                                            <img class="lazyload position-absolute"
-                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                                                data-src="/assets/100/501/740/articles/1-15da8b7a-69a1-43cc-a22b-26b1f9d7371a.jpg?v=1701363821503"
-                                                alt="Hướng dẫn tự decor phòng ngủ đẹp và chuẩn phong thủy 2023">
-                                        </a>
-                                        <div class="content p-3">
-                                            <div class="time-post mb-2 d-md-block d-none">Thứ năm, 30/11/2023, 11:36
-                                            </div>
-                                            <h3 class="bold mb-md-2 mb-1">
-                                                <a href="/huong-dan-tu-decor-phong-ngu-dep-va-chuan-phong-thuy-2023"
-                                                    class="text2line"
-                                                    title="Hướng dẫn tự decor phòng ngủ đẹp và chuẩn phong thủy 2023">Hướng
-                                                    dẫn tự
-                                                    decor phòng ngủ đẹp và chuẩn phong thủy 2023</a>
-                                            </h3>
-                                            <p class="justify summary text4line">Bạn đang tìm kiếm ý tưởng decor phòng
-                                                ngủ? Bạn
-                                                muốn tham khảo nhiều phong cách trang trí phòng ngủ đẹp và chi tiết
-                                                nhất? Tham khảo
-                                                hướng dẫn decor phòng ngủ dưới đây để tìm ra ý tưởng trang trí phù hợp
-                                                nhất với bạn
-                                                nhé.
-                                                1. Lưu ý trước khi decor phòng ngủ
-                                                Decor phòng ngủ&nbsp;không chỉ cần khoa học, thẩm mỹ mà cần thuận phong
-                                                thủy. Đối
-                                                với người Việt, yếu tố phong thủy được đánh giá quan trọng....</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="item-blog mb-md-4 mb-2">
-                                        <a class="thumb ratioblog d-block position-relative "
-                                            href="/ghe-sofa-bo-roi-phu-hop-voi-khong-gian-phong-khach-nao"
-                                            title="Ghế sofa bộ rời phù hợp với không gian phòng khách nào?">
-                                            <img class="lazyload position-absolute"
-                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                                                data-src="/assets/100/501/740/articles/1-e7aec805-773d-496b-a0c5-68693018e642.jpg?v=1701361754090"
-                                                alt="Ghế sofa bộ rời phù hợp với không gian phòng khách nào?">
-                                        </a>
-                                        <div class="content p-3">
-                                            <div class="time-post mb-2 d-md-block d-none">Thứ năm, 30/11/2023, 11:29
-                                            </div>
-                                            <h3 class="bold mb-md-2 mb-1">
-                                                <a href="/ghe-sofa-bo-roi-phu-hop-voi-khong-gian-phong-khach-nao"
-                                                    class="text2line"
-                                                    title="Ghế sofa bộ rời phù hợp với không gian phòng khách nào?">Ghế
-                                                    sofa bộ
-                                                    rời phù hợp với không gian phòng khách nào?</a>
-                                            </h3>
-                                            <p class="justify summary text4line">Những bộ&nbsp;ghế sofa sang
-                                                trọng&nbsp;hay hiện
-                                                đại, đơn giản hay cổ điển đều mang lại phong cách riêng. Bạn thích kiểu
-                                                dáng, thiết
-                                                kế của những bộ ghế sofa bộ rời nhưng không biết có phù hợp với phòng
-                                                khách nhà bạn
-                                                hay không. Bạn có thể tham khảo bài viết dưới đây để biết ghế sofa bộ
-                                                rời phù hợp
-                                                với không gian phòng khách nào nhé.
-                                                1. Ghế sofa bộ rời phù hợp với không gian phòng khách rộng
-                                                Điều...</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="item-blog mb-md-4 mb-2">
-                                        <a class="thumb ratioblog d-block position-relative "
-                                            href="/bi-quyet-chon-sofa-cho-phong-khach-nho"
-                                            title="Bí quyết chọn sofa cho phòng khách nhỏ">
-                                            <img class="lazyload position-absolute"
-                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                                                data-src="/assets/100/501/740/articles/3-23f953d8-34eb-4cf1-a22a-db13998581ea.jpg?v=1701361427303"
-                                                alt="Bí quyết chọn sofa cho phòng khách nhỏ">
-                                        </a>
-                                        <div class="content p-3">
-                                            <div class="time-post mb-2 d-md-block d-none">Thứ năm, 30/11/2023, 11:23
-                                            </div>
-                                            <h3 class="bold mb-md-2 mb-1">
-                                                <a href="/bi-quyet-chon-sofa-cho-phong-khach-nho" class="text2line"
-                                                    title="Bí quyết chọn sofa cho phòng khách nhỏ">Bí quyết chọn sofa
-                                                    cho phòng
-                                                    khách nhỏ</a>
-                                            </h3>
-                                            <p class="justify summary text4line">Với không gian phòng khách nhỏ, việc
-                                                lựa chọn
-                                                sofa trở nên không còn đơn giản đối với nhiều gia đình. Nhưng điều đó
-                                                không có nghĩa
-                                                là quá khó khăn. Hãy để Showroom Hùng Túy giúp bạn giải quyết mối lo
-                                                ngại này.
-                                                1. Kiểm tra kích thước phòng khách
-                                                Nhà của bạn có diện tích phòng khách nhỏ vì thế trước khi mua sofa bạn
-                                                cần đo đạc
-                                                xem kích thước của căn phòng như thế nào. Và xem xét...</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
+                
                     @livewire('inc.footer')
                     <style>
                         .footer {

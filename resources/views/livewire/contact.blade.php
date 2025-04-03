@@ -600,7 +600,7 @@
                 <h1 class="title-head-contact a-left d-none">Liên hệ</h1>
                 <div class="layout-contact">
                     <div class="map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d49065.48724191766!2d105.66705551613587!3d9.78366273034262!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0f0a555555551%3A0xadec95a396049a55!2zVHLGsMahzIBuZyBUSCBWYcyAIFRIQ1MgUGjGsMahbmcgTmluaA!5e1!3m2!1svi!2s!4v1743402822032!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12965.895665370514!2d107.19629097966137!3d10.526333768333476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31750c9d676cabed%3A0x9f9a323c5753996e!2zSMOyYSBMb25nLCBUcC4gQsOgIFLhu4thLCBCw6AgUuG7i2EgLSBWxaluZyBUw6B1LCBWaeG7h3QgTmFt!5e1!3m2!1svi!2s!4v1743681820825!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                     <div class="info-contact container mb-5">
                         <div class="row m-0 border">
@@ -650,7 +650,7 @@
                                         <path
                                             d="M302.8 312C334.9 271.9 408 174.6 408 120C408 53.7 354.3 0 288 0S168 53.7 168 120c0 54.6 73.1 151.9 105.2 192c7.7 9.6 22 9.6 29.6 0zM416 503l144.9-58c9.1-3.6 15.1-12.5 15.1-22.3V152c0-17-17.1-28.6-32.9-22.3l-116 46.4c-.5 1.2-1 2.5-1.5 3.7c-2.9 6.8-6.1 13.7-9.6 20.6V503zM15.1 187.3C6 191 0 199.8 0 209.6V480.4c0 17 17.1 28.6 32.9 22.3L160 451.8V200.4c-3.5-6.9-6.7-13.8-9.6-20.6c-5.6-13.2-10.4-27.4-12.8-41.5l-122.6 49zM384 255c-20.5 31.3-42.3 59.6-56.2 77c-20.5 25.6-59.1 25.6-79.6 0c-13.9-17.4-35.7-45.7-56.2-77V449.4l192 54.9V255z" />
                                     </svg>
-                                    Tầng 5 Quận 12, TP HCM
+                                    Tổ 10, xã Hòa Đông, tp Bà rịa, Vũng Tàu
                                 </div>
                                 <div class="item position-relative mb-3">
                                     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="envelope"
@@ -660,8 +660,8 @@
                                             d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z">
                                         </path>
                                     </svg>
-                                    <a href="mailto:noithatdepbaria@gmail.com" class="d-block"
-                                        title="noithatdepbaria@gmail.com">noithatdepbaria@gmail.com</a>
+                                    <a href="mailto:lenhatanhfpt123@gmail.com" class="d-block"
+                                        title="lenhatanhfpt123@gmail.com">lenhatanhfpt123@gmail.com</a>
                                 </div>
                                 <div class="item position-relative mb-3">
                                     <svg aria-hidden="true" focusable="false" data-prefix="fas"
@@ -672,7 +672,7 @@
                                             d="M497.39 361.8l-112-48a24 24 0 0 0-28 6.9l-49.6 60.6A370.66 370.66 0 0 1 130.6 204.11l60.6-49.6a23.94 23.94 0 0 0 6.9-28l-48-112A24.16 24.16 0 0 0 122.6.61l-104 24A24 24 0 0 0 0 48c0 256.5 207.9 464 464 464a24 24 0 0 0 23.4-18.6l24-104a24.29 24.29 0 0 0-14.01-27.6z">
                                         </path>
                                     </svg>
-                                    <a class="fone d-block" href="tel:0999999999" title="0999999999">0999999999</a>
+                                    <a class="fone d-block" href="tel:0937313731" title="0937.31.37.31">0937.31.37.31</a>
                                 </div>
                                 <div class="item position-relative">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="position-absolute" height="1em"

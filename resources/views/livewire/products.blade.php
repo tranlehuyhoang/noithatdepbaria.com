@@ -966,9 +966,8 @@
                                     <div class="products-view products-view-grid list_hover_pro">
                                         <div class="row">
                                             @foreach ($products as $product)
-                                            <div class="col-6 col-md-4 item_product_main">
-                                                <form
-                                                    class="variants product-action product-item " >
+                                            <div class="col-6 col-md-4 item_product_main" style="padding: 5px;">
+                                                <form class="variants product-action product-item">
                                                     <div class="product-thumbnail position-relative">
                                                         <a class="product-thumb position-relative ratio1by1 scale_hover d-block"
                                                             href="/product/{{ $product->slug }}"
@@ -992,7 +991,6 @@
                                                             </a>
                                                         </h3>
                                                         <div class="price-box bold mb-3">
-
                                                             <span class="price bold">Liên hệ</span>
                                                         </div>
                                                         <div class="action">
