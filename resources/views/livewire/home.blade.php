@@ -521,171 +521,43 @@
                 <body class="body-index">
                     @livewire('inc.header')
                     <h1 class="d-none">OH! Decor</h1>
-                    <section class="section_slider section_slider_text position-relative">
-                        <div class="slider_text">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-5">
-                                        <div class="line-1 font-weight-bold mb-4"><b>Nội thất</b> nâng tầm không gian
-                                            sống</div>
-                                        <div class="line-2 mb-4">Khám phá nội thất thiết kế đương đại mang đến cảm giác
-                                            thoải mái,
-                                            sang trọng. Cá nhân hoá trong từng sản phẩm phù hợp với mọi không gian sống.
-                                        </div>
-                                        <a href="/collections/all"
-                                            class="buy d-inline-block font-weight-bold py-2 py-lg-3 px-3 mb-3 mb-lg-5"
-                                            title="Mua sắm ngay"><svg width="24" height="24" viewBox="0 0 24 24"
-                                                fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M3.9 5.73333L5.08557 14.275C5.22282 15.2638 6.06825 16 7.06658 16L17.8334 16C18.8317 16 19.6772 15.2638 19.8144 14.275L20.7632 7.43955C20.8883 6.53778 20.1878 5.73333 19.2774 5.73333L3.9 5.73333ZM3.9 5.73333L3.60486 3.4136C3.50205 2.60558 2.81454 2 2 2V2"
-                                                    stroke="#492D25" stroke-width="1.5" />
-                                                <path
-                                                    d="M9 20.5C9 19.6716 8.32843 19 7.5 19C6.67157 19 6 19.6716 6 20.5C6 21.3284 6.67157 22 7.5 22C8.32843 22 9 21.3284 9 20.5Z"
-                                                    stroke="#492D25" stroke-width="1.5" />
-                                                <path
-                                                    d="M19 20.5C19 19.6716 18.3284 19 17.5 19C16.6716 19 16 19.6716 16 20.5C16 21.3284 16.6716 22 17.5 22C18.3284 22 19 21.3284 19 20.5Z"
-                                                    stroke="#492D25" stroke-width="1.5" />
-                                            </svg> Mua sắm ngay</a>
-                                        <div class="d-flex text-center">
-                                            <div class="item"><b class="d-block"><span
-                                                        class="count">15.000</span>+</b>Sản
-                                                phẩm đa dạng</div>
-                                            <div class="item"><b class="d-block"><span class="count">10</span>+</b>Hệ
-                                                thống
-                                                cửa hàng</div>
-                                            <div class="item"><b class="d-block"><span
-                                                        class="count">20</span>+</b>Giải thưởng
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-7">
-                                        <a href="/collections/all" class="d-block">
-                                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                                                data-src="/assets/100/501/740/themes/929449/assets/slider_text_image.png?1736415638335"
-                                                class="image position-absolute lazyload"
-                                                alt="<b>Nội thất</b> nâng tầm không gian sống">
-                                        </a>
-                                    </div>
+                    <div class="slider_text">
+                        <div class="container-fluid m-0 p-0">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <img src="/banner.png" class="banner w-100" alt="" style="height: 770px;" />
                                 </div>
                             </div>
                         </div>
-                    </section>
+                    </div>
+                    <div class="container-fluid px-0">
+                        <div class="row no-gutters">
+                          <!-- Left image section with curved green border -->
+                          <div class="col-md-5 position-relative">
+                            <div class="rounded-right bg-success" style="position: absolute; top: 0; bottom: 0; left: 0; right: 0; z-index: 1;"></div>
+                            <div class="position-relative" style="z-index: 2; padding: 15px 15px 15px 0;">
+                              <img src="/banner2.png" alt="Interior Design" class="img-fluid rounded" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                          </div>
+
+                          <!-- Right content section -->
+                          <div class="col-md-7 px-4 py-5 d-flex align-items-center">
+                            <div class="content-wrapper">
+                              <h2 class="text-success font-weight-bold mb-4">Welcome to Nhật Anh</h2>
+                              <p class="text-dark mb-4">
+                                Ở thời đại hiện nay, không gian sống và làm việc không chỉ đơn thuần là nơi để tồn tại mà còn là nơi để tỏa sáng và thể hiện bản thân. Với sứ mệnh làm cho mọi không gian trở nên độc đáo và đầy sáng tạo, Nhật Anh đã trở thành một tên tuổi uy tín trong lĩnh vực thiết kế và xây dựng nội thất tại Việt Nam. Nhật Anh là một công ty thiết kế và xây dựng nội thất chuyên nghiệp, thành lập với tâm huyết và đam mê về sự sáng tạo và không gian sống.
+                              </p>
+                              <div class="mt-4">
+                                <a href="#" class="btn btn-outline-success px-4">Xem Thêm</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     <section class="section_cate">
                         <div class="container">
                             <div class="row">
-                                <div class="left col-xl-2 col-lg-3 col-md-4 mb-3 mb-md-0">
-                                    <h2 class="block-title bold">
-                                        <a href="diem-den-yeu-thich" title="Các dòng sản phẩm nổi bật">Các dòng sản
-                                            phẩm nổi
-                                            bật</a>
-                                    </h2>
-                                    <div class="swiper-button swiper-button-prev position-absolute"></div>
-                                    <div class="swiper-button swiper-button-next position-absolute"></div>
-                                </div>
-                                <div class="right col-xl-10 col-lg-9 col-md-8">
-                                    <div class="cate-slider swiper-container">
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide">
-                                                <a href="/sofa"
-                                                    class="item position-relative d-flex align-items-center"
-                                                    title="SOFA">
-                                                    <img class="lazyload position-absolute"
-                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                                                        data-src="/assets/thumb/large/100/501/740/themes/929449/assets/cate_1.jpg?1736415638335"
-                                                        alt="SOFA">
-                                                    <span class="text position-relative"><b
-                                                            class="d-block">SOFA</b>Ghế sofa vải
-                                                        và ghế dài</span>
-                                                    <span class="more position-absolute pr-4">Xem thêm</span>
-                                                </a>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <a href="/den"
-                                                    class="item position-relative d-flex align-items-center"
-                                                    title="ĐÈN">
-                                                    <img class="lazyload position-absolute"
-                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                                                        data-src="/assets/thumb/large/100/501/740/themes/929449/assets/cate_2.jpg?1736415638335"
-                                                        alt="ĐÈN">
-                                                    <span class="text position-relative"><b class="d-block">ĐÈN</b>Đèn
-                                                        trang trí
-                                                        nội thất</span>
-                                                    <span class="more position-absolute pr-4">Xem thêm</span>
-                                                </a>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <a href="/tu-tuong"
-                                                    class="item position-relative d-flex align-items-center"
-                                                    title="TỦ">
-                                                    <img class="lazyload position-absolute"
-                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                                                        data-src="/assets/thumb/large/100/501/740/themes/929449/assets/cate_3.jpg?1736415638335"
-                                                        alt="TỦ">
-                                                    <span class="text position-relative"><b class="d-block">TỦ</b>Tủ
-                                                        phòng khách,
-                                                        phòng ngủ</span>
-                                                    <span class="more position-absolute pr-4">Xem thêm</span>
-                                                </a>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <a href="/giường"
-                                                    class="item position-relative d-flex align-items-center"
-                                                    title="GIƯỜNG">
-                                                    <img class="lazyload position-absolute"
-                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                                                        data-src="/assets/thumb/large/100/501/740/themes/929449/assets/cate_4.jpg?1736415638335"
-                                                        alt="GIƯỜNG">
-                                                    <span class="text position-relative"><b
-                                                            class="d-block">GIƯỜNG</b>Giường đa
-                                                        phong cách</span>
-                                                    <span class="more position-absolute pr-4">Xem thêm</span>
-                                                </a>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <a href="/ghe"
-                                                    class="item position-relative d-flex align-items-center"
-                                                    title="GHẾ">
-                                                    <img class="lazyload position-absolute"
-                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                                                        data-src="/assets/thumb/large/100/501/740/themes/929449/assets/cate_5.jpg?1736415638335"
-                                                        alt="GHẾ">
-                                                    <span class="text position-relative"><b
-                                                            class="d-block">GHẾ</b>Chất liệu gỗ,
-                                                        nhôm, nhựa</span>
-                                                    <span class="more position-absolute pr-4">Xem thêm</span>
-                                                </a>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <a href="/ban"
-                                                    class="item position-relative d-flex align-items-center"
-                                                    title="BÀN">
-                                                    <img class="lazyload position-absolute"
-                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                                                        data-src="/assets/thumb/large/100/501/740/themes/929449/assets/cate_6.jpg?1736415638335"
-                                                        alt="BÀN">
-                                                    <span class="text position-relative"><b
-                                                            class="d-block">BÀN</b>Chất liệu gỗ,
-                                                        nhôm, nhựa</span>
-                                                    <span class="more position-absolute pr-4">Xem thêm</span>
-                                                </a>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <a href="/cay-trang-tri"
-                                                    class="item position-relative d-flex align-items-center"
-                                                    title="Cây">
-                                                    <img class="lazyload position-absolute"
-                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                                                        data-src="/assets/thumb/large/100/501/740/themes/929449/assets/cate_7.jpg?1736415638335"
-                                                        alt="Cây">
-                                                    <span class="text position-relative"><b class="d-block">Cây</b>Cây
-                                                        xanh trang
-                                                        trí</span>
-                                                    <span class="more position-absolute pr-4">Xem thêm</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+
                             </div>
                         </div>
                     </section>
@@ -865,7 +737,7 @@
                     <section class="section_banner">
                         <div class="container">
                             <a href="/collections/all" class="m-banner lazyload_bg text-center d-block"
-                                data-src="/assets/100/501/740/themes/929449/assets/m_banner.jpg?1736415638335"
+                                data-src="banner.png?1736415638335"
                                 title="NGUỒN CẢM HỨNG VÔ TẬN">
                                 <span class="title d-inline-block bold position-relative">NGUỒN CẢM HỨNG VÔ TẬN</span>
                                 <span class="desc d-block m-0 mx-auto position-relative">Khám phá nội thất thiết kế
