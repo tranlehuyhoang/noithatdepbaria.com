@@ -4,7 +4,13 @@
             <div>
 
                 <head>
-                    <title>Nội thất đẹp</title>
+                    <title>Nội thất cao cấp - {{ env('APP_NAME') }}</title>
+                    <meta name="description" content="Nội thất cao cấp, thiết kế và thi công nội thất chuyên nghiệp. Cung cấp các sản phẩm nội thất cao cấp, sang trọng với chất lượng hàng đầu." />
+                    <meta name="keywords" content="nội thất cao cấp, thiết kế nội thất, thi công nội thất, nội thất sang trọng, nội thất phòng khách, nội thất phòng ngủ" />
+                    <meta property="og:image" content="{{asset('banner.png')}}" />
+                    <link rel="icon" type="image/png"
+        href="{{asset('banner.png')}}">
+                    <link rel="icon" type="image/png" href="{{asset('minify_logo.png')}}">
                     <link rel="preload" as='style' type="text/css"
                         href="/assets/100/501/740/themes/929449/assets/main.scss.css?1736415638335">
                     <link rel="preload" as='style' type="text/css"
