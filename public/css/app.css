@@ -254,6 +254,9 @@ header.header .form-search .search-auto::placeholder {
   .section_product_tab .row {
     flex-direction: row;
   }
+  .tab-content .product-thumbnail {
+    height: 185px !important;
+  }
   
 
 .slider_text {
