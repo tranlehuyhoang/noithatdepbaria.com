@@ -2,7 +2,6 @@
     <div>
         <div>
             <div>
-
                 <head>
                     <title>Nội thất cao cấp - {{ env('APP_NAME') }}</title>
                     <meta name="description" content="Nội thất cao cấp, thiết kế và thi công nội thất chuyên nghiệp. Cung cấp các sản phẩm nội thất cao cấp, sang trọng với chất lượng hàng đầu." />
@@ -639,13 +638,13 @@
                                                     </div>
                                                     <a href="/project/{{ $project->slug }}" class="btn btn-outline-dark px-4">
                                                         Xem thêm
-                                                      
+
                                                     </a>
                                                 </div>
                                                 @endforeach
                                             </div>
                                             <div class="swiper-pagination"></div>
-                                         
+
                                         </div>
                                     </div>
                                 </div>
@@ -656,7 +655,7 @@
                                                 @if($projects->count() > 0)
                                                 <div class="project-image position-relative">
                                                     <img src="{{ asset('storage/'.$projects[2]->banner) }}" class="img-fluid w-100" alt="{{ $projects[2]->title }}" style="height: 423px; object-fit: cover;">
-                                                    
+
                                                 </div>
                                                 @endif
                                             </div>
@@ -664,7 +663,7 @@
                                                 @foreach($projects->take(2) as $key => $project)
                                                 <div class="project-image position-relative {{ $key == 0 ? 'mb-3' : 'mt-3 ' }}">
                                                     <img src="{{ asset('storage/'.$project->banner) }}" class="img-fluid w-100" alt="{{ $project->title }}" style="height: 200px; object-fit: cover; {{ $key == 1 ? 'height: 207px;' : '' }}">
-                                                    
+
                                                 </div>
                                                 @endforeach
                                             </div>
@@ -683,7 +682,7 @@
                                 <a href="/products" title="Bộ sưu tập" style="color: #0a8f3c;">Sản phẩm nổi bật</a>
                                 <hr style="width: 30%; display: inline-block; margin-left: 20px;">
                             </h2>
-                           
+
                             <div class="tab-1 tab-content current">
                                 <div class="row">
                                     @foreach($products as $product)
@@ -728,10 +727,10 @@
                                 </div>
                                 <a href="/products" class="more-product d-block m-auto py-2 pr-4 bold">Xem thêm</a>
                             </div>
-                        
+
                         </div>
                     </section>
-                
+
                     <section class="section_blog" style="background: none;">
                         <div class="container">
                             <h2 class="block-title position-relative text-start bold mb-4">
@@ -778,7 +777,7 @@
                     </section>
 
                     <section class="section_brand">
-                        
+
                         <div class="container">
                             <h2 class="block-title position-relative text-start bold mb-4" style="display: flex; align-items: center;">
                                 <a href="/tin-tuc" title="Tin tức" style="color: #0a8f3c;">Đối tác khách hàng</a>
@@ -787,8 +786,8 @@
                            <div class="row m-0">
                             <div class="brand-swiper swiper-container">
                                 <div class="swiper-wrapper" style="max-width: 100vw;">
-                                 
-                                   
+
+
                                     <div class="swiper-slide">
                                         <a href="#" title="brand" style="display: block; height: 200px; display: flex; align-items: center; justify-content: center;">
                                             <img src="{{asset('assets/image-Photoroom.png')}}"
@@ -801,14 +800,14 @@
                                                 alt="brand" class="img-responsive" style="height: 100%; object-fit: contain;" />
                                         </a>
                                     </div>
-                                   
+
                                     <div class="swiper-slide">
                                         <a href="#" title="brand" style="display: block; height: 200px; display: flex; align-items: center; justify-content: center;">
                                             <img src="{{asset('assets/thiet-ke-logo-noi-that-bee-art-06-Photoroom.png')}}"
                                                 alt="brand" class="img-responsive" style="height: 100%; object-fit: contain;" />
                                         </a>
                                     </div>
-                                   
+
                                     <div class="swiper-slide">
                                         <a href="#" title="brand" style="display: block; height: 200px; display: flex; align-items: center; justify-content: center;">
                                             <img src="{{asset('assets/thiet-ke-logo-noi-that-bee-art-02-Photoroom.png')}}"
@@ -827,13 +826,13 @@
                                                 alt="brand" class="img-responsive" style="height: 100%; object-fit: contain;" />
                                         </a>
                                     </div>
-                                 
+
                                 </div>
                             </div>
                            </div>
                         </div>
                     </section>
-                 
+
 
                     <script>
                         jQuery("body").on("click", '.decor-dot', function(e) {
@@ -843,7 +842,7 @@
                             $(this).find('.detail').toggleClass('active');
                         });
                     </script>
-                
+
                     @livewire('inc.footer')
                     <style>
                         .footer {

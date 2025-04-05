@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Apr 03, 2025 at 02:20 PM
+-- Generation Time: Apr 05, 2025 at 08:30 AM
 -- Server version: 8.0.30
--- PHP Version: 8.1.10
+-- PHP Version: 8.2.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -100,7 +100,10 @@ CREATE TABLE `cache` (
 
 INSERT INTO `cache` (`key`, `value`, `expiration`) VALUES
 ('1b6453892473a467d07372d45eb05abc2031647a', 'i:2;', 1743689549),
-('1b6453892473a467d07372d45eb05abc2031647a:timer', 'i:1743689549;', 1743689549);
+('1b6453892473a467d07372d45eb05abc2031647a:timer', 'i:1743689549;', 1743689549),
+('livewire-rate-limiter:a17961fa74e9275d529f489537f179c05d50c2f3', 'i:1;', 1743841288),
+('livewire-rate-limiter:a17961fa74e9275d529f489537f179c05d50c2f3:timer', 'i:1743841288;', 1743841288),
+('theme', 's:7:\"dracula\";', 2059201481);
 
 -- --------------------------------------------------------
 
@@ -245,7 +248,11 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (13, '2025_03_31_110334_create_contacts_table', 11),
 (14, '2025_03_31_161927_create_partners_table', 12),
 (15, 'aa2025_03_31_161927_create_partners_table', 13),
-(16, '2025_04_03_211554_add_seo_columns_to_products_table', 14);
+(16, '2025_04_03_211554_add_seo_columns_to_products_table', 14),
+(17, '2025_04_05_151953_add_custom_fields_to_users_table', 15),
+(18, '2025_04_05_151954_add_avatar_url_to_users_table', 15),
+(19, '2025_04_05_152310_add_themes_settings_to_users_table', 16),
+(20, '2025_04_05_152556_create_settings_table', 17);
 
 -- --------------------------------------------------------
 
@@ -295,9 +302,9 @@ CREATE TABLE `products` (
   `view` int NOT NULL DEFAULT '0',
   `short_dec` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `seo_title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `seo_keywords` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `seo_description` text COLLATE utf8mb4_unicode_ci,
+  `seo_title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `seo_keywords` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `seo_description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `category_id` bigint UNSIGNED NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -308,7 +315,7 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `images`, `slug`, `title`, `view`, `short_dec`, `description`, `seo_title`, `seo_keywords`, `seo_description`, `category_id`, `created_at`, `updated_at`) VALUES
-(1, '[\"01JQXZWT5859ZZD3C3N830CKHJ.jpg\"]', 'cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang', 'Ghế ăn XDAILY - VALLE chair', 38, 'Vật chất: ván sợi mật độ trung bình\nPhong cách: 4 kiểu (tùy chọn)\nNguồn bằng: 1 pin AA (không bao gồm)\nTrọng lượng vật phẩm: khoảng 125g / 4.41oz\nKích thước gói: 138 * 60 * 263mm / 5,43 * 2,36 * 10,35in\nTrọng lượng gói: khoảng 200g / 7.05oz', '<p>Đây là một chiếc đồng hồ treo tường có kích thước hoàn hảo mà bạn sẽ thích có trong phòng khách của mình. Nó dễ dàng bổ sung cho các đồ nội thất khác trong nhà của bạn.&nbsp;</p><p><strong>Các tính năng:</strong></p><p>Nó trông phong cách độc đáo ở bất cứ nơi nào bạn treo nó.</p><p>Nó không có chức năng thông báo điểm tích hợp, con chim chỉ để trang trí.</p><p>Hoàn hảo như một vật trang trí cho gia đình, quán cà phê, nhà hàng, v.v.</p><p>Thích hợp cho phòng khách, phòng làm việc và phòng ngủ.</p><p>Thật tốt khi tặng nó những người bạn yêu nghệ thuật.</p><p><strong>Thông số kỹ thuật:</strong></p><p>Vật chất: ván sợi mật độ trung bình</p><p>Phong cách: 4 kiểu (tùy chọn)</p><p>Nguồn bằng: 1 pin AA (không bao gồm)</p><p>Trọng lượng vật phẩm: khoảng 125g / 4.41oz</p><p>Kích thước gói: 138 * 60 * 263mm / 5,43 * 2,36 * 10,35in</p><p>Trọng lượng gói: khoảng 200g / 7.05oz</p><p>Kích thước mặt hàng:</p><p>Kiểu 1: 241 * 116 * 50mm / 9,49 * 4,57 * 1,97in<br>Kiểu 2: 225 * 118 * 50mm / 8,86 * 4,65 * 1,97in<br>Kiểu 3: 225 * 115 * 50mm / 8,86 * 4,53 * 1,97in<br>Kiểu 4: 231 * 118 * 50mm / 9,09 * 4,65 * 1,97in</p><p>Lưu ý:</p><p>1 Pin AA là cần thiết, nhưng không bao gồm trong giao hàng.</p><p>Danh sách gói:</p><p>1 * Đồng hồ&nbsp;</p>', 'Ghế ăn XDAILY - VALLE chair', 'Ghế ăn XDAILY,Ghế ăn XDAILY, Ghế ăn XDAILY, Ghế ăn XDAILY', 'Ghế ăn XDAILY - VALLE chair Ghế ăn XDAILY - VALLE chairGhế ăn XDAILY - VALLE chairGhế ăn XDAILY - VALLE chairGhế ăn XDAILY - VALLE chairGhế ăn XDAILY - VALLE chairGhế ăn XDAILY - VALLE chairGhế ăn XDAILY - VALLE chairGhế ăn XDAILY - VALLE chairGhế ăn XDAILY - VALLE chair', 2, '2025-03-31 03:31:44', '2025-04-03 14:20:17'),
+(1, '[\"01JQXZWT5859ZZD3C3N830CKHJ.jpg\"]', 'cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang', 'Ghế ăn XDAILY - VALLE chair', 40, 'Vật chất: ván sợi mật độ trung bình\nPhong cách: 4 kiểu (tùy chọn)\nNguồn bằng: 1 pin AA (không bao gồm)\nTrọng lượng vật phẩm: khoảng 125g / 4.41oz\nKích thước gói: 138 * 60 * 263mm / 5,43 * 2,36 * 10,35in\nTrọng lượng gói: khoảng 200g / 7.05oz', '<p>Đây là một chiếc đồng hồ treo tường có kích thước hoàn hảo mà bạn sẽ thích có trong phòng khách của mình. Nó dễ dàng bổ sung cho các đồ nội thất khác trong nhà của bạn.&nbsp;</p><p><strong>Các tính năng:</strong></p><p>Nó trông phong cách độc đáo ở bất cứ nơi nào bạn treo nó.</p><p>Nó không có chức năng thông báo điểm tích hợp, con chim chỉ để trang trí.</p><p>Hoàn hảo như một vật trang trí cho gia đình, quán cà phê, nhà hàng, v.v.</p><p>Thích hợp cho phòng khách, phòng làm việc và phòng ngủ.</p><p>Thật tốt khi tặng nó những người bạn yêu nghệ thuật.</p><p><strong>Thông số kỹ thuật:</strong></p><p>Vật chất: ván sợi mật độ trung bình</p><p>Phong cách: 4 kiểu (tùy chọn)</p><p>Nguồn bằng: 1 pin AA (không bao gồm)</p><p>Trọng lượng vật phẩm: khoảng 125g / 4.41oz</p><p>Kích thước gói: 138 * 60 * 263mm / 5,43 * 2,36 * 10,35in</p><p>Trọng lượng gói: khoảng 200g / 7.05oz</p><p>Kích thước mặt hàng:</p><p>Kiểu 1: 241 * 116 * 50mm / 9,49 * 4,57 * 1,97in<br>Kiểu 2: 225 * 118 * 50mm / 8,86 * 4,65 * 1,97in<br>Kiểu 3: 225 * 115 * 50mm / 8,86 * 4,53 * 1,97in<br>Kiểu 4: 231 * 118 * 50mm / 9,09 * 4,65 * 1,97in</p><p>Lưu ý:</p><p>1 Pin AA là cần thiết, nhưng không bao gồm trong giao hàng.</p><p>Danh sách gói:</p><p>1 * Đồng hồ&nbsp;</p>', 'Ghế ăn XDAILY - VALLE chair', 'Ghế ăn XDAILY,Ghế ăn XDAILY, Ghế ăn XDAILY, Ghế ăn XDAILY', 'Ghế ăn XDAILY - VALLE chair Ghế ăn XDAILY - VALLE chairGhế ăn XDAILY - VALLE chairGhế ăn XDAILY - VALLE chairGhế ăn XDAILY - VALLE chairGhế ăn XDAILY - VALLE chairGhế ăn XDAILY - VALLE chairGhế ăn XDAILY - VALLE chairGhế ăn XDAILY - VALLE chairGhế ăn XDAILY - VALLE chair', 2, '2025-03-31 03:31:44', '2025-04-05 08:25:31'),
 (2, '[\"01JQS6989BDRHKP5EQT23KWGMH.png\",\"01JQN42MWJ8S3RFCJFX0DXGYWN.png\",\"01JQN42MWGD02756R6QBFBN6EV.png\",\"01JQN42MWEJT7FNM82VJJ7DQVP.png\",\"01JQN42MWC9H0HDA1SWS8J9BBC.png\"]', 'cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang-1', 'Ghế thư giãn hiện đại mang đậm phong cách nội thất châu Âu', 0, 'Vật chất: ván sợi mật độ trung bình\r\nPhong cách: 4 kiểu (tùy chọn)\r\nNguồn bằng: 1 pin AA (không bao gồm)\r\nTrọng lượng vật phẩm: khoảng 125g / 4.41oz\r\nKích thước gói: 138 * 60 * 263mm / 5,43 * 2,36 * 10,35in\r\nTrọng lượng gói: khoảng 200g / 7.05oz', '<p>Đây là một chiếc đồng hồ treo tường có kích thước hoàn hảo mà bạn sẽ thích có trong phòng khách của mình. Nó dễ dàng bổ sung cho các đồ nội thất khác trong nhà của bạn.&nbsp;</p><p><strong>Các tính năng:</strong></p><p>Nó trông phong cách độc đáo ở bất cứ nơi nào bạn treo nó.</p><p>Nó không có chức năng thông báo điểm tích hợp, con chim chỉ để trang trí.</p><p>Hoàn hảo như một vật trang trí cho gia đình, quán cà phê, nhà hàng, v.v.</p><p>Thích hợp cho phòng khách, phòng làm việc và phòng ngủ.</p><p>Thật tốt khi tặng nó những người bạn yêu nghệ thuật.</p><p><strong>Thông số kỹ thuật:</strong></p><p>Vật chất: ván sợi mật độ trung bình</p><p>Phong cách: 4 kiểu (tùy chọn)</p><p>Nguồn bằng: 1 pin AA (không bao gồm)</p><p>Trọng lượng vật phẩm: khoảng 125g / 4.41oz</p><p>Kích thước gói: 138 * 60 * 263mm / 5,43 * 2,36 * 10,35in</p><p>Trọng lượng gói: khoảng 200g / 7.05oz</p><p>Kích thước mặt hàng:</p><p>Kiểu 1: 241 * 116 * 50mm / 9,49 * 4,57 * 1,97in<br>Kiểu 2: 225 * 118 * 50mm / 8,86 * 4,65 * 1,97in<br>Kiểu 3: 225 * 115 * 50mm / 8,86 * 4,53 * 1,97in<br>Kiểu 4: 231 * 118 * 50mm / 9,09 * 4,65 * 1,97in</p><p>Lưu ý:</p><p>1 Pin AA là cần thiết, nhưng không bao gồm trong giao hàng.</p><p>Danh sách gói:</p><p>1 * Đồng hồ&nbsp;</p>', NULL, NULL, NULL, 3, '2025-03-31 03:31:44', '2025-04-01 17:46:38'),
 (3, '[\"01JQS6AB8ZCR5RNAYZYNV9V3KC.jpg\",\"01JQN42MWJ8S3RFCJFX0DXGYWN.png\",\"01JQN42MWGD02756R6QBFBN6EV.png\",\"01JQN42MWEJT7FNM82VJJ7DQVP.png\",\"01JQN42MWC9H0HDA1SWS8J9BBC.png\"]', 'cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang-2', 'Ghế thư giãn bập bênh kèm đôn giá rẻ', 2, 'Vật chất: ván sợi mật độ trung bình\r\nPhong cách: 4 kiểu (tùy chọn)\r\nNguồn bằng: 1 pin AA (không bao gồm)\r\nTrọng lượng vật phẩm: khoảng 125g / 4.41oz\r\nKích thước gói: 138 * 60 * 263mm / 5,43 * 2,36 * 10,35in\r\nTrọng lượng gói: khoảng 200g / 7.05oz', '<p>Đây là một chiếc đồng hồ treo tường có kích thước hoàn hảo mà bạn sẽ thích có trong phòng khách của mình. Nó dễ dàng bổ sung cho các đồ nội thất khác trong nhà của bạn.&nbsp;</p><p><strong>Các tính năng:</strong></p><p>Nó trông phong cách độc đáo ở bất cứ nơi nào bạn treo nó.</p><p>Nó không có chức năng thông báo điểm tích hợp, con chim chỉ để trang trí.</p><p>Hoàn hảo như một vật trang trí cho gia đình, quán cà phê, nhà hàng, v.v.</p><p>Thích hợp cho phòng khách, phòng làm việc và phòng ngủ.</p><p>Thật tốt khi tặng nó những người bạn yêu nghệ thuật.</p><p><strong>Thông số kỹ thuật:</strong></p><p>Vật chất: ván sợi mật độ trung bình</p><p>Phong cách: 4 kiểu (tùy chọn)</p><p>Nguồn bằng: 1 pin AA (không bao gồm)</p><p>Trọng lượng vật phẩm: khoảng 125g / 4.41oz</p><p>Kích thước gói: 138 * 60 * 263mm / 5,43 * 2,36 * 10,35in</p><p>Trọng lượng gói: khoảng 200g / 7.05oz</p><p>Kích thước mặt hàng:</p><p>Kiểu 1: 241 * 116 * 50mm / 9,49 * 4,57 * 1,97in<br>Kiểu 2: 225 * 118 * 50mm / 8,86 * 4,65 * 1,97in<br>Kiểu 3: 225 * 115 * 50mm / 8,86 * 4,53 * 1,97in<br>Kiểu 4: 231 * 118 * 50mm / 9,09 * 4,65 * 1,97in</p><p>Lưu ý:</p><p>1 Pin AA là cần thiết, nhưng không bao gồm trong giao hàng.</p><p>Danh sách gói:</p><p>1 * Đồng hồ&nbsp;</p>', NULL, NULL, NULL, 2, '2025-03-31 03:31:44', '2025-04-03 13:45:17'),
 (4, '[\"01JQS6CJ6G94YZ16JPBMACTS0B.jpg\",\"01JQN42MWJ8S3RFCJFX0DXGYWN.png\",\"01JQN42MWGD02756R6QBFBN6EV.png\",\"01JQN42MWEJT7FNM82VJJ7DQVP.png\"]', 'cuckoo-dong-ho-treo-tuong-chim-go-trang-tri-cho-gia-dinh-cafe-nha-hang-3', 'Bàn nội thất văn phòng chất lượng cao sang trọng', 0, 'Vật chất: ván sợi mật độ trung bình\r\nPhong cách: 4 kiểu (tùy chọn)\r\nNguồn bằng: 1 pin AA (không bao gồm)\r\nTrọng lượng vật phẩm: khoảng 125g / 4.41oz\r\nKích thước gói: 138 * 60 * 263mm / 5,43 * 2,36 * 10,35in\r\nTrọng lượng gói: khoảng 200g / 7.05oz', '<p>Đây là một chiếc đồng hồ treo tường có kích thước hoàn hảo mà bạn sẽ thích có trong phòng khách của mình. Nó dễ dàng bổ sung cho các đồ nội thất khác trong nhà của bạn.&nbsp;</p><p><strong>Các tính năng:</strong></p><p>Nó trông phong cách độc đáo ở bất cứ nơi nào bạn treo nó.</p><p>Nó không có chức năng thông báo điểm tích hợp, con chim chỉ để trang trí.</p><p>Hoàn hảo như một vật trang trí cho gia đình, quán cà phê, nhà hàng, v.v.</p><p>Thích hợp cho phòng khách, phòng làm việc và phòng ngủ.</p><p>Thật tốt khi tặng nó những người bạn yêu nghệ thuật.</p><p><strong>Thông số kỹ thuật:</strong></p><p>Vật chất: ván sợi mật độ trung bình</p><p>Phong cách: 4 kiểu (tùy chọn)</p><p>Nguồn bằng: 1 pin AA (không bao gồm)</p><p>Trọng lượng vật phẩm: khoảng 125g / 4.41oz</p><p>Kích thước gói: 138 * 60 * 263mm / 5,43 * 2,36 * 10,35in</p><p>Trọng lượng gói: khoảng 200g / 7.05oz</p><p>Kích thước mặt hàng:</p><p>Kiểu 1: 241 * 116 * 50mm / 9,49 * 4,57 * 1,97in<br>Kiểu 2: 225 * 118 * 50mm / 8,86 * 4,65 * 1,97in<br>Kiểu 3: 225 * 115 * 50mm / 8,86 * 4,53 * 1,97in<br>Kiểu 4: 231 * 118 * 50mm / 9,09 * 4,65 * 1,97in</p><p>Lưu ý:</p><p>1 Pin AA là cần thiết, nhưng không bao gồm trong giao hàng.</p><p>Danh sách gói:</p><p>1 * Đồng hồ&nbsp;</p>', NULL, NULL, NULL, 5, '2025-03-31 03:31:44', '2025-04-01 17:46:38'),
@@ -429,8 +436,29 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('f5cSeRXgCDOf6bRl4hYAZK6eWK1zybVJUJm0Gat7', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiSFp5R253bHBnZU9vcU1OMW1BYWNtcEFjaUFGWEhmVUd6d0lpaUIwViI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MTAwOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvcHJvZHVjdC9jdWNrb28tZG9uZy1oby10cmVvLXR1b25nLWNoaW0tZ28tdHJhbmctdHJpLWNoby1naWEtZGluaC1jYWZlLW5oYS1oYW5nIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1743690017),
-('XqgYFjFqBZoaGPmfRSRZJoP6EOtu4qX0rdC1fO7u', 4, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36', 'YTo3OntzOjY6Il90b2tlbiI7czo0MDoiUnI2bTY4ZEFleHRkclBVYlY1UHQ1VXU5Z3o5NGtKc1Vaa3l3YVdseCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MTAwOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvcHJvZHVjdC9jdWNrb28tZG9uZy1oby10cmVvLXR1b25nLWNoaW0tZ28tdHJhbmctdHJpLWNoby1naWEtZGluaC1jYWZlLW5oYS1oYW5nIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czozOiJ1cmwiO2E6MDp7fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjQ7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMiRETGFxZ080UDM0UnNLNGhuLlBmWEp1TmdWTHc4Y3RWczhwTHNxeDNLa1FVWENTajM2RFRGUyI7czo4OiJmaWxhbWVudCI7YTowOnt9fQ==', 1743689984);
+('99kvxvJIIb9drNXXYNaUMfs9sBZn8qRNtNMDWXld', 4, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 OPR/117.0.0.0', 'YTo3OntzOjY6Il90b2tlbiI7czo0MDoiUzBhdlVORFQyMlVZNW5RbkhOTWJWMVJxWlpCMTl3VXl6TldzTFFBSyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6MzoidXJsIjthOjA6e31zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aTo0O3M6MTc6InBhc3N3b3JkX2hhc2hfd2ViIjtzOjYwOiIkMnkkMTIkRExhcWdPNFAzNFJzSzRobi5QZlhKdU5nVkx3OGN0VnM4cExzcXgzS2tRVVhDU2ozNkRURlMiO3M6ODoiZmlsYW1lbnQiO2E6MDp7fX0=', 1743841807);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `settings`
+--
+
+CREATE TABLE `settings` (
+  `id` bigint UNSIGNED NOT NULL,
+  `header` text COLLATE utf8mb4_unicode_ci,
+  `footer` text COLLATE utf8mb4_unicode_ci,
+  `script` text COLLATE utf8mb4_unicode_ci,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `settings`
+--
+
+INSERT INTO `settings` (`id`, `header`, `footer`, `script`, `created_at`, `updated_at`) VALUES
+(1, '<script></script>\n\n', '<script></script>\n', NULL, '2025-04-05 08:28:49', '2025-04-05 08:28:49');
 
 -- --------------------------------------------------------
 
@@ -446,15 +474,19 @@ CREATE TABLE `users` (
   `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `remember_token` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `custom_fields` json DEFAULT NULL,
+  `avatar_url` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `theme` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT 'default',
+  `theme_color` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(4, 'noithatdepbaria@gmail.com', 'noithatdepbaria@gmail.com', NULL, '$2y$12$DLaqgO4P34RsK4hn.PfXJuNgVLw8ctVs8pLsqx3KkQUXCSj36DTFS', 'DZ8gvARHsCg3ByWhLYMV7VoVFR6hPXLClQo4ECwkHDGIRLqhN6al7jk4TyqD', '2025-03-31 09:17:42', '2025-03-31 09:17:42');
+INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`, `custom_fields`, `avatar_url`, `theme`, `theme_color`) VALUES
+(4, 'noithatdepbaria@gmail.com', 'noithatdepbaria@gmail.com', NULL, '$2y$12$DLaqgO4P34RsK4hn.PfXJuNgVLw8ctVs8pLsqx3KkQUXCSj36DTFS', 'DZ8gvARHsCg3ByWhLYMV7VoVFR6hPXLClQo4ECwkHDGIRLqhN6al7jk4TyqD', '2025-03-31 09:17:42', '2025-03-31 09:17:42', NULL, NULL, 'default', NULL);
 
 -- --------------------------------------------------------
 
@@ -603,6 +635,12 @@ ALTER TABLE `sessions`
   ADD KEY `sessions_last_activity_index` (`last_activity`);
 
 --
+-- Indexes for table `settings`
+--
+ALTER TABLE `settings`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -659,7 +697,7 @@ ALTER TABLE `jobs`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `partners`
@@ -684,6 +722,12 @@ ALTER TABLE `projects`
 --
 ALTER TABLE `services`
   MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
+-- AUTO_INCREMENT for table `settings`
+--
+ALTER TABLE `settings`
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `users`
