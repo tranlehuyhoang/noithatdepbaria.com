@@ -34,9 +34,9 @@
                         title="lenhatanhfpt123@gmail.com">lenhatanhfpt123@gmail.com</a>
                 </p>
             </div>
-           
+
         </div>
-        
+
     </div>
     <a class="chat-plugin" href="https://www.messenger.com" target="_blank" rel="nofollow"
     title="Messenger">
@@ -47,4 +47,8 @@
     </svg>
     <div>Chat</div>
 </a>
+    @foreach ($settings ?? [] as $setting)
+        {!! $setting->header !!}
+    @endforeach
 </footer>
+

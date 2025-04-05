@@ -11,7 +11,7 @@
         <nav class="header-nav">
             <ul class="item-big">
                 <div class="menu-bar d-xl-none d-block mr-4 current nxcmmbmb" bis_skin_checked="1">
-                    <svg fill="#000000" height="800px" width="800px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                    <svg fill="#000000" height="800px" width="800px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                     viewBox="0 0 460.775 460.775" xml:space="preserve">
                <path d="M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55
                    c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55
@@ -89,4 +89,7 @@
             }
         });
     </script>
+    @foreach ($settings ?? [] as $setting)
+        {!! $setting->header !!}
+    @endforeach
 </header>
